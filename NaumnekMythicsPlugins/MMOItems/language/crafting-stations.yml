@@ -1,35 +1,38 @@
 condition:
-  level:
-    positive: '&a✔ Требуемый Уровень: #level#'
-    negative: '&c✖ Требуемый Уровень: #level#'
-  class:
-    positive: '&a✔ Требуемый Класс: #class#'
-    negative: '&c✖ Требуемый Класс: #class#'
   profession:
-    positive: '&a✔ Требуется #level# уровень #profession#'
-    negative: '&c✖ Требуется #level# уровень #profession#'
-  stamina:
-    positive: '&a✔ Требуется #stamina# Выносливости'
-    negative: '&c✖ Требуется #stamina# Выносливости'
-  food:
-    positive: '&a✔ Требуется #food# Сытости'
-    negative: '&c✖ Требуется #food# Сытости'
-  money:
-    positive: '&a✔ Требуется $#money#'
-    negative: '&c✖ Требуется $#money#'
+    positive: '&a✔ Requires #level# in #profession#'
+    negative: '&c✖ Requires #level# in #profession#'
   mana:
-    positive: '&a✔ Требуется #mana# Маны'
-    negative: '&c✖ Требуется #mana# Маны'
+    positive: '&a✔ Requires #mana# Mana'
+    negative: '&c✖ Requires #mana# Mana'
+  money:
+    positive: '&a✔ Requires $#money#'
+    negative: '&c✖ Requires $#money#'
+  level:
+    positive: '&a✔ Requires Level #level#'
+    negative: '&c✖ Requires Level #level#'
   stellium:
     positive: '&a✔ Requires #stellium# Stellium'
     negative: '&c✖ Requires #stellium# Stellium'
+  stamina:
+    positive: '&a✔ Requires #stamina# Stamina'
+    negative: '&c✖ Requires #stamina# Stamina'
+  permission:
+    positive: '&a✔ #display#'
+    negative: '&c✖ #display#'
+  placeholder:
+    positive: '&a✔ #display#'
+    negative: '&c✖ #display#'
   attribute:
     positive: '&a✔ Requires #points# #attribute#'
     negative: '&c✖ Requires #points# #attribute#'
+  class:
+    positive: '&a✔ Required Class: #class#'
+    negative: '&c✖ Required Class: #class#'
+  food:
+    positive: '&a✔ Requires #food# Food'
+    negative: '&c✖ Requires #food# Food'
 ingredient:
-  mythicitem:
-    positive: '&8✔ &7#amount# #item#'
-    negative: '&c✖ &7#amount# #item#'
   mmoitem:
     positive: '&8✔ &7#amount# #level##item#'
     negative: '&c✖ &7#amount# #level##item#'

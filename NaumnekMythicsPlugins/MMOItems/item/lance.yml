@@ -11,7 +11,7 @@ FIRE_GREATLANCE:
     ability:
       on-hit:
         type: LIFE_ENDER
-        mode: ON_HIT
+        mode: ATTACK
         damage: 10.0
         cooldown: 30.0
     lore:
@@ -26,4 +26,3 @@ FIRE_GREATLANCE:
       rotation-speed: 0.4
     disable-crafting: true
     two-handed: true
-    revision-id: 1

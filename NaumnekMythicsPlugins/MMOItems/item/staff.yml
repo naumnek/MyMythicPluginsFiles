@@ -1,273 +1,180 @@
 EARTH_STAFF:
   base:
     material: JUNGLE_SAPLING
-    name: '&3Посох Земли'
-    tier: UNCOMMON
+    name: '&fEarth Staff'
+    enchants:
+      unbreaking: 1
     hide-enchants: true
+    movement-speed: 0.005
     attack-damage:
-      base: 50.0
+      base: 17.0
       spread: 0.02
       max-spread: 0.06
     attack-speed: 0.4
-    range: 16.0
-    mana-cost: 25.0
+    critical-strike-chance: 18.0
+    critical-strike-power: 49.0
+    range: 15.0
     two-handed: true
     perm-effects:
       JUMP: 2
+    crafting:
+      shaped:
+        '1':
+        - JUNGLE_SAPLING EMERALD JUNGLE_SAPLING
+        - EMERALD STICK EMERALD
+        - JUNGLE_SAPLING EMERALD JUNGLE_SAPLING
     element:
       earth:
-        damage: 10.0
+        damage: 23.0
     gem-sockets:
-    - Uncolored
-    disable-enchanting: true
-    disable-repairing: true
-    disable-smelting: true
-    disable-interaction: true
-    disable-crafting: true
-    revision-id: 2
-STRUDY_STAFF:
-  base:
-    material: STICK
-    name: '&3Крепкий Посох'
-    tier: UNCOMMON
-    hide-enchants: true
-    attack-damage:
-      base: 80.0
-      spread: 0.02
-      max-spread: 0.06
-    attack-speed: 0.4
-    mana-cost: 25.0
-    range: 7.0
-    two-handed: true
-    element:
-      earth:
+    - Blue
+    - Blue
+    ability:
+      right-click:
+        type: EARTHQUAKE
+        mode: SHIFT_LEFT_CLICK
+        cooldown: 28.0
         damage: 5.0
-    gem-sockets:
-    - Uncolored
-    disable-enchanting: true
-    disable-repairing: true
+        amplifier: 2.0
+        duration: 2.0
+      on-hit:
+        type: SLOW
+        mode: ATTACK
+        cooldown: 39.0
+        amplifier: 4.0
+        duration: 2.0
+    lore:
+    - '&7An extremely powerful weapon.'
+    - '&7Use it &f&nwisely&7.'
+    tier: VERY_RARE
+    disable-crafting: true
     disable-smelting: true
     disable-interaction: true
-    disable-crafting: true
-    revision-id: 2    
+    required-level: 30.0
 LIGHTNING_STAFF:
   base:
     material: STICK
-    name: '&aПосох Молний'
-    tier: VERY_RARE
+    name: '&f&lLightning Staff'
     required-level: 3.0
     attack-damage:
-      base: 15.0
+      base: 10.0
       spread: 0.06
       max-spread: 0.17
     attack-speed:
-      base: 0.8
+      base: 0.4
       spread: 0.07
       max-spread: 0.2
     staff-spirit: LIGHTNING_SPIRIT
     gem-sockets:
     - Blue
     - Blue
-    - Blue
-    range: 90.0
+    range: 45.0
     ability:
       on-hit:
         type: STARFALL
-        mode: ON_HIT
-        damage: 50.0
+        mode: ATTACK
+        damage: 5.0
         cooldown: 30.0
-    revision-id: 1
-STAFF_OF_THUNDER:
-  base:
-    material: BLAZE_ROD
-    name: '&dПосох Грома'
-    tier: MYTHICAL
-    two-handed: false
-    hide-enchants: true
-    attack-damage:
-      base: 55.0
-      spread: 0.06
-      max-spread: 0.17
-    attack-speed:
-      base: 0.8
-      spread: 0.07
-      max-spread: 0.1
-    staff-spirit: LIGHTNING_SPIRIT
-    gem-sockets:
-    - Blue
-    - Blue
-    - Blue
-    - Blue
-    - Blue
-    range: 75.0
-    ability:
-      ability1:
-        type: ARCANE_HAIL
-        mode: SHIFT_RIGHT_CLICK
-        mana: 40.0
-        cooldown: 35.0
-        damage: 50.0
-        duration: 6.0
-      ability2:
-        type: ARCANE_RIFT
-        mode: RIGHT_CLICK
-        mana: 20.0
-        damage: 35.0
-        cooldown: 15.0
-      ability3:
-        type: FIREFLY
-        mode: SHIFT_LEFT_CLICK
-        knockback: 3.0
-        cooldown: 120.0
-        mana: 20.0
-        damage: 50.0
-    item-particles:
-      type: AURA
-      particle: REDSTONE
-      color:
-        red: 255
-        green: 0
-        blue: 255
-      radius: 1.2
-      speed: 0.4
-      y-speed: 3.0
-      rotation-speed: 1.5
-    mana-cost: 5.0
-    mana-regeneration: 0.0
-    element:
-      thunder:
-        damage: 50.0
-      fire:
-        defense: 30.0
-    custom-model-data: 1.0
-    enchants:
-      thorns: 3.0
-    required-level: 0.0
-    critical-strike-power: 250.0
-    critical-strike-chance: 3.0
-    revision-id: 1
-TESTVITALII:
-  base:
-    material: DIAMOND_HOE
-    ability:
-      ability1:
-        type: FIREFLY
-        mode: RIGHT_CLICK
-        knockback: 2.0
-        damage: 15.0
-        mana: 20.0
-    revision-id: 1
-METLA:
-  base:
-    material: STICK
-    ability:
-      ability1:
-        type: BLINK
-        mode: RIGHT_CLICK
-    durability: 0.0
-    revision-id: 1
 BONE_STAFF:
   base:
     material: BONE
-    name: '&9Костяной Посох'
-    lore:
-    - '&7Источает холодную ауру давно'
-    - '&7умершего магического зверя.'
-    tier: RARE
-    max-durability: 3000.0
     disable-interaction: false
     disable-crafting: true
-    disable-enchanting: true
-    disable-repairing: true
-    range: 32.0
-    mana-cost: 50.0
+    required-level: 3.0
     attack-damage:
-      base: 60.0
+      base: 5.0
       spread: 0.06
       max-spread: 0.17
     attack-speed: 0.4
+    tier: TRASH
     magic-damage:
-      base: 30.0
+      base: 7.0
       spread: 0.07
       max-spread: 0.2
-    staff-spirit: SUNFIRE_SPIRIT
-    gem-sockets:
-    - Uncolored
-    - Uncolored
-    element:
-      ice:
-        damage: 20.0
-    ability:
-      ability1:
-        type: LOW_LICH_ATTACK
-        mode: RIGHT_CLICK
-    revision-id: 2
-ICE_STAFF:
+    lore: []
+    name: '&fBone Staff'
+MANA_STAFF:
   base:
-    material: BONE
-    name: '&3Ледяной Посох'
-    tier: UNCOMMON
-    max-durability: 1500.0
-    disable-interaction: false
-    disable-crafting: true
-    disable-enchanting: true
-    disable-repairing: true
-    range: 24.0
-    mana-cost: 25.0
+    material: DIAMOND_HOE
+    name: §b§lMana Staff
+    lore:
+      - §b§oThis staff uses pure ambiant mana.
+    tier: RARE
+    required-level: 15.0
+    critical-strike-chance:
+      base: 15.0
+      spread: 0.08
+      max-spread: 0.19
+    critical-strike-power:
+      base: 30.0
+      spread: 0.08
+      max-spread: 0.19
     attack-damage:
-      base: 45.0
-      spread: 0.06
-      max-spread: 0.17
-    attack-speed: 0.5
+      base: 14.0
+      scale: 0.07
+      spread: 0.1
+    attack-speed: 0.7
+    perm-effects:
+      SPEED: 1.0
+    ability:
+      ability1:
+        type: REGEN_ALLY
+        mode: RIGHT_CLICK
+        duration: 3.0
+        cooldown: 8.0
+        heal: 10.0
+        mana: 10.0
+    magic-damage-reduction:
+      base: 15.0
+      scale: 0.05
+      spread: 0.1
+      max-spread: 0.2
+    magic-damage:
+      base: 12.0
+      scale: 0.07
+      spread: 0.12
+    mana-cost: 5.0
+    range: 32.0
     element:
-      ice:
-        damage: 10.0
+      water:
+        damage:
+          base: 60.0
+          scale: 0.0
+          spread: 0.1
+          max-spread: 0.25
     gem-sockets:
-    - Blue
-    ability:
-      ability1:
-        type: LOW_ICESPIRIT_ATTACK
-        mode: RIGHT_CLICK
-    revision-id: 2
-HELL_STAFF:
+      - Blue
+    staff-spirit: MANA_SPIRIT
+VOID_STAFF:
   base:
-    material: STICK
-    name: §4§l§k_ §cАдский посох §4§l§k_
-    disable-crafting: true
-    disable-smelting: true
-    disable-smithing: true
-    disable-enchanting: true
-    disable-repairing: true
-    disable-interaction: true
-    attack-damage: 66.6
-    attack-speed: 0.0
-    range: 75.0
-    mana-cost: 0.5
-    unbreakable: true
+    material: NETHERITE_HOE
+    name: §5§lVoid Staff
+    attack-damage: 25.0
+    attack-speed: 1.5
+    required-level: 40.0
     tier: LEGENDARY
-    max-mana: 150.0
-    gem-sockets:
-    - Blue
-    - Blue
-    - Blue
-    - Blue
-    - Blue
+    critical-strike-chance:
+      base: 10.0
+      scale: 0.1
+      spread: 0.1
+      max-spread: 0.2
+    critical-strike-power:
+      base: 20.0
+      scale: 0.1
+      spread: 0.1
+      max-spread: 0.2
+    range: 30.0
+    mana-cost: 6.0
+    magic-damage: 40.0
+    staff-spirit: VOID_SPIRIT
+    required-class:
+      - Mage
     ability:
-      ability2:
-        type: FIRE_METEOR
-        mode: SHIFT_RIGHT_CLICK
-        cooldown: 30.0
-        knockback: 3.0
-        radius: 5.0
-        mana: 100.0
-        damage: 150.0
       ability1:
-        type: TARGETED_FIREBALL
+        type: CURSED_BEAM
         mode: RIGHT_CLICK
-        damage: 100.0
-        mana: 30.0
-        cooldown: 15.0
-        ignite: 5.0
-    staff-spirit: NETHER_SPIRIT
-    custom-model-data: 2.0
-    revision-id: 1
+        damage: 30.0
+        duration: 4.0
+        cooldown: 7.0
+    lore:
+      - §7Think of all the places this can go.

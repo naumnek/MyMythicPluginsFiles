@@ -11,7 +11,7 @@ STIFF_GREATSTAFF:
     ability:
       on-hit:
         type: STUN
-        mode: ON_HIT
+        mode: ATTACK
         cooldown: 15.0
     lore:
     - '&7So heavy it &cstuns&7 enemies on hit.'
@@ -21,4 +21,3 @@ STIFF_GREATSTAFF:
     blunt-rating: 75.0
     dodge-rating: -30.0
     tier: COMMON
-    revision-id: 1

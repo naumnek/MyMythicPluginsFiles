@@ -1,32 +1,42 @@
 # For more information, check out the plugin manual or join us on Discord:
 # http://www.mythicmobs.net
 #  
-DummyHelmet:
-  Id: LEATHER_HELMET
-  Display: '&fШлем Манекена'
-  Options:
-    Color: 255,40,40
-    Unbreakable: true    
-MagicSkeletonHelmet:
-  Id: LEATHER_HELMET
-  Display: '&fМагический Шлем'
-  Options:
-    Color: 0,191,255
-MagicSkeletonChestplate:
-  Id: LEATHER_CHESTPLATE
-  Display: '&fМагический Нагрудник'
-  Options:
-    Color: 0,191,255
-MagicSkeletonLeggings:
-  Id: LEATHER_LEGGINGS
-  Display: '&fМагический Поножи'
-  Options:
-    Color: 0,191,255
-MagicSkeletonBoots:
-  Id: LEATHER_BOOTS
-  Display: '&fМагические Сапоги'
-  Options:
-    Color: 0,191,255
+
+SkeletonKingSword:
+  Id: DIAMOND_SWORD
+  Data: 0
+  Display: '&3Greatsword of the Skeleton King'
+  Lore:
+  - '&6A powerful sword used by'
+  - '&6the King of Skeletons.'
+  Enchantments:
+  - DAMAGE_ALL:5
+  - KNOCKBACK:2
+  - FIRE_ASPECT:2
+  Attributes:
+    MainHand:
+      Health: 10
+      MovementSpeed: 0.1
+KingsCrown:
+  Id: GOLDEN_HELMET
+  Data: 0
+  Amount: 1
+  Display: '&dCrown of the King'
+  Lore:
+  - '&6A kingly crowl that grants'
+  - '&6the wearer unwavering power!'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+  - PROTECTION_PROJECTILE:2
+  - PROTECTION_FIRE:2
+  - PROTECTION_EXPLOSIONS:2
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Attributes:
+    Head:
+      Health: 10
+      KnockbackResistance: 10
 BanditTunic:
   Id: LEATHER_CHESTPLATE
   Display: '&aBandit Tunic'

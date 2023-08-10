@@ -1,8 +1,0 @@
-# The internal name of the MM skill.
-mythicmobs-skill-id: LOW_ICESPIRIT_ATTACK
-
-# Ability name displayed in lore.
-name: 'Проклятие Ледяного Духа'
-
-# Ability Modifiers (default values).
-cooldown: 15

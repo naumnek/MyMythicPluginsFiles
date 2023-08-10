@@ -1,3 +1,4 @@
+
 # Default item types. These cannot be removed. They
 # may be used as 'parents' to create new item types
 # which will behave just like another item type. Parents
@@ -17,555 +18,544 @@ SWORD:
     display: IRON_SWORD:0
     
     # Name displayed in the item lore.
-    name: 'Меч'
+    name: 'Sword'
     
     # Template of an unidentified item.
     unident-item:
-        name: '&f#prefix#Неопознанный Меч'
+        name: '&f#prefix#Unidentified Sword'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 DAGGER:
     display: STONE_SWORD
-    name: 'Кинжал'
+    name: 'Dagger'
     unident-item:
-        name: '&f#prefix#Неопознанный Кинжал'
+        name: '&f#prefix#Unidentified Dagger'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 SPEAR:
     display: TRIDENT
-    name: 'Копьё'
+    name: 'Spear'
     unident-item:
-        name: '&f#prefix#Неопознанное Копьё'
+        name: '&f#prefix#Unidentified Spear'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 HAMMER:
     display: IRON_AXE
-    name: 'Молот'
+    name: 'Hammer'
     unident-item:
-        name: '&f#prefix#Неопознанный Молот'
+        name: '&f#prefix#Unidentified Hammer'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 GAUNTLET:
     display: IRON_HORSE_ARMOR
-    name: 'Перчатка'
+    name: 'Gauntlet'
     unident-item:
-        name: '&f#prefix#Неопознанный Перчатка'
+        name: '&f#prefix#Unidentified Gauntlet'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 WHIP:
     display: LEAD
-    name: 'Хлыст'
+    name: 'Whip'
     unident-item:
-        name: '&f#prefix#Неопознанный Хлыст'
+        name: '&f#prefix#Unidentified Whip'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 STAFF:
     display: DIAMOND_HOE
-    name: 'Посох'
+    name: 'Staff'
     unident-item:
-        name: '&f#prefix#Неопознанный Посох'
+        name: '&f#prefix#Unidentified Staff'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 BOW:
     display: BOW
-    name: 'Лук'
+    name: 'Bow'
     unident-item:
-        name: '&f#prefix#Неопознанный Лук'
+        name: '&f#prefix#Unidentified Bow'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 CROSSBOW:
     display: WOODEN_PICKAXE
-    name: 'Арбалет'
+    name: 'Crossbow'
     unident-item:
-        name: '&f#prefix#Неопознанный Арбалет'
+        name: '&f#prefix#Unidentified Crossbow'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 MUSKET:
     display: IRON_HORSE_ARMOR
-    name: 'Мушкет'
+    name: 'Musket'
     unident-item:
-        name: '&f#prefix#Неопознанный Мушкет'
+        name: '&f#prefix#Unidentified Musket'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 LUTE:
     display: NAME_TAG
-    name: 'Музыкальный Инструмент'
+    name: 'Lute'
     unident-item:
-        name: '&f#prefix#Неопознанный Музыкальный Инструмент'
+        name: '&f#prefix#Unidentified Lute'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
-      
-CUSTOMPLAYER:
-    display: SNOWBALL
-    name: 'Заказное'
-    parent: 'CATALYST'
-    unident-item:
-        name: '&f#prefix#Неопознанный Предмет'
-        lore:
-        - '&7Требуется идентификация'
-        - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
+# Applies stats in both hands
 CATALYST:
     display: PRISMARINE_SHARD
-    name: 'Катализатор'
+    name: 'Catalyst'
     unident-item:
-        name: '&f#prefix#Неопознанный Катализатор'
+        name: '&f#prefix#Unidentified Catalyst'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
+# Applies stats in offhand only
 OFF_CATALYST:
     display: PRISMARINE_CRYSTALS
-    name: 'Катализатор'
+    name: 'Catalyst (Offhand)'
     unident-item:
-        name: '&f#prefix#Неопознанный Катализатор'
+        name: '&f#prefix#Unidentified Catalyst'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - 'Двуручный'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
+
+# Applies stats in mainhand only
+MAIN_CATALYST:
+    display: PRISMARINE_CRYSTALS
+    name: 'Catalyst (Mainhand)'
+    unident-item:
+        name: '&f#prefix#Unidentified Catalyst'
+        lore:
+            - '&7This item is unidentified. I must'
+            - '&7find a way to identify it!'
+            - '{tier}'
+            - '{tier}&8Item Info:'
+            - '{range}&8- &7Lvl Range: &e#range#'
+            - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 ORNAMENT:
     display: GOLD_NUGGET
-    name: 'Орнамент'
+    name: 'Ornament'
     unident-item:
-        name: '&f#prefix#Неопознанный Орнамент'
+        name: '&f#prefix#Unidentified Ornament'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 ACCESSORY:
     display: DIAMOND
-    name: 'Аксессуар'
+    name: 'Accessory'
     unident-item:
-        name: '&f#prefix#Неопознанный Аксессуар'
+        name: '&f#prefix#Unidentified Accessory'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
-
-RING:
-    display: IRON_INGOT
-    name: 'Кольцо'
-    parent: 'ACCESSORY'
-    unident-item:
-        name: '&f#prefix#Неопознанное Кольцо'
-        lore:
-        - '&7Требуется идентификация'
-        - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 ARMOR:
     display: IRON_CHESTPLATE
-    name: 'Броня'
+    name: 'Armor'
     unident-item:
-        name: '&f#prefix#Неопознанная Броня'
+        name: '&f#prefix#Unidentified Armor'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
-
-MAGIC_ARMOR:
-    display: GOLDEN_CHESTPLATE
-    name: 'Магическая Броня'
-    parent: 'ARMOR'
-    unident-item:
-        name: '&f#prefix#Неопознанная Броня'
-        lore:
-        - '&7Требуется идентификация'
-        - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 TOOL:
     display: IRON_PICKAXE
-    name: 'Инструмент'
+    name: 'Tool'
     unident-item:
-        name: '&f#prefix#Неопознанный Инструмент'
+        name: '&f#prefix#Unidentified Tool'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
-
-SPECIAL_TOOL:
-    display: KNOWLEDGE_BOOK
-    name: 'Особые Инструменты'
-    parent: 'TOOL'
-    unident-item:
-        name: '&f#prefix#Неопознанный Инструмент'
-        lore:
-        - '&7Требуется идентификация'
-        - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 CONSUMABLE:
     display: APPLE
-    name: 'Расходный Материал'
+    name: 'Consumable'
     unident-item:
-        name: '&f#prefix#Неопознанный Расходный Материал'
+        name: '&f#prefix#Unidentified Consumable'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 MISCELLANEOUS:
     display: WATER_BUCKET
-    name: 'Разное'
+    name: 'Miscellaneous'
     unident-item:
-        name: '&f#prefix#Неопознанный Предмет'
+        name: '&f#prefix#Unidentified Misc Item'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 SKIN:
     display: LEATHER
-    name: 'Одежда'
+    name: 'Skin'
     unident-item:
-        name: '&f#prefix#Неопознанный Элемент Одежды'
+        name: '&f#prefix#Unidentified Skin Item'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 GEM_STONE:
     display: EMERALD
-    name: 'Драгоценный Камень'
+    name: 'Gem Stone'
     unident-item:
-        name: '&f#prefix#Неопознанный Драгоценный Камень'
+        name: '&f#prefix#Unidentified Gem'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 BLOCK:
     display: STONE:0
-    name: 'Блок'
+    name: 'Block'
     unident-item:
-        name: '&f#prefix#Неопознанный Блок'
+        name: '&f#prefix#Unidentified Block'
         lore:
-        - '&7Требуется идентификация'
-        - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+            - '&7This item is unidentified. I must'
+            - '&7find a way to identify it!'
+            - '{tier}'
+            - '{tier}&8Item Info:'
+            - '{range}&8- &7Lvl Range: &e#range#'
+            - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 
 # Default subtypes
 GREATSWORD:
     display: DIAMOND_SWORD
-    name: 'Большой Меч'
+    name: 'Greatsword'
     parent: 'SWORD'
     unident-item:
-        name: '&f#prefix#Неопознанный Большой Меч'
+        name: '&f#prefix#Unidentified Greatsword'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 LONG_SWORD:
     display: STONE_SWORD
-    name: 'Длинный Меч'
+    name: 'Long Sword'
     parent: 'SWORD'
     unident-item:
-        name: '&f#prefix#Неопознанный Длинный Меч'
+        name: '&f#prefix#Unidentified Long Sword'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 KATANA:
     display: IRON_SWORD
-    name: 'Катана'
+    name: 'Katana'
     parent: 'SWORD'
     unident-item:
-        name: '&f#prefix#Неопознанная Катана'
+        name: '&f#prefix#Unidentified Katana'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
-
-SABER:
-    display: IRON_SWORD
-    name: 'Сабля'
-    parent: 'SWORD'
-    unident-item:
-        name: '&f#prefix#Неопознанная Сабля'
-        lore:
-        - '&7Требуется идентификация'
-        - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 THRUSTING_SWORD:
     display: GOLDEN_SWORD
-    name: 'Колющий Меч'
+    name: 'Thrusting Sword'
     parent: 'DAGGER'
     unident-item:
-        name: '&f#prefix#Неопознанный Колющий Меч'
+        name: '&f#prefix#Unidentified Thrusting Dagger'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
     
 AXE:
     display: STONE_AXE
-    name: 'Топор'
+    name: 'Axe'
     parent: 'SWORD'
     unident-item:
-        name: '&f#prefix#Неопознанный Топор'
+        name: '&f#prefix#Unidentified Axe'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
     
 GREATAXE:
     display: DIAMOND_AXE
-    name: 'Большой Топор'
+    name: 'Greataxe'
     parent: 'SWORD'
     unident-item:
-        name: '&f#prefix#Неопознанный Большой Топор'
+        name: '&f#prefix#Unidentified Greataxe'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
     
 HALBERD:
     display: IRON_AXE
-    name: 'Алебарда'
+    name: 'Halberd'
     parent: 'SWORD'
     unident-item:
-        name: '&f#prefix#Неопознанная Алебарда'
+        name: '&f#prefix#Unidentified Halberd'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
     
 LANCE:
     display: STICK
-    name: 'Копье'
+    name: 'Lance'
     parent: 'SPEAR'
     unident-item:
-        name: '&f#prefix#Неопознанное Копье'
+        name: '&f#prefix#Unidentified Lance'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
     
 GREATHAMMER:
     display: DIAMOND_AXE
-    name: 'Большой Молот'
+    name: 'Greathammer'
     parent: 'HAMMER'
     unident-item:
-        name: '&f#prefix#Неопознанный Большой Молот'
+        name: '&f#prefix#Unidentified Greathammer'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
     
 GREATSTAFF:
     display: DIAMOND_HOE
-    name: 'Великий Посох'
+    name: 'Greatstaff'
     parent: 'HAMMER'
     unident-item:
-        name: '&f#prefix#Неопознанный Великий Посох'
+        name: '&f#prefix#Unidentified Greatstaff'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
     
 STAVE:
     display: IRON_HOE
-    name: 'Посох'
+    name: 'Stave'
     parent: 'HAMMER'
     unident-item:
-        name: '&f#prefix#Неопознанный Посох'
+        name: '&f#prefix#Unidentified Stave'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
     
 TOME:
     display: BOOK
-    name: 'Том'
+    name: 'Tome'
     parent: 'CATALYST'
     unident-item:
-        name: '&f#prefix#Неопознанный Том'
+        name: '&f#prefix#Unidentified Tome'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
     
 TALISMAN:
     display: TOTEM_OF_UNDYING
-    name: 'Талисман'
+    name: 'Talisman'
     parent: 'CATALYST'
     unident-item:
-        name: '&f#prefix#Неопознанный Талисман'
+        name: '&f#prefix#Unidentified Talisman'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
  
 WAND:
     display: STICK
-    name: 'Палочка'
+    name: 'Wand'
     parent: 'STAFF'
     unident-item:
-        name: '&f#prefix#Неопознанная Палочка'
+        name: '&f#prefix#Unidentified Wand'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
 
 GREATBOW:
     display: BOW
-    name: 'Длинный Лук'
+    name: 'Greatbow'
     parent: 'BOW'
     unident-item:
-        name: '&f#prefix#Неопознанный Длинный Лук'
+        name: '&f#prefix#Unidentified Greatbow'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
     
 SHIELD:
     display: SHIELD
-    name: 'Щит'
+    name: 'Shield'
     parent: CATALYST
     unident-item:
-        name: '&f#prefix#Неопознанный Щит'
+        name: '&f#prefix#Unidentified Shield'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'
     
 MATERIAL:
     display: PAPER
-    name: 'Материал'
+    name: 'Material'
     parent: 'MISCELLANEOUS'
     unident-item:
-        name: '&f#prefix#Неопознанный Материал'
+        name: '&f#prefix#Unidentified Material'
         lore:
-        - '&7Требуется идентификация'
+        - '&7This item is unidentified. I must'
+        - '&7find a way to identify it!'
         - '{tier}'
-        - '{tier}&8Характеристики:'
-        - '{range}&8- &7Диапозон Уровней: &e#range#'
-        - '{tier}&8- &7Уровень Предмета: #prefix##tier#'
+        - '{tier}&8Item Info:'
+        - '{range}&8- &7Lvl Range: &e#range#'
+        - '{tier}&8- &7Item Tier: #prefix##tier#'

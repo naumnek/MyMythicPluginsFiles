@@ -1,8 +1,0 @@
-# The internal name of the MM skill.
-mythicmobs-skill-id: LOW_ICEGUARD_AGRE
-
-# Ability name displayed in lore.
-name: 'Указать Цель Ледяному Духу'
-
-# Ability Modifiers (default values).
-cooldown: 0

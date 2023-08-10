@@ -1,7 +1,8 @@
+
 # Attribute ID
 strength:
 
-    name: 'Сила'
+    name: Strength
     
     # Maximum amount of points players 
     # may spend in this attribute.
@@ -10,24 +11,20 @@ strength:
     # Buffs given every 1 attribute point spent
     # in this specific attribute.
     buff:
-        physical_damage: 0.5
-        max_health: 4
-        health_regeneration: 0.03
+        weapon_damage: 2
+        max_health: 1%
 
 dexterity:
-    name: 'Ловкость'
+    name: Dexterity
     max-points: 40
     buff:
-        weapon_damage: 1  
+        physical_damage: 1.5
         projectile_damage: 1
-        attack_speed: 0.01
-        knockback_resistance: 0.5
+        attack_speed: 0.5%
 
 intelligence:
-    name: 'Интеллект'
+    name: Intelligence
     max-points: 40
     buff:
-        magic_damage: 1.25
-        max_mana: 5
-        mana_regeneration: 0.1
-        speed_malus_reduction: 0.25
+        magic_damage: 2
+        cooldown_reduction: 1

@@ -14,7 +14,11 @@ death-exp-loss:
 - '&4Вы умерли и потеряли &6{loss} &4опыта.'
 - ''
 
+
 # General
+not-enough-perms: '&cТы не имеешь достаточную власть.'
+
+# Experience boosters
 booster-main:
 - '&e'
 - '&6{multiplier}x&e Множитель EXP теперь активен!'
@@ -24,6 +28,34 @@ booster-skill:
 - '&eA &6{multiplier}x&e &6{profession} &eМножитель EXP теперь активен!'
 - '&e'
 booster-expired: '&cИстекший!'
+
+# PvP Mode
+pvp-mode:
+  cooldown: '&cPlease wait {remaining} seconds to use this command again.'
+
+  # When you cannot hit another player
+  cannot-hit:
+    high-level-difference: '&cLevel difference is too high to fight this player.'
+    low-level-target: '&cYou cannot fight this player as their level is too low.'
+    low-level-self: '&cYour level is too low to fight other players.'
+    pvp-mode-disabled-target: '&cThis player has not toggled on PvP.'
+    pvp-mode-disabled-self: '&cYou have not toggled on PvP.'
+    invulnerable-self: '&cYou are still out of combat for {left} seconds.'
+    invulnerable-target: '&cThis player is out of combat for {left} seconds.'
+
+  # When using /pvpmode
+  toggle:
+    on-safe: '&aYou will now be able to fight other players in dedicated areas.'
+    on-invulnerable: '&aYou will be able to fight other players in {time} seconds.'
+    off-safe: '&cYou can no longer fight other players.'
+
+  # Entering/leaving regions
+  leave:
+    pvp-allowed: '&cYou left a PVP zone but are still vulnerable for {remaining} seconds!'
+    pvp-denied: '&cYou left the PVP zone.'
+  enter:
+    pvp-mode-on: '&aYou entered a PVP zone and gained invulnerability for {time} seconds!'
+    pvp-mode-off: '&aYou entered a PVP zone. You may use /pvpmode to fight other players.'
 
 # Fishing Profession
 caught-fish: '&cТы поймал рыбу!'
@@ -51,18 +83,21 @@ casting:
     action-bar:
         ready: '&6[{index}] &a&l{skill}'
         on-cooldown: '&6[{index}] &c&l{skill} &6(&c{cooldown}&6)'
-        no-mana: '&6[{index}] &9&l{skill}'
+        no-mana: '&6[{index}] &9&l{skill}'    
+        no-stamina: '&6[{index}] &9&l{skill}'
     split: '&7 &7 - &7 '
     no-longer: '%&cКаст отменен.'
     no-mana: '&cНедостаточно маны!'
     no-stamina: '&cНедостаточно выносливости!'
     on-cooldown: '&cНавык перезаряжается.'
 
+
 # Combat Log
 now-in-combat: '%&cБой начался!'
 leave-combat: '%&aБой окончен.'
 
 # Waypoints
+new-waypoint-book: '%&eYou unlocked the &6{waypoint} &ewaypoint!'
 new-waypoint: '%&eВы разблокировали точку &6{waypoint}!'
 not-enough-stellium: '&cНехватает &6{more} &cстеллия.'
 waypoint-cooldown: '&cПодождите &6{cooldown}'
@@ -71,6 +106,7 @@ not-dynamic-waypoint: '&cВы можете телепортироваться т
 standing-on-waypoint: '&cВы уже находитесь на этой точке.'
 warping-canceled: '%&cПеремещение отменено.'
 warping-comencing: '%&cНе двигайтесь &6{left} &cсекунд.'
+cannot-teleport-to: '&cThe two waypoints are not linked.'
 
 # Cash
 deposit: '&eВы успешно сдали депозит &6{worth}з&e.'
@@ -113,6 +149,7 @@ party-joined-other: '&6{player}&e присоединился к группе!'
 transfer-party-ownership: '&eВы стали главой группы'
 kick-from-party: '&eВы выгнали &6{player}&e.'
 party-invite-cooldown: '&cПодождите {cooldown} секунд, прежде чем пригласить {player}.'
+high-level-difference: '&cYou cannot invite {player} as the level difference is too high ({diff}).'
 
 # Guilds
 guild-chat: '&a[{tag}] {player}: {message}'
@@ -123,7 +160,7 @@ guild-invite:
 - '{"text":"&6{player} &eприглашает тебя в гильдию!"}'
 - '[{"text":"        ","hoverEvent":{}},{"text":"&8[&a&lСогласиться!!&8]","clickEvent":{"action":"run_command","value":"/guild accept {uuid}"},"hoverEvent":{"action":"show_text","value":"&eНажмите, чтобы присоединиться!"}},{"text":"&r             ","hoverEvent":{}},{"text":"&8[&c&lОтказаться!&8]","clickEvent":{"action":"run_command","value":"/guild deny {uuid}"},"hoverEvent":{"action":"show_text","value":"&eНажмите, чтобы отказаться."}}]'
 - '{"text":""}'
-#guild-is-full: '&cГильдия переполнена.' -Unused right now
+#guild-is-full: '&cSorry, your guild is full.' -Unused right now
 guild-joined: '&eВы присоединились к гильдии &6{owner}&e.'
 guild-joined-other: '&6{player}&e присоединился к гильдии!'
 transfer-guild-ownership: '&eВы были переданы гильдии.'
@@ -144,9 +181,6 @@ cant-redo-quest: '&cНевозможно повторить задание.'
 quest-cooldown: '&cТебе нужно подождать {delay}.'
 start-quest: '&eВы успешно начали &6{quest}&e.'
 
-cant-choose-new-class:
-- '&cТребуется очко класса.'
-
 # Attributes
 no-attribute-points-spent: '&cВы не потратили ни одного очка атрибута.'
 not-attribute-reallocation-point: '&cТребуется очко перераспределения.'
@@ -154,6 +188,14 @@ not-attribute-point: '&cТребуется очко атрибута.'
 attribute-points-reallocated: '&eВы сбросили свои атрибуты. Получено  &6{points} &eочков атрибута.'
 attribute-max-points-hit: '&cВы больше не можете повышать уровень этого атрибута.'
 attribute-level-up: '&eУровень &6{attribute}&e повышен.' # {level}
+not-attribute-point-shift: '&cYou must have &4{shift_points} &cattribute points.'
+
+
+# Class selection
+cant-choose-new-class:
+  - '&cТребуется очко класса.'
+no-permission-for-class:
+  - "&cYou don't have the permission to choose this class."
 
 # Skills
 no-class-skill: '&cОтсутствуют классовые навыки.'
@@ -164,3 +206,22 @@ no-skill-bound: '&cПустой слот.'
 not-active-skill: '&cНавык неактивен.'
 skill-max-level-hit: '&cНавык достиг максимального уровня.'
 no-skill-placeholder: 'Навык не привязан'
+not-enough-skill-points-shift: '&cYou need {shift_points} skill points.'
+skill-level-not-met: '&cYou cannot use this skill yet.'
+not-compatible-skill: '&cThe selected skill is not compatible with this slot.'
+cant-manually-bind: "&cYou can't manually bind/unbind a skill to this slot."
+not-skill-reallocation-point: '&cYou do not have 1 skill reallocation point.'
+no-skill-points-spent: '&cYou have not spent any skill points.'
+skill-points-reallocated: '&eYou successfully reset your skill points. You now have &6{points} &eskill points.'
+max-points-reached: '&cYou reached the maximum points you can spend. You need to reallocate your points to rollback.'
+
+# Skill Trees
+no-skill-tree-points-spent: '&cYou have not spent any skill tree points.'
+locked-node: '&cThis skill is locked!'
+upgrade-skill-node: '&eYour skill node &6{skill-node} &eis now Level &6{level}&e!'
+skill-node-max-level-hit: '&cYou already hit the max level for that skill node.'
+missing-skill-node-permission: '&cYou do not have the permission to unlock this skill node.'
+not-enough-skill-tree-points: '&cYou need {point} skill tree point.'
+reallocated-points: '&eYou successfully reset the skill tree {skill-tree}. &eYou now have &6{points} &eskill tree points.'
+not-skill-tree-reallocation-point: '&cYou do not have 1 skill tree reallocation point.'
+no-skill-tree: '&cYour class doesn''t have any skill tree.'

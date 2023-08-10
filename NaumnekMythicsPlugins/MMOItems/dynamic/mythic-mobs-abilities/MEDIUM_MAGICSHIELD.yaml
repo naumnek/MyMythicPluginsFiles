@@ -1,8 +1,0 @@
-# The internal name of the MM skill.
-mythicmobs-skill-id: MEDIUM_MAGICSHIELD
-
-# Ability name displayed in lore.
-name: 'Морозный Щит'
-
-# Ability Modifiers (default values).
-cooldown: 60

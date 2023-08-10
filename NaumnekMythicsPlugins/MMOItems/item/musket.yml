@@ -1,65 +1,91 @@
-TESTVITALII2:
+MAKESHIFT_MUSKET:
   base:
     material: IRON_HORSE_ARMOR
-    name: '&aАдский Мушкет'
+    name: §fMakeshift Musket
     lore:
-    - '&8Мушкет заряженный силой тьмы'
-    tier: VERY_RARE
-    attack-damage: 100.0
-    mana-cost: 80.0
-    range: 45.0
-    ability:
-      ability1:
-        type: FIREBOLT
-        damage: 45.0
-        cooldown: 30.0
-        mana: 50.0
-        mode: LEFT_CLICK
-    attack-speed: 0.5
-    element:
-      darkness:
-        damage: 33.0
-        defense: 10.0
-    gem-sockets:
-    - Uncolored
-    - Uncolored
-    - Uncolored
-    amphibian: DRY
-    revision-id: 1
-SNIPE:
+      - §7A decent musket that doesn't require ammo.
+      - §eGreat for hunting mobs.
+    crafting:
+      shaped:
+        '1':
+          input:
+            - v AIR 0 1..|v AIR 0 1..|v AIR 0 1..
+            - v iron_ingot - 1.0..|v iron_ingot - 1.0..|v copper_block - 1.0..
+            - v iron_nugget - 1.0..|v AIR 0 1..|v copper_ingot - 1.0..
+    critical-strike-chance:
+      base: 15.0
+      scale: 0.05
+      spread: 0.15
+      max-spread: 0.3
+    critical-strike-power:
+      base: 40.0
+      scale: 0.05
+      spread: 0.15
+      max-spread: 0.3
+    required-level: 8.0
+    attack-speed: 1.4
+    range: 48.0
+    weapon-damage:
+      base: 20.0
+      scale: 0.1
+      spread: 0.1
+      max-spread: 0.2
+    tier: RARE
+    pve-damage: 100.0
+    attack-damage:
+      base: 12.0
+      scale: 0.1
+      spread: 0.1
+      max-spread: 0.2
+    knockback: 0.15
+    recoil: 0.1
+    two-handed: true
+    max-durability: 1350.0
+SNIPER_RIFLE:
   base:
-    material: IRON_HORSE_ARMOR
-    name: §2§l§k_ §aМорозный Мушкет §2§l§k_
-    disable-smelting: true
-    disable-smithing: true
-    disable-crafting: true
-    disable-enchanting: true
-    disable-repairing: true
-    range: 100.0
-    unbreakable: true
+    material: DIAMOND_HORSE_ARMOR
+    name: §b§lSniper Rifle
+    max-durability: 6000.0
+    lore:
+      - §bWhen you need a lot of precision.
+    disable-interaction: true
+    range: 160.0
+    attack-damage:
+      base: 30.0
+      scale: 0.15
+      spread: 0.1
+      max-spread: 0.2
+    critical-strike-chance:
+      base: 30.0
+      spread: 0.15
+      max-spread: 0.3
+    critical-strike-power:
+      base: 60.0
+      spread: 0.15
+      max-spread: 0.3
+    required-level: 35.0
+    weapon-damage:
+      base: 10.0
+      scale: 0.05
+      spread: 0.05
+      max-spread: 0.1
+    projectile-damage:
+      base: 10.0
+      scale: 0.05
+      spread: 0.1
+      max-spread: 0.2
+    tier: EPIC
+    gem-sockets:
+      - Cyan
+      - Cyan
     ability:
       ability1:
-        type: FREEZE
-        mode: ON_HIT
-        duration: 3.0
+        type: STUN
+        mode: ATTACK
         cooldown: 5.0
-        amplifier: 5.0
-        radius: 1.0
-      ability2:
-        type: ITEM_BOMB
-        mode: SHIFT_LEFT_CLICK
-        damage: 60.0
-        mana: 30.0
-        slow-duration: 15.0
-        slow-amplifier: 3.0
-        radius: 5.0
-        cooldown: 60.0
-    attack-damage: 10.0
-    cooldown-reduction: 0.0
-    attack-speed: 0.0
-    item-cooldown: 1.0
-    knockback: 1.5
-    tier: VERY_RARE
-    movement-speed: 0.0
-    custom-model-data: 1.0
-    revision-id: 1
+        duration: 2.0
+    attack-speed: 0.9
+    knockback: 0.25
+    recoil: 0.01
+    displayed-type: Firearm
+    movement-speed: -0.05

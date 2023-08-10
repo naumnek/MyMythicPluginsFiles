@@ -1,3 +1,4 @@
+
 # GUI display name
 name: '&0[&8{tag}&0] &8{name} &0- &8(&7{page}&8/&7{maxpages}&8)'
 
@@ -11,33 +12,33 @@ items:
         function: member
         empty:  
             item: GRAY_STAINED_GLASS_PANE
-            name: '&aНет Участников'
+            name: '&aNo Player'
         member:
             item: PLAYER_HEAD
             name: '&a{name}'
             #leader-name: '&a{name} &c[&aLeader&c]' - Unused right now
             lore:
-            - '&7Уровень {level} {class}'
-            - '&7В сети с: {since}'
+            - '&7Level {level} {class}'
+            - '&7Online Since: {since}'
     next:
         slots: [26]
         function: next
         item: PLAYER_HEAD
         texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTliZjMyOTJlMTI2YTEwNWI1NGViYTcxM2FhMWIxNTJkNTQxYTFkODkzODgyOWM1NjM2NGQxNzhlZDIyYmYifX19
-        name: '&aСледующая страница'
+        name: '&aNext Page'
         lore: []
     previous:
         slots: [18]
         function: previous
         item: PLAYER_HEAD
         texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ2OWUwNmU1ZGFkZmQ4NGU1ZjNkMWMyMTA2M2YyNTUzYjJmYTk0NWVlMWQ0ZDcxNTJmZGM1NDI1YmMxMmE5In19fQ==
-        name: '&aПредыдущая страница'
+        name: '&aPrevious Page'
         lore: []
     leave:
         slots: [49]
         function: leave
         item: REDSTONE
-        name: '&cПокинуть гильдию'
+        name: '&cLeave Guild'
         lore: []
     
     #Request and Disband are only available to the Guild Leader    
@@ -45,11 +46,11 @@ items:
         slots: [51]
         function: disband
         item: BARRIER
-        name: '&cРасформировать гильдию'
+        name: '&cDisband Guild'
         lore: []
     request:
         slots: [47]
         function: invite
         item: WRITABLE_BOOK
-        name: '&aПригласите игрока..'
+        name: '&aInvite a player..'
         lore: []

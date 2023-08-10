@@ -1,166 +1,94 @@
-GREEN_ESSENCE_MANA:
-  base:
-    material: SLIME_BALL
-    name: '&3Зеленая Эссенция Маны'
-    tier: UNCOMMON
-    disable-crafting: true
-    success-rate:
-      base: 25.0
-      spread: 0.03
-      max-spread: 0.28
-    max-mana:
-      base: 25.0
-      spread: 0.03
-      max-spread: 0.28
-    mana-regeneration:
-      base: 0.41
-      spread: 0.03
-      max-spread: 0.28
-    element:
-      earth:
-        defense: 5
-    revision-id: 1
-GEM_OF_STRENGTH:
+RUBY:
   base:
     material: EMERALD
-    name: '&fКамень Силы'
-    tier: COMMON
-    max-health: 5.0
-    success-rate:
-      base: 75.0
-      spread: 0.03
-      max-spread: 0.28
-    disable-crafting: true
+    name: '&fRuby of Strength'
+    critical-strike-power:
+      base: 11.0
+      spread: 0.028
+      max-spread: 0.083
     attack-damage:
-      base: 2.0
-      spread: 0.2
-      max-spread: 0.3
-    revision-id: 1
-GEM_OF_ICE:
-  base:
-    material: DIAMOND
-    name: '&3Камень Льда'
-    tier: UNCOMMON
+      base: 1.5
+      spread: 0.083
+      max-spread: 0.25
+    required-level: 5.0
     disable-crafting: true
-    success-rate:
-      base: 45.0
-      spread: 0.03
-      max-spread: 0.08
-    armor:
-      base: 2.0
-      spread: 0.02
-      max-spread: 0.08
-    element:
-      fire:
-        defense:
-          base: 6.0
-          spread: 0.02
-          max-spread: 0.08
-      ice:
-        damage:
-          base: 4.0
-          spread: 0.02
-          max-spread: 0.08
-    revision-id: 1
 GEM_OF_ACCURACY:
   base:
     material: DIAMOND
     disable-crafting: true
-    name: '&fКамень Точности'
-    tier: COMMON
+    name: '&fGem of Accuracy'
     success-rate:
-      base: 80.0
-      spread: 0.03
-      max-spread: 0.07
+      base: 94.5
+      spread: 0.015
+      max-spread: 0.045
     attack-speed:
-      base: 0.1
-      spread: 0.1
-      max-spread: 0.3
-    revision-id: 1
+      base: 0.075
+      spread: 0.08
+      max-spread: 0.25
+    tier: COMMON
+    critical-strike-chance:
+      base: 12.5
+      spread: 0.06
+      max-spread: 0.17
+    gem-color: Blue
+    displayed-type: Blue Gem Stone
 GEM_OF_LIFE:
   base:
     material: RED_DYE
-    name: '&fКамень Жизни'
-    lore:
-    - '&7Требуемый тип: &fБроня'
-    success-rate:
-      base: 75.0
-      spread: 0.03
-      max-spread: 0.28
-    tier: COMMON
+    max-health: 4.0
+    name: '&fGem of Life'
     item-type-restriction:
     - ARMOR
-    - MAGIC_ARMOR
-    block-power: 5.0
-    max-health:
-      base: 30.0
-      spread: 0.06
-      max-spread: 0.17
+    gem-color: Red
+    displayed-type: Red Armor Gem Stone
+    block-power: 3.0
     disable-crafting: true
-    revision-id: 1
 NATURE_GIFT:
   base:
     material: EMERALD
-    name: '&fДар Природы'
-    tier: COMMON
+    name: '&fNature''s Gift'
+    displayed-type: Green Gem Stone
     fire-damage-reduction:
       base: 25.0
       spread: 0.06
       max-spread: 0.17
     required-level: 6.0
-    revision-id: 1
-DESERT_DIAMOND:
+SPITEFUL_OPAQUE_DIAMOND:
   base:
     material: DIAMOND
-    name: '&9Бриллиант Пустыни'
-    tier: RARE
-    lore:
-    - '&7Требуемый тип: &fПосох'
-    item-type-restriction:
-    - STAFF
+    name: '&9Spiteful Opaque Diamond'
     success-rate:
-      base: 40.0
+      base: 11.0
       spread: 0.03
       max-spread: 0.08
-    max-mana:
-      base: 50.0
-      spread: 0.03
-      max-spread: 0.28
-    mana-regeneration:
-      base: 1.1
-      spread: 0.03
-      max-spread: 0.28
-    element:
-      wind:
-        damage:
-          base: 5.0
-          spread: 0.02
-          max-spread: 0.08
-    revision-id: 1
+    attack-damage:
+      base: 3.5
+      spread: 0.04
+      max-spread: 0.13
+    armor: 2.0
     disable-crafting: true
-    custom-model-data: 2.0
-    revision-id: 1
+    gem-color: Blue
+    displayed-type: Blue Gem Stone
 GOLDEN_RELIC:
   base:
     material: GOLD_NUGGET
-    name: '&fЗолотая Реликвия'
-    tier: COMMON
+    name: '&eGolden Relic'
     lore:
-    - '&8Продукт башни магов.'
+    - '&7Apply it onto &eany&7 socket.'
+    - '&7'
     critical-strike-chance:
       base: 15.0
       spread: 0.08
       max-spread: 0.25
     required-level: 20.0
     disable-crafting: true
-    revision-id: 1
 BLAZE_SOUL:
   base:
     material: ORANGE_DYE
     disable-crafting: true
-    name: '&fПылающая Душа'
-    tier: COMMON
+    name: '&cBlaze Soul'
     required-level: 15.0
+    displayed-type: Red Gem Stone
     hide-enchants: true
     enchants:
       unbreaking: 1
@@ -172,4 +100,87 @@ BLAZE_SOUL:
       base: 70.0
       spread: 0.042
       max-spread: 0.13
-    revision-id: 1
+NETHER_GEM:
+  base:
+    material: NETHERITE_SCRAP
+    name: §cNether Gem
+    lore:
+      - §c§oThe nether gem can be placed on
+      - §c§oitems containing nether sockets.
+    success-rate:
+      base: 60.0
+      scale: 0.12
+      spread: 0.25
+    gem-color: Nether
+    attack-damage:
+      base: 6.0
+      scale: 0.05
+      spread: 0.06
+      max-spread: 0.12
+    weapon-damage:
+      base: 14.0
+      scale: 0.1
+      spread: 0.09
+      max-spread: 0.15
+    critical-strike-chance:
+      base: 4.0
+      scale: 0.1
+      spread: 0.09
+      max-spread: 0.15
+    critical-strike-power:
+      base: 25.0
+      scale: 0.1
+      spread: 0.09
+      max-spread: 0.15
+    crafting:
+      shaped:
+        '1':
+          input:
+            - v AIR 0 1..|v netherite_ingot - 1.0..|v AIR 0 1..
+            - v netherite_ingot - 1.0..|v magma_cream - 1.0..|v netherite_ingot - 1.0..
+            - v AIR 0 1..|v netherite_ingot - 1.0..|v AIR 0 1..
+    tier: RARE
+RAINBOW_GEM:
+  base:
+    material: AMETHYST_SHARD
+    name: §c§lR§6§la§e§li§a§ln§2§lb§9§lo§3§lw §c§lG§6§le§e§lm
+    lore:
+      - §eThe rainbow gem allows you to
+      - §eboost a large amount of stats!
+      - §2It will also upgrade your item
+      - §2depending on its previous upgrades!
+      - §cVery hard to craft!
+    attack-damage: 2.0
+    attack-speed: 0.1
+    critical-strike-chance: 10.0
+    critical-strike-power: 15.0
+    block-power: 2.0
+    block-rating: 2.0
+    block-cooldown-reduction: 2.5
+    cooldown-reduction: 5.0
+    weapon-damage: 5.0
+    magic-damage: 2.5
+    tier: LEGENDARY
+    unstackable: true
+    gem-color: Rainbow
+    gem-upgrade-scaling: HISTORIC
+    max-health: 5.0
+    max-mana: 5.0
+    crafting:
+      megashaped:
+        '1':
+          input:
+            - v netherite_sword - 1.0..|v netherite_helmet - 1.0..|v netherite_chestplate
+              - 1.0..|v netherite_leggings - 1.0..|v netherite_boots - 1.0..|v golden_sword
+              - 1.0..
+            - v diamond_helmet - 1.0..|v wither_skeleton_skull - 1.0..|v gold_ingot
+              - 1.0..|v gold_ingot - 1.0..|v nether_star - 1.0..|v golden_helmet - 1.0..
+            - v diamond_chestplate - 1.0..|v iron_ingot - 1.0..|v diamond_block - 1.0..|v
+              diamond_block - 1.0..|v amethyst_shard - 1.0..|v golden_chestplate - 1.0..
+            - v diamond_leggings - 1.0..|v iron_ingot - 1.0..|v diamond_block - 1.0..|v
+              diamond_block - 1.0..|v amethyst_shard - 1.0..|v golden_leggings - 1.0..
+            - v diamond_boots - 1.0..|v netherite_block - 1.0..|v copper_ingot - 1.0..|v
+              copper_ingot - 1.0..|v heart_of_the_sea - 1.0..|v golden_boots - 1.0..
+            - v iron_sword - 1.0..|v iron_helmet - 1.0..|v iron_chestplate - 1.0..|v
+              iron_leggings - 1.0..|v iron_boots - 1.0..|v diamond_sword - 1.0..
+    success-rate: 90.0

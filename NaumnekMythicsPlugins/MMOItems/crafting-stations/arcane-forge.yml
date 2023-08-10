@@ -1,6 +1,7 @@
+
 # Name which will be displayed
 # when opening the station
-name: 'Чародейская Кузница (#page#/#max#)'
+name: 'Arcane Forge (#page#/#max#)'
 
 # The maximum amount of items in the crafting queue ie. the
 # max number of items players are able to craft simultaneously.
@@ -24,10 +25,10 @@ items:
         material: AIR
     no-recipe:
         material: GRAY_STAINED_GLASS_PANE
-        name: '&aНет Рецепта'
+        name: '&aNo Recipe'
     no-queue-item:
         material: GRAY_STAINED_GLASS_PANE
-        name: '&aНет предмета в очереди'
+        name: '&aNo Item in Queue'
 
 # Station recipes
 recipes:
@@ -40,7 +41,7 @@ recipes:
         conditions:
         - 'level{level=5}'
         ingredients:
-        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=3,display="Магический Фрагмент"}
+        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=3,display="Magic Fragment"}
     arcane-helmet:
         output:
             type: ARMOR
@@ -50,7 +51,7 @@ recipes:
         conditions:
         - 'level{level=4}'
         ingredients:
-        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=6,display="Магический Фрагмент"}
+        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=6,display="Magic Fragment"}
     steel-chestplate:
         output:
             type: ARMOR
@@ -60,7 +61,7 @@ recipes:
         conditions:
         - 'level{level=4}'
         ingredients:
-        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=9,display="Магический Фрагмент"}
+        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=9,display="Magic Fragment"}
     steel-leggings:
         output:
             type: ARMOR
@@ -70,7 +71,7 @@ recipes:
         conditions:
         - 'level{level=4}'
         ingredients:
-        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=8,display="Магический Фрагмент"}
+        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=8,display="Magic Fragment"}
     steel-boots:
         output:
             type: ARMOR
@@ -80,4 +81,4 @@ recipes:
         conditions:
         - 'level{level=4}'
         ingredients:
-        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=5,display="Магический Фрагмент"}
+        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=5,display="Magic Fragment"}

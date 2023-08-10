@@ -1,15 +1,15 @@
 sharp:
     chance: 0.3
-    prefix: '&7Повышаающий Урон'
+    prefix: '&fSharp'
     stats:
         attack-damage: 3
         lore:
-        - '&7Повышает Урон'
+        - '&7Much sharper!'
 
 fiery:
     chance: 0.1
     prefix:
-        format: '&fОгненный'
+        format: '&cFiery'
         priority: 1
     stats:
         ability:
@@ -19,7 +19,7 @@ fiery:
 
 # Lucky modifier which grants more crit chance
 lucky:
-    prefix: '&3Счасливый'
+    prefix: '&fLucky'
     stats:
         critical-strike-chance:
             base: 9
@@ -28,7 +28,7 @@ lucky:
 
 # Gives more man mana
 arcane:
-    suffix: '&7Повышает Объём Маны'
+    suffix: '&fof the Arcane'
     stats:
         max-mana:
             base: 6
@@ -37,7 +37,7 @@ arcane:
             max-spread: .3
 
 ancient:
-    prefix: '&7Повышает Магическую Силу'
+    prefix: '&fAncient'
     stats:
         magic-damage:
             base: 7
@@ -46,7 +46,7 @@ ancient:
             max-spread: .9
 
 accuracy:
-    suffix: '&7Повышает Точность'
+    suffix: 'of Accuracy'
     stats:
         critical-strike-chance:
             base: 9
@@ -58,14 +58,14 @@ accuracy:
             max-spread: .3
 
 swiftness:
-    suffix: '&7Повышает Стремительность'
+    suffix: 'of Swiftness'
     stats:
         perm-effects:
             speed: 1
 
 # Modifier that makes weapons two-handed but more damage and crit power
 heavy:
-    prefix: '&fТяжелый'
+    prefix: '&fHeavy'
     stats:
         two-handed: true
         attack-damage:
@@ -77,17 +77,18 @@ heavy:
 
 # Elemental modifiers
 blazing:
-    prefix: '&fПылающий'
+    prefix: '&fBlazing'
     stats:
         element:
             fire:
-                base: 20
-                spread: .2
-                max-spread: .5
+                damage:
+                    base: 20
+                    spread: .2
+                    max-spread: .5
 
 # Love u terraria!
 impending-doom:
-    suffix: '&fНесущий Погибель'
+    suffix: '&fof Impending Doom'
     stats:
         magic-damage:
             base: 7

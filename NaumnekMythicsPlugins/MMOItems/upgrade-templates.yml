@@ -1,23 +1,18 @@
+
 # Template ID, only used as reference. This is the
 # text you need to enter in the edition GUI in order
 # to setup item upgrading for a specific item.
-armor-magic-rare1:
-    armor: 2%
-    max-mana: 5
-
-sword-weapon-rare1:
-    attack-damage: 6%
-    attack-speed: 2%
-    max-health: 5
-
-weapon-common:
-    attack-damage: 4%
-    
 weapon-default:
 
     # Every time the item is upgraded, its attack damage
     # is increased by 3% (relative to the current value)
-    attack-damage: 1%
+    attack-damage: 3%
+    
+    # Every time it is upgraded, it gets +2% aboslute 
+    # critical strike chance (independant of current val.)
+    critical-strike-chance: 2
+    
+    pve-damage: 1%
 
 armor-template-example:
     armor: 3%

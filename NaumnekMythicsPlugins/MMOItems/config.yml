@@ -24,21 +24,22 @@ iterate-whole-inventory: false
 # When this is set to true, skins can only be applied to an item ONCE. 
 locked-skins: true
 
-# Enable/Disable abilities in the players offhand, stops
-# players using abilities when interacting with chests, mining etc.
-# Very useful if your have a lot of items that your players use in their
-# off-hand like tomes!
-disable-abilities-in-offhand: false
-
-# enable/disable the automatic equip feature
-# By right clicking with a piece of armor, the plugin will
-# check if your currently equipped armor's "Equip Priority" stat
-# is lower/higher than the one you're currently right clicking with, if
-# the one in your hand is higher it will auto equip that and put the
-# old piece back into your hand. Used to hot swap armor.
+# Since 6.9.3 dev builds, MMOItems supports the use of multiple
+# RPG core plugins at the same time. However, MMOItems needs one
+# specific plugin to hook onto level, class, etc.
 #
-# Warning: Could be resource intensive if abused?
-auto-equip-feature: true
+# Available plugins:
+# - MMOCORE (level, class, mana, stamina)
+# - HEROES (level, class, mana, stamina)
+# - SKILLAPI or PROSKILLAPI (level, class, mana)
+# - RPGPLAYERLEVELING (level, mana, power)
+# - RACESANDCLASSES (level, class, mana)
+# - BATTLELEVELS (level)
+# - MCMMO (power level)
+# - MCRPG (power level)
+# - SKILLS or SKILLSPRO (class, level, mana)
+# - AURELIUM_SKILLS (power level, mana)
+preferred-rpg-provider: MMOCORE
 
 # By default, all player inventories will be updated every
 # 10 ticks which corresponds to 2 inventory updates a second.
@@ -52,6 +53,10 @@ inventory-update-delay: 10
 # interval [playerLevel - spread, playerLevel + spread]
 item-level-spread: 2
 
+# There is currently a client-side Minecraft issue
+# where left clicking a
+fix-left-click-interact: false
+
 # When an item is generated with no tier,
 # this is the capacity formula it will use.
 default-item-capacity:
@@ -60,18 +65,32 @@ default-item-capacity:
     spread: 0
     max-spread: 0
 
-# Changes the default value for some stats.
+# Changes the default value for some stats. This mainly
+# accounts for untargeted weapons like staffs, muskets...
 default:
     attack-speed: 0.67
     range: 16
     blunt-rating: 33
     recoil: 0.1
 
-# Enable/disable the item glow feature. Make sure you
-# reload your server when changing this option. This
-# option might take extra performance so consider toggling
-# it off if you have players or mobs dropping many items.
-item-glow: true
+# Restart server when changing this option
+dropped-items:
+
+    # Items glow based on their tier
+    tier-glow: true
+
+    # Display item name over the dropped item
+    hints: true
+
+# Some item stats like 'Commands' or NBTTags can be abused to become op.
+# You can bind a specific permissions to these stats to limit their edition.
+# You need a perm plugin that supports Vault for that option to work.
+# The corresponding permission is "mmoitems.edit.op".
+op-item-stats:
+    enabled: false
+    stats:
+        - COMMANDS
+        - CUSTOM_NBT
 
 item-upgrading:
 
@@ -110,29 +129,14 @@ soulbound:
     damage:
         base: 1
         per-lvl: 1
-        
+
     # Whether or not soulbound items should be
     # kept when a player dies.
     keep-on-death: true
-    
+
     # Whether or not soulbound item can be
     # dropped by the player
     can-drop: true
-    
-    auto-bind:
-    
-        # The default Soulbind level to apply
-        # when automatically soulbinding
-        level: 1
-        
-        # Here you can disable individual events for when
-        # Items should automatically soulbind to the player
-        # (Requires the 'Auto-Bind' stat to be true)
-        disable-on:
-            pickup: false
-            craft: false
-            click: false
-            join: true # 'true' recommended
 
 # Enable, disable, and customize the weapon effects here.
 # Weapon effects depend on the item type & type set.
@@ -166,7 +170,7 @@ gem-sockets:
     # Define the text you need to enter in the
     # item gem sockets if you want to create an
     # uncolored gem socket i.e a socket for any type of gem.
-    uncolored: 'Бесцветный'
+    uncolored: 'Uncolored'
 
 custom-blocks:
 
@@ -202,9 +206,6 @@ two-handed-item-restriction: true
 # the item ability cooldown progress bar.
 cooldown-progress-bar-char: █
 
-# When toggled off, players can't damage each other using item abilities.
-ability-player-damage: true
-
 # Displays a message on the action bar instead of on the chat.
 # Can be used to reduce chat spam.
 # Might interfere with other action bar plugins.
@@ -218,32 +219,10 @@ action-bar-display:
     mitigation: true
     item-break: false
 
-# Displays in-game damage indicators.
-# Requires HolographicDisplays/Holograms to work.
-# Requires /reload when enabled/disabled.
-game-indicators:
-    damage:
-        enabled: true
-        decimal-format: '0.#'
-        format: '&c-#'
-        #format: '&c&l✦ #'
-    heal:
-        enabled: true
-        decimal-format: '0.#'
-        format: '&a+#'
-        #format: '&a&l❤ #'
-
 recipes:
 
-    # Allows you to use stack amounts for recipe ingredients.
-    # This will enable a custom crafting system which
-    # can cause lots of trouble. If you don't need specific
-    # ingredient amounts then DO NOT enable this!
-    recipe-amounts: false
-    
-    # Enables the vanilla recipe book for MMOItem recipes!
-    # THIS IS NOT COMPATIBLE WITH RECIPE AMOUNTS!
-    use-recipe-book: false
+    # Enables the vanilla recipe book for MMOItems recipes
+    use-recipe-book: true
 
 # "repair" prevents players from repairing MMOItems.
 # "smelt" prevents players from smelting MMOItems.
@@ -261,7 +240,7 @@ disable-interactions:
 
 # Block types that can't be broken by an ability/item effect
 block-blacklist:
-    - BEDROCK
+    - OBSIDIAN
 
 # Allows/disables the permissions needed in order to use items/abilities.
 # General permission node for abilities: mmoitems.ability.ability-id
@@ -271,7 +250,24 @@ block-blacklist:
 #     etc.
 permissions:
     abilities: false
-    items: false
+    items: true
+
+#
+# When item stats has a numeric range of possibilities.
+# attack-damage:
+#    base: 10
+#    spread: 1
+#
+# Using the spread, a level, and a random number, we
+# obtain a random number (very related to the spread): 1.7
+#
+# If additive-spread-formula is true, this is added to the base:
+#    RESULT: 10 + 1.7  =  11.7 attack damage
+#
+# If additive-spread-formula is false, this is multiplied to the base:
+#    RESULT: 10 * 1.7  =  17 attack damage
+#
+additive-spread-formula: false
 
 # Disables non MMOItems from being crafted in the vanilla workbench.
 # Add [] if the list is empty.
@@ -282,43 +278,103 @@ disable-vanilla-recipes: []
 # Options for the Item Revision System
 item-revision:
 
-    # Whether the updated items should reroll stats
-    # according to the players current level or if
-    # they should keep the level and tier from when
-    # the item was first generated.
-    reroll-when-updated: false
+    # Unsocketing gems picks them up with the stats they had
+    # when first put into the item, disable this option to
+    # force them to be regenerated.
+    regenerate-gems-when-unsocketed: false
 
-    # This is the value to set the Item Level to when
-    # items are updated by the revision system.
-    # This can be set to -1 to use the items previous level.
-    # Please note, that this value has no effect if
-    # ´reroll-when-updated´ is set to true.
-    default-item-level: -1
-
-    # Whether or not the current tier of the item should
-    # be carried over.
-    # Please note, that this value has no effect if
-    # ´reroll-when-updated´ is set to true.
+    # Legacy option to carry tiers over, will take precedence
+    # If not specified next to the other keep- flags.
     keep-tiers: true
 
     # If an item is updated, and the new version does not
     # keep its gems, this will give the gems back to the
     # player so that they don't get lost forever.
     drop-extra-gems: true
-    
+
+    # When keeping lore data, only lore that starts with this
+    # will actually be kept.
+    kept-lore-prefix: '&7'
+
     # Whether or not specific stats should be kept
     # when an item is updated to latest revision.
     keep-data:
+
+        # Name of the item, usually renamed via anvil
         display-name: true
-        lore: false # Warning, this prevents stats in the lore from updating visually!
+
+        # Enchantments put on the item by the player
         enchantments: true
+
+        # Soulbound applied to the item
         soulbound: true
-        
-        # Modifications are Gemstones and Upgrades
-        # Please note that some stats will be unable to update
-        # to the latest changes if you enable these.
+
+        # Gems on the item
+        gems: true
+
+        # Upgrade level of the item
+        upgrades: true
+
+        # Specific lore lines of the item...
+        # Warning, this prevents stats in the lore from updating visually!
+        lore: false
+
+        # Data that may have been put there by external plugins.
+        exsh: true
+
+        # Stats handled by RNG will be rerolled
+        reroll: false
+
+        # Modifiers of items ~ Sharp, Light, Heavy, Arcane
         modifications: true
-        
+
+        # Skins applied by MMOItems
+        skins: true
+
+        # Tier of the item
+        tier: true
+
+        # Third party plugin compatibility
+        advanced-enchantments: true
+
+    # Whether specific stats should be kept when gemstones
+    # within an item are updated to the latest revision.
+    keep-gem-data:
+
+        # Name of the item, usually renamed via anvil
+        display-name: true
+
+        # Enchantments put on the item by the player
+        enchantments: true
+
+        # Specific lore lines of the item...
+        # Warning, this prevents stats in the lore from updating visually!
+        lore: false
+
+        # Stats handled by RNG will be rerolled
+        reroll: false
+
+    phat-loots:
+        display-name: false
+        enchantments: false
+        soulbound: false
+        gems: true
+        upgrades: false
+        lore: false
+        exsh: false
+        tier: true
+        skins: false
+        reroll: true
+        modifications: false
+        advanced-enchantments: false
+
+    # These will not update at all in PhatLoots, for
+    # compatibility with quest plugins that check for
+    # exact NBT
+    disable-phat-loot:
+        - MANGO
+        - STEEL_HELMET
+
     # Here you can disable individual events for when
     # Items should update when a higher revision ID is found
     disable-on:
@@ -337,5 +393,10 @@ lootsplosion:
     offset: .2
     height: .6
 
-# When I was a kid, I saw the Mona Lisa in my school art book...
-# The fist time I saw her, with her hands on her knee... how do I say this...
+# When Upgrading meets Gems, one must decide if
+# gems' stats will increase as well.
+gem-upgrade-default: 'NEVER'
+
+# This option allows you to disable the ability to
+# use MMOItems that have been removed from your config.
+disable-removed-items: true

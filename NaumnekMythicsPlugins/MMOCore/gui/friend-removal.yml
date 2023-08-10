@@ -1,5 +1,6 @@
+
 # GUI display name
-name: 'Удаление из друзей'
+name: Friend Removal
 
 # Number of slots in your inventory. Must be
 # between 9 and 54 and must be a multiple of 9.
@@ -10,11 +11,11 @@ items:
         slots: [12]
         item: RED_TERRACOTTA
         function: 'yes'
-        name: '&cУдалить&f {name}'
+        name: '&aRemove {name}'
         lore: {}
     back:
         slots: [14]
         item: GREEN_TERRACOTTA
         function: 'back'
-        name: '&aВернуть&f {name}'
+        name: '&aKeep {name}'
         lore: {}

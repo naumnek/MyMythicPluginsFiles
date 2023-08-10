@@ -1,5 +1,5 @@
 # GUI display name
-name: 'Друзья'
+name: Friends
 
 # Number of slots in your inventory. Must be
 # between 9 and 54 and must be a multiple of 9.
@@ -12,30 +12,30 @@ items:
         
         # No friend
         item: GRAY_STAINED_GLASS_PANE
-        name: '&cНет Друзей'
+        name: '&cNo Friend'
         lore: {}
         
         # Online friend
         online:
             item: PLAYER_HEAD
-            name: '&a[В сети] &f{name}'
+            name: '&a[Online] &f{name}'
             lore:
-            - '&7Уровень {level} {class}'
-            - '&7В сети с: {online_since}'
+            - '&7Level {level} {class}'
+            - '&7Online Since: {online_since}'
             - ''
-            - '&fПКМ&7 - удалить.'
+            - '&cRight click to remove.'
             
         # Offline friend
         offline:
             item: PLAYER_HEAD
-            name: '&c[Не в сети] &f{name}'
+            name: '&c[Offline] &f{name}'
             lore:
-            - '&7Был в сети: {last_seen} ago'
+            - '&7Last Seen: {last_seen} ago'
             - ''
-            - '&fПКМ&7 - удалить.'
+            - '&cRight click to remove.'
     request:
         slots: [49]
         function: request
         item: WRITABLE_BOOK
-        name: '&aНовый Запрос на Дружбу'
+        name: '&aNew Friend Request'
         lore: {}

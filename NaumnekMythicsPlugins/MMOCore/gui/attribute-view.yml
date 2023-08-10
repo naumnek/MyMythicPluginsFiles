@@ -1,5 +1,7 @@
+
 # GUI display name
-name: 'Просмотр Аттрибутов'
+name: Player Attributes
+
 
 # Number of slots in your inventory. Must be
 # between 9 and 54 and must be a multiple of 9.
@@ -10,59 +12,61 @@ items:
         slots: [26]
         function: reallocation
         item: CAULDRON
-        name: '&aПерераспределение Очков навыков'
+        name: '&aAttribute Points'
         lore:
-        - ''
-        - 'Вы потратили в общей сложности &6{total}&7 очков навыков.'
-        - '&fПКМ &7- перераспределение'
-        - ''
-        - '&7Стоимость перераспределение 1 очко.'
-        - '&8◆ Очки перераспределения атрибутов: &b{points}'
+            - ''
+            - 'You have spent a total of &6{total}&7 attribute points.'
+            - '&7Right click to reallocate them.'
+            - ''
+            - '&eCosts 1 attribute reallocation point.'
+            - '&e◆ Attribute Reallocation Points: &6{points}'
     str:
         slots: [11]
         function: attribute_strength
-        name: '&c&l{name} &7&l- &c&l{current}'
+        name: '&a{name}'
         item: GOLDEN_APPLE
         lore: # {buffs} returns amount of buffs
-        - ''
-        - '&8При повышения уровня:'
-        - '&7  +{buff_physical_damage}% Физический урон (&a+{total_physical_damage}%&7)'
-        - '&7  +{buff_max_health} Объём здоровье (&a+{total_max_health}&7)'
-        - '&7  +{buff_health_regeneration} Регенерация здоровья (&a+{total_health_regeneration}&7)'
-        - ''
-        - '&7◆ Текущие Очки Атрибутов:&b {attribute_points}'
-        - '&7Потраченные Очки Атрибутов: &b{spent}&7/&f{max}'
-        - '&8Нажмите, чтобы повысить уровень на 1 очко атрибута.'
+            - ''
+            - '&7Points Spent: &6{spent}&7/&6{max}'
+            - '&7Current {name}: &6&l{current}'
+            - ''
+            - '&8When Leveled Up:'
+            - '&7  +{buff_weapon_damage}% Weapon Damage (&a+{total_weapon_damage}%&7)'
+            - '&7  +{buff_max_health} Max Health (&a+{total_max_health}&7)'
+            - ''
+            - '&eClick to level up for 1 attribute point.'
+            - '&e◆ Current Attribute Points: {attribute_points}'
     dex:
         slots: [13]
         function: attribute_dexterity
-        name: '&a&l{name} &7&l- &a&l{current}'
+        name: '&a{name}'
         item: LEATHER_BOOTS
         hide-flags: true
         lore:
-        - ''
-        - '&8При повышения уровня:'
-        - '&7  +{buff_weapon_damage}% Урон ближнего оружия (&a+{total_weapon_damage}%&7)'
-        - '&7  +{buff_projectile_damage}% Урон дальнего оружия (&a+{total_projectile_damage}%&7)'
-        - '&7  +{buff_attack_speed} Скорость атаки (&a+{total_attack_speed}&7)'
-        - '&7  +{buff_knockback_resistance} Сопротивление отбрасыванию (&a+{total_knockback_resistance}&7)'
-        - ''
-        - '&7◆ Текущие Очки Атрибутов:&b {attribute_points}'
-        - '&7Потраченные Очки Атрибутов: &b{spent}&7/&f{max}'
-        - '&8Нажмите, чтобы повысить уровень на 1 очко атрибута.'
+            - ''
+            - '&7Points Spent: &6{spent}&7/&6{max}'
+            - '&7Current {name}: &6&l{current}'
+            - ''
+            - '&8When Leveled Up:'
+            - '&7  +{buff_physical_damage}% Physical Damage (&a+{total_physical_damage}%&7)'
+            - '&7  +{buff_projectile_damage}% Projectile Damage (&a+{total_projectile_damage}%&7)'
+            - '&7  +{buff_attack_speed} Attack Speed (&a+{total_attack_speed}&7)'
+            - ''
+            - '&eClick to level up for 1 attribute point.'
+            - '&e◆ Current Attribute Points: {attribute_points}'
     int:
         slots: [15]
         function: attribute_intelligence
-        name: '&9&l{name} &7&l- &9&l{current}'
+        name: '&a{name}'
         item: BOOK
         lore:
-        - ''
-        - '&8При повышении уровня'
-        - '&7  +{buff_magic_damage}% Магический урон (&a+{total_magic_damage}%&7)'
-        - '&7  +{buff_max_mana} Объём маны (&a+{total_max_mana}&7)'        
-        - '&7  +{buff_mana_regeneration} Восстановление маны (&a+{total_mana_regeneration}&7)' 
-        - '&7  +{buff_speed_malus_reduction}% Снижение длительности дебаффов (&a+{total_speed_malus_reduction}%&7)'         
-        - ''
-        - '&7◆ Текущие Очки Атрибутов:&b {attribute_points}'
-        - '&7Потраченные Очки Атрибутов: &b{spent}&7/&f{max}'
-        - '&8Нажмите, чтобы повысить уровень на 1 очко атрибута.'
+            - ''
+            - '&7Points Spent: &6{spent}&7/&6{max}'
+            - '&7Current {name}: &6&l{current}'
+            - ''
+            - '&8When Leveled Up:'
+            - '&7  +{buff_magic_damage}% Magic Damage (&a+{total_magic_damage}%&7)'
+            - '&7  +{buff_cooldown_reduction}% Cooldown Reduction (&a+{total_cooldown_reduction}%&7)'
+            - ''
+            - '&eClick to level up for 1 attribute point.'
+            - '&e◆ Current Attribute Points: {attribute_points}'

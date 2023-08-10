@@ -1,118 +1,18 @@
 # For more information, check out the plugin manual or join us on Discord:
 # http://www.mythicmobs.net
-#  SpiderScout
-#Spider
-RandomPoisonSpider:
-  MobType: PoisonSpider
-  Worlds: magic_world
-  PointType: LAND
-  Chance: 0.02
-  Priority: 3
-  Action: ADD
-  Conditions:
-  - region{r=lowlich_zone} false
-  - region{r=belgor} false
-  - region{r=belgor2} false
-RandomSpiderScout:
-  MobType: SpiderScout
-  Worlds: magic_world
-  PointType: LAND
-  Chance: 0.5
-  Priority: 2
-  Action: ADD
-  Conditions:
-  - region{r=lowlich_zone} false
-  - region{r=belgor} false
-  - region{r=belgor2} false
-#Zombie
-RandomZombieCommander:
-  MobType: ZombieCommander
-  Worlds: magic_world
-  PointType: LAND
-  Chance: 0.02
-  Priority: 3
-  Action: ADD
-  Conditions:
-  - region{r=belgor} false
-  - region{r=belgor2} false
-  - region{r=desert_hram} false
-RandomZombieSwordsman:
-  MobType: ZombieSwordsman
-  Worlds: magic_world
-  PointType: LAND
-  Chance: 0.7
-  Priority: 2
-  Action: ADD
-  Conditions:
-  - region{r=belgor} false
-  - region{r=belgor2} false
-  - region{r=desert_hram} false
-#Skeleton  
-RandomSkeletonArcher:
-  MobType: SkeletonArcher
-  Worlds: magic_world
-  PointType: LAND
-  Chance: 0.8
-  Priority: 2
-  Action: ADD
-  Conditions:
-  - region{r=belgor} false
-  - region{r=belgor2} false
-  - region{r=desert_hram} false
-RandomSkeletonSwordsman:
-  MobType: SkeletonSwordsman
-  Worlds: magic_world
-  PointType: LAND
-  Chance: 0.7
-  Priority: 2
-  Action: ADD
-  Conditions:
-  - region{r=belgor} false
-  - region{r=belgor2} false
-  - region{r=desert_hram} false
-RandomSkeletonKnight:
-  MobType: SkeletonKnight
-  Worlds: magic_world
-  PointType: LAND
-  Chance: 0.02
-  Priority: 3
-  Action: ADD
-  Conditions:
-  - region{r=belgor} false
-  - region{r=belgor2} false
-  - region{r=desert_hram} false
-RandomCreeper:
-  MobType: CREEPER
-  Worlds: magic_world
-  PointType: LAND
+#  
+
+RandomSkeletonKing:
+  MobType: SkeletonKing
+  Worlds: world
   Chance: 0.001
   Priority: 1
   Action: REPLACE
-RandomSkeleton:
-  MobType: SKELETON
-  Worlds: magic_world
-  PointType: LAND
-  Chance: 0.001
+  Conditions:
+  - outside true
+RandomSkeletalKnight:
+  MobType: SkeletalKnight
+  Worlds: world
+  Chance: 0.008
   Priority: 1
-  Action: REPLACE
-RandomZombie:
-  MobType: ZOMBIE
-  Worlds: magic_world
-  PointType: LAND
-  Chance: 1
-  Priority: 1
-  Action: REPLACE
-RandomSpider:
-  MobType: SPIDER
-  Worlds: magic_world
-  PointType: LAND
-  Chance: 0.001
-  Priority: 1
-  Action: REPLACE
-RandomEnderman:
-  MobType: ENDERMAN
-  Worlds: magic_world
-  PointType: LAND
-  Chance: 0.001
-  Priority: 1 
   Action: REPLACE

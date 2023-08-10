@@ -27,7 +27,7 @@ rules:
         matches: "[a-zA-Z -_!?]+"
         # Minimum and Maximum lengt of a tag
         min-length: 3
-        max-length: 24
+        max-length: 14
 
 
 
