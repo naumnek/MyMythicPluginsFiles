@@ -1,0 +1,175 @@
+GREEN_ESSENCE_MANA:
+  base:
+    material: SLIME_BALL
+    name: '&3Зеленая Эссенция Маны'
+    tier: UNCOMMON
+    disable-crafting: true
+    success-rate:
+      base: 25.0
+      spread: 0.03
+      max-spread: 0.28
+    max-mana:
+      base: 25.0
+      spread: 0.03
+      max-spread: 0.28
+    mana-regeneration:
+      base: 0.41
+      spread: 0.03
+      max-spread: 0.28
+    element:
+      earth:
+        defense: 5
+    revision-id: 1
+GEM_OF_STRENGTH:
+  base:
+    material: EMERALD
+    name: '&fКамень Силы'
+    tier: COMMON
+    max-health: 5.0
+    success-rate:
+      base: 75.0
+      spread: 0.03
+      max-spread: 0.28
+    disable-crafting: true
+    attack-damage:
+      base: 2.0
+      spread: 0.2
+      max-spread: 0.3
+    revision-id: 1
+GEM_OF_ICE:
+  base:
+    material: DIAMOND
+    name: '&3Камень Льда'
+    tier: UNCOMMON
+    disable-crafting: true
+    success-rate:
+      base: 45.0
+      spread: 0.03
+      max-spread: 0.08
+    armor:
+      base: 2.0
+      spread: 0.02
+      max-spread: 0.08
+    element:
+      fire:
+        defense:
+          base: 6.0
+          spread: 0.02
+          max-spread: 0.08
+      ice:
+        damage:
+          base: 4.0
+          spread: 0.02
+          max-spread: 0.08
+    revision-id: 1
+GEM_OF_ACCURACY:
+  base:
+    material: DIAMOND
+    disable-crafting: true
+    name: '&fКамень Точности'
+    tier: COMMON
+    success-rate:
+      base: 80.0
+      spread: 0.03
+      max-spread: 0.07
+    attack-speed:
+      base: 0.1
+      spread: 0.1
+      max-spread: 0.3
+    revision-id: 1
+GEM_OF_LIFE:
+  base:
+    material: RED_DYE
+    name: '&fКамень Жизни'
+    lore:
+    - '&7Требуемый тип: &fБроня'
+    success-rate:
+      base: 75.0
+      spread: 0.03
+      max-spread: 0.28
+    tier: COMMON
+    item-type-restriction:
+    - ARMOR
+    - MAGIC_ARMOR
+    block-power: 5.0
+    max-health:
+      base: 30.0
+      spread: 0.06
+      max-spread: 0.17
+    disable-crafting: true
+    revision-id: 1
+NATURE_GIFT:
+  base:
+    material: EMERALD
+    name: '&fДар Природы'
+    tier: COMMON
+    fire-damage-reduction:
+      base: 25.0
+      spread: 0.06
+      max-spread: 0.17
+    required-level: 6.0
+    revision-id: 1
+DESERT_DIAMOND:
+  base:
+    material: DIAMOND
+    name: '&9Бриллиант Пустыни'
+    tier: RARE
+    lore:
+    - '&7Требуемый тип: &fПосох'
+    item-type-restriction:
+    - STAFF
+    success-rate:
+      base: 40.0
+      spread: 0.03
+      max-spread: 0.08
+    max-mana:
+      base: 50.0
+      spread: 0.03
+      max-spread: 0.28
+    mana-regeneration:
+      base: 1.1
+      spread: 0.03
+      max-spread: 0.28
+    element:
+      wind:
+        damage:
+          base: 5.0
+          spread: 0.02
+          max-spread: 0.08
+    revision-id: 1
+    disable-crafting: true
+    custom-model-data: 2.0
+    revision-id: 1
+GOLDEN_RELIC:
+  base:
+    material: GOLD_NUGGET
+    name: '&fЗолотая Реликвия'
+    tier: COMMON
+    lore:
+    - '&8Продукт башни магов.'
+    critical-strike-chance:
+      base: 15.0
+      spread: 0.08
+      max-spread: 0.25
+    required-level: 20.0
+    disable-crafting: true
+    revision-id: 1
+BLAZE_SOUL:
+  base:
+    material: ORANGE_DYE
+    disable-crafting: true
+    name: '&fПылающая Душа'
+    tier: COMMON
+    required-level: 15.0
+    hide-enchants: true
+    enchants:
+      unbreaking: 1
+    fire-damage-reduction:
+      base: 55.0
+      spread: 0.03
+      max-spread: 0.08
+    success-rate:
+      base: 70.0
+      spread: 0.042
+      max-spread: 0.13
+    revision-id: 1

@@ -1,0 +1,6 @@
+TESTVITALII:
+  base:
+    material: NAME_TAG
+    note-weight: 23.0
+    lute-attack-sound: '3'
+    revision-id: 1

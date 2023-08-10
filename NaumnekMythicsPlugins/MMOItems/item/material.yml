@@ -1,0 +1,192 @@
+STEEL_INGOT:
+  base:
+    material: IRON_INGOT
+    name: '&fСтальной Слиток'
+    tier: COMMON
+    disable-repairing: true
+    disable-crafting: true
+    custom-model-data: 2.0
+    revision-id: 1
+HARDENED_STEEL_INGOT:
+  base:
+    material: IRON_INGOT
+    name: '&3Закаленный Стальной Слиток'
+    tier: UNCOMMON
+    disable-repairing: true
+    disable-crafting: true
+    custom-model-data: 2.0
+    revision-id: 1
+POISON_FLESH:
+  base:
+    material: ROTTEN_FLESH
+    name: '&fЯдовитая Кожа'
+    tier: COMMON
+    disable-repairing: true
+    disable-crafting: true
+    revision-id: 1
+SEND_FAVOR:
+  base:
+    material: GLOWSTONE_DUST
+    name: '&9Песок Покровительства'
+    lore:
+    - '&7&oДоказательство того, что песок может'
+    - '&7&oстать чем-то более целостным.'
+    tier: RARE
+    disable-repairing: true
+    disable-crafting: true
+    revision-id: 1
+WITHER_ESSENCE:
+  base:
+    material: GRAY_DYE
+    name: '&fЭссенция'
+    disable-crafting: true
+    revision-id: 1
+UNCOMMON_WEAPON_ESSENCE:
+  base:
+    material: CYAN_DYE
+    enchants:
+      unbreaking: 1
+    hide-enchants: true
+    name: '&3Эссенция'
+    disable-crafting: true
+    disable-smelting: true
+    revision-id: 1
+RARE_WEAPON_ESSENCE:
+  base:
+    material: BLUE_DYE
+    enchants:
+      unbreaking: 1
+    hide-enchants: true
+    name: '&9Эссенция'
+    disable-crafting: true
+    disable-smelting: true
+    revision-id: 1
+VERY_RARE_WEAPON_ESSENCE:
+  base:
+    material: GREEN_DYE
+    enchants:
+      unbreaking: 1
+    hide-enchants: true
+    name: '&aЗелёная Эссенция'
+    disable-crafting: true
+    disable-smelting: true
+    revision-id: 1
+LEGENDARY_WEAPON_ESSENCE:
+  base:
+    material: LIME_DYE
+    enchants:
+      unbreaking: 1
+    hide-enchants: true
+    name: '&2Изумрудная Эссенция'
+    disable-crafting: true
+    disable-smelting: true
+    revision-id: 1
+MYTHICAL_WEAPON_ESSENCE:
+  base:
+    material: BLAZE_POWDER
+    enchants:
+      unbreaking: 1
+    hide-enchants: true
+    name: '&dФиолетовая Эссенция'
+    disable-crafting: true
+    disable-smelting: true
+    revision-id: 1
+EPIC_WEAPON_ESSENCE:
+  base:
+    material: BLAZE_POWDER
+    enchants:
+      unbreaking: 1
+    name: '&eEpic Weapon Essence'
+    disable-crafting: true
+    disable-smelting: true
+    revision-id: 1
+MAGICAL_WEAPON_ESSENCE:
+  base:
+    material: BLAZE_POWDER
+    enchants:
+      unbreaking: 1
+    hide-enchants: true
+    lore:
+    - '&7Can be used to craft magical items.'
+    name: '&eMagical Weapon Essence'
+    disable-crafting: true
+    disable-smelting: true
+    revision-id: 1
+UNIQUE_WEAPON_ESSENCE:
+  base:
+    material: BLAZE_POWDER
+    enchants:
+      unbreaking: 1
+    hide-enchants: true
+    lore:
+    - '&7Can be used to craft unique items.'
+    name: '&eUnique Weapon Essence'
+    disable-crafting: true
+    disable-smelting: true
+    revision-id: 1
+WEAPON_POWDER:
+  base:
+    material: GUNPOWDER
+    tier: TRASH
+    name: '&7Сломанные части оружия'
+    revision-id: 1
+MAGIC_FRAGMENT:
+  base:
+    material: MAGENTA_DYE
+    disable-crafting: true
+    tier: RARE
+    name: '&8Magic Fragment'
+    revision-id: 1
+MAGIC_ESSENCE:
+  base:
+    material: BOOK
+    disable-crafting: true
+    tier: RARE
+    name: '&5Magic Essence'
+    revision-id: 1
+FIRE_ESSENCE:
+  base:
+    material: BLAZE_POWDER
+    disable-crafting: true
+    name: '&bFire Essence'
+    hide-enchants: true
+    enchants:
+      unbreaking: 1
+    revision-id: 1
+RARE_DIAMOND:
+  base:
+    material: DIAMOND
+    enchants:
+      unbreaking: 1
+    hide-enchants: true
+    disable-crafting: true
+    name: '&bRare Diamond'
+    revision-id: 1
+SILVER_COIN:
+  base:
+    material: IRON_NUGGET
+    name: '&fSilver Coin'
+    lore:
+    - '&7A very shiny silver coin.'
+    enchants:
+      unbreaking: 1
+    hide-enchants: true
+    disable-crafting: true
+    revision-id: 1
+SILVER_INGOT:
+  base:
+    material: IRON_INGOT
+    name: '&fSilver Ingot'
+    lore:
+    - '&7A very shiny silver ingot.'
+    enchants:
+      unbreaking: 1
+    hide-enchants: true
+    disable-crafting: true
+    crafting:
+      shaped:
+        '1':
+        - MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN
+        - MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN
+        - MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN
+    revision-id: 1

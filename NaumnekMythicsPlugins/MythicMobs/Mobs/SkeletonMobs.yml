@@ -1,0 +1,132 @@
+#
+SkeletonKnight:
+  Type: SKELETON
+  Display: '&3Скелет Рыцарь'
+  Health: 300
+  Faction: Undead
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - clear
+  - players
+  - specificfactionmonsters Summon
+  - hurtbytarget
+  Damage: 25
+  Skills:
+# --- SKILLS ---  
+  - skill{s=Low-Smash-Attack} @PlayersInRadius{r=10;limit=2;sort=NEAREST;ignore=creative,spectators} 0.6 ~onDamaged
+  - skill{s=Low-BoneEnchantment-Buff} @self <40%
+# --- SUMMONS ---
+  - skill{s=Low-SkeletalMinion-Summon} @self <60%
+# --- ACTIONS ---
+  - remove{} @Children ~onDeath  
+# --- PARTICLES ---
+  - effect:particles{particle=cloud;amount=12;hS=0.4;vS=1;speed=0.006;vd=32} @self ~onTimer:20
+  Equipment:
+  - mmoitems{type=ARMOR;id=IRON_KNIGHT_HELMET}:4
+  - mmoitems{type=ARMOR;id=IRON_KNIGHT_CHESTPLATE}:3
+  - mmoitems{type=ARMOR;id=IRON_KNIGHT_LEGGINGS}:2
+  - mmoitems{type=ARMOR;id=IRON_KNIGHT_BOOTS}:1
+  - mmoitems{type=SWORD;id=IRON_KNIGHT_SWORD}:0
+  Drops:  
+  - SkeletonKnightItemDrops  
+  LevelModifiers:
+  - health 15
+  - damage 1  
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    PreventSunburn: true  
+    MovementSpeed: 0.3
+    MaxCombatDistance: 128
+    FollowRange: 32
+# --- SUMMONS ---
+SkeletalMinion:
+  Type: SKELETON
+  Display: '&8Скелет Миньон '
+  Health: 30
+  Damage: 5
+  Modules:
+    ThreatTable: true
+  Faction: Undead
+  AITargetSelectors:
+  - clear
+  - players
+  - specificfactionmonsters Summon
+  - hurtbytarget
+  Equipment:
+  - mmoitems{type=SWORD;id=STEEL_SWORD}:0   
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    PreventSunburn: true  
+    FollowRange: 32
+    MovementSpeed: 0.25
+#
+# + COMMON +
+#
+SkeletonSwordsman:
+  Type: SKELETON
+  Display: '&fСкелет Мечник'
+  Health: 80
+  Damage: 20
+  Modules:
+    ThreatTable: true
+  Faction: Undead
+  AITargetSelectors:
+  - clear
+  - players
+  - specificfactionmonsters Summon
+  - hurtbytarget
+  Equipment:
+  - mmoitems{type=ARMOR;id=STEEL_CHAINMAIL_HELMET}:4
+  - mmoitems{type=ARMOR;id=STEEL_CHAINMAIL_CHESTPLATE}:3
+  - mmoitems{type=ARMOR;id=STEEL_CHAINMAIL_LEGGINGS}:2
+  - mmoitems{type=ARMOR;id=STEEL_CHAINMAIL_BOOTS}:1
+  - mmoitems{type=SWORD;id=STEEL_SWORD}:0
+  Drops:
+  - LowSwordsmanDrops
+  LevelModifiers:
+  - health 5
+  - damage 0.5
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    PreventSunburn: true  
+    MaxCombatDistance: 128
+    FollowRange: 30
+    MovementSpeed: 0.23  
+#    
+SkeletonArcher:
+  Type: SKELETON
+  Display: '&fСкелет Лучник'
+  Health: 60
+  Damage: 15
+  Modules:
+    ThreatTable: true
+  Faction: Undead
+  AITargetSelectors:
+  - clear
+  - players
+  - specificfactionmonsters Summon
+  - hurtbytarget
+  Skills:
+  - equip{item=mmoitems{type=ARMOR;id=SKELETON_ARCHER_HELMET} HEAD} ~onSpawn
+  Equipment:
+  - mmoitems{type=ARMOR;id=BLACK_ARCHER_HELMET}:4
+  - mmoitems{type=ARMOR;id=BLACK_ARCHER_CHESTPLATE}:3
+  - mmoitems{type=ARMOR;id=BLACK_ARCHER_LEGGINGS}:2
+  - mmoitems{type=ARMOR;id=BLACK_ARCHER_BOOTS}:1
+  - mmoitems{type=BOW;id=COMPOSITE_BOW}:0 
+  Drops:
+  - SkeletonArcherDrops
+  LevelModifiers:
+  - health 5
+  - damage 0.5  
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    PreventSunburn: true  
+    MaxCombatDistance: 128
+    FollowRange: 30
+    MovementSpeed: 0.25

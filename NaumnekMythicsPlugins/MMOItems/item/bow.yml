@@ -1,0 +1,170 @@
+FIRE_ARCHER_BOW:
+  base:
+    material: BOW
+    name: '&fЛук Огненного Лучника'
+    tier: COMMON
+    max-durability: 1000.0
+    critical-strike-chance:
+      base: 10
+      spread: 0.1
+      max-spread: 0.3
+    critical-strike-power:
+      base: 12.5
+      spread: 0.06
+    attack-damage:
+      base: 100
+      spread: 0.1
+      max-spread: 0.3
+    revision-id: 1
+COMPOSITE_BOW:
+  base:
+    material: BOW
+    name: Композитный Лук
+    tier: COMMON
+    max-durability: 600.0
+    critical-strike-chance:
+      base: 10
+      spread: 0.1
+      max-spread: 0.3
+    critical-strike-power:
+      base: 12.5
+      spread: 0.06
+    attack-damage:
+      base: 15
+      spread: 0.1
+      max-spread: 0.3
+    revision-id: 1
+ELEMENTAL_BOW:
+  base:
+    material: BOW
+    tier: RARE
+    name: '&9Элементальный Лук'
+    enchants:
+      infinity: 1
+    disable-enchanting: true      
+    hide-enchants: true
+    unbreakable: true
+    auto-soulbind: true
+    soulbound-break-chance: 0.0 
+    soulbound-level: 4    
+    mana-cost: 1
+    knockback-resistance: 1
+    attack-damage: 25
+    element:
+      water:
+        damage: 25
+      earth:
+        damage: 25
+      fire:
+        damage: 25
+      wind:
+        damage: 25
+      ice:
+        damage: 25
+      thunder:
+        damage: 25
+    revision-id: 1
+HELL_BOW:
+  base:
+    material: BOW
+    enchants:
+      unbreaking: 10
+      infinity: 1
+    hide-enchants: true
+    unbreakable: true
+    tier: RARE
+    attack-damage:
+      base: 11.5
+      spread: 0.038
+      max-spread: 0.12
+    critical-strike-chance:
+      base: 35.0
+      spread: 0.14
+      max-spread: 0.42
+    critical-strike-power:
+      base: 12.5
+      spread: 0.06
+      max-spread: 0.17
+    element:
+      fire:
+        damage: 14.0
+    ability:
+      right-click:
+        type: FIREBOLT
+        mode: SHIFT_LEFT_CLICK
+        cooldown: 20.0
+        damage: 4.0
+        ignite: 6.0
+    gem-sockets:
+    - Red
+    - Red
+    - Green
+    name: '&cHell Bow'
+    pve-damage:
+      base: 25.0
+      spread: 0.06
+      max-spread: 0.17
+    arrow-particles:
+      amount: 5
+      offset: 0.05
+      particle: FLAME
+      speed: 0.08
+    revision-id: 1
+MARKING_BOW:
+  base:
+    material: BOW
+    enchants:
+      unbreaking: 3
+    name: '&8Marking Bow'
+    attack-damage: 7.0
+    arrow-particles:
+      particle: SMOKE_NORMAL
+      amount: 3
+      speed: 0.05
+    ability:
+      ability1:
+        type: WEAKEN_TARGET
+        mode: ON_HIT
+        extra-damage: 60.0
+    dodge-rating: 10.0
+    damage-reduction: -5.0
+    required-level: 10.0
+    lore:
+    - '&7Shoot an entity to &cmark &7it. The'
+    - '&7next attack against this entity'
+    - '&7will deal &c60%&7 extra damage.'
+    revision-id: 1
+VITALII_BOW:
+  base:
+    material: BOW
+    attack-damage:
+      base: 53.0
+      scale: 63.0
+    arrow-potion-effects:
+      GLOWING:
+        duration: 10.0
+        amplifier: 1
+    tier: RARE
+    gem-sockets:
+    - red
+    - red
+    - red
+    - red
+    movement-speed: 0.03
+    attack-speed: 1.0
+    arrow-velocity: 1.4
+    name: ira groza
+    critical-strike-power: 150.0
+    critical-strike-chance: 15.0
+    ability:
+      ability1:
+        type: VAMPIRISM
+        mode: ON_HIT
+        cooldown: 0.0
+        drain: 10.0
+    revision-id: 1
+DRAGON_BOW:
+  base:
+    material: BOW
+    custom-model-data: 2.0
+    revision-id: 1

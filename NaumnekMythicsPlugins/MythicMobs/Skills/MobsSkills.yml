@@ -1,0 +1,256 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+#
+# === LIST ===
+#
+# +++ RARE +++
+#
+# --- LowLich---
+#
+# ++ UNCOMMON ++
+#
+# --- SkeletonKnight ---
+# --- IceGuard ---
+# --- IceSpirit ---
+#
+# + COMMON +
+#
+#
+# === SKELETONS ===
+#
+#
+# +++ RARE +++
+#
+# --- LowLich ---
+#
+#
+# ++ UNCOMMON ++
+#
+# --- SkeletonKnight ---
+#
+Low-Smash-Attack:
+  Cooldown: 15
+  Skills:
+  - teleport @target
+  - effect:sound{s=mob.endermen.portal;volume=1.0;pitch=0.5}
+  - delay 10
+  - damage{amount=20;ia=true} @PlayersInRadius{r=5}
+  - pull{velocity=10} @target
+#  
+Low-SkeletalMinion-Summon:
+  Cooldown: 10
+  Skills:
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=1;noise=5} @Self
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=3;noise=5} @Self
+  - delay 20
+  - runaigoalselector{goal=gotoparent} @Children
+Low-BoneEnchantment-Buff:
+  Cooldown: 10
+  Skills:
+  - potion{type=SPEED;duration=600;level=1;p=false} @Self
+  - potion{type=SPEED;duration=300;level=0;p=false} @Children  
+  - potion{type=DOLPHINS_GRACE;duration=1200;level=3;p=false} @Self
+  - potion{type=DOLPHINS_GRACE;duration=600;level=2;p=false} @Children
+#
+# + COMMON +
+#
+#
+# === ZOMBIES ===
+#
+#
+#
+# +++ RARE +++
+#
+#
+#
+# ++ UNCOMMON ++
+#
+Low-ZombieSwordsman-AttackSummon:
+  Cooldown: 1
+  Skills:
+  - summon{mob=ZombiePirate;amount=1;noise=5}
+Low-ZombieSwordsman-DamageSummon:
+  Cooldown: 1
+  Skills:
+  - summon{mob=ZombiePirate;amount=1;noise=5} 
+LowBlackMistAura:
+  Skills:
+  - damage{amount=1;ia=true} 
+  - effect:particles{particle=reddust;size=1;color=#133337;amount=64;hS=0.3;vS=1;speed=0.01;vd=32}
+LowBlackCommanderAura:
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;level=1;p=false} 
+  - effect:particles{particle=reddust;size=1;color=#133337;amount=64;hS=0.3;vS=1;speed=0.01;vd=32} 
+  - healpercent{m=0.1}
+#
+Low-Slash-Attack:
+  Cooldown: 15
+  Skills:
+  - damage{amount=15;ia=true} @PlayersInRadius{r=4}
+  - throw{velocity=12;velocityY=6} @PlayersInRadius{r=4}
+  - effect:explosion @self  
+  - effect:particlering{particle=smoke_large;radius=4;points=32;amount=2;hS=0.1;vS=0;speed=0.01;vd=32;p=false} @Self  
+Low-ZombieSwordsman-Summon:
+  Cooldown: 60
+  Skills:
+  - delay 20
+  - summon{mob=ZombieSwordsman;amount=2;noise=5} @Self
+  - delay 20
+  - summon{mob=ZombieSwordsman;amount=2;noise=5} @Self
+#  
+Low-FleshEnchantment-Buff:
+  Cooldown: 10
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=1200;level=1;p=false} @Self
+  - potion{type=INCREASE_DAMAGE;duration=600;level=0;p=false} @Children  
+#
+# + COMMON +
+#
+#
+# === SPIDERS ===
+#
+#
+#
+# +++ RARE +++
+#
+#
+#
+# ++ UNCOMMON ++
+#
+Low-Poison-Area:
+  Cooldown: 15
+  Skills:
+  - stun{d=100;f=false} @PlayersInRadius{r=4}
+  - potion{type=WEAKNESS;duration=600;level=1} @Target  
+  - throw{velocity=6;velocityY=4} @PlayersInRadius{r=4}
+  - effect:particlering{particle=falling_dust;radius=4;points=32;amount=8;hS=1;vS=1;speed=0.0001;vd=32;p=false} @Self
+#
+# + COMMON +
+#
+# === Harmless ===
+#
+# + COMMON +
+#
+Low-FunnyMist-Aura:
+  Skills:
+  - effect:particles{particle=reddust;size=1;color=#ccff99;amount=16;hS=0.3;vS=0.3;speed=0.01;vd=32}
+  - pull{velocity=12} @EntitiesInRadius{r=18;ignore=players;limit=2;sort=NEAREST} 0.02
+  - potion{type=WEAKNESS;duration=200;level=1;p=false} @PlayersInRadius{r=16;limit=2;sort=NEAREST} 0.01
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=1;p=false} @EntitiesInRadius{r=24;ignore=players;limit=1;sort=NEAREST} 0.01
+  - lightning @NearestPlayer{r=16} 0.01
+  - healpercent{m=0.2} @EntitiesInRadius{r=24;ignore=players;limit=1;sort=NEAREST} 0.01
+  - pull{velocity=10} @NearestPlayer{r=24} 0.02
+  - throw{velocity=12;velocityY=6} @PlayersInRadius{r=8;limit=2;sort=NEAREST} 0.02
+  - teleportin{d=0,0,0} @EntitiesInRadius{r=12;ignore=players;limit=1;sort=NEAREST} 0.02
+#
+# === SUBJECT ===
+#
+#
+#
+# +++ RARE +++
+#
+#
+#
+# ++ UNCOMMON ++
+#
+#
+# + COMMON +
+#
+#
+# === NPC ===
+#
+#
+DummyEffect:
+  Skills:  
+  - particlering{particle=reddust;size=3.0;color=#556666;radius=5;points=10;amount=200;hS=3;vS=0.2;speed=0.01;vd=64}
+Low-IronHeart-Aura:
+  Skills:
+  - heal{a=15}
+  - effect:particles{particle=villager_happy;size=1;amount=4;hS=0.3;vS=1;speed=0.01;vd=32}
+Dummy-Teleport-Detlas:
+  Conditions:
+  - onground{} false
+  Skills:
+  - teleport{} @CasterSpawnLocation
+  - potion{type=SLOW;duration=200;lvl=255} @self
+  Conditions:
+  - onground{} false
+  Skills:
+  - teleport{} @CasterSpawnLocation
+  - potion{type=SLOW;duration=200;lvl=255} @self
+Dummy-Heal:  
+  Cooldown: 15
+  Skills:
+  - delay 300
+  - heal{amount=10000} @self  
+#
+#
+# === TEST ===
+#
+#
+Test-Summon:
+  Conditions:
+  - children{a=0-1} true  
+  Skills:
+  - delay 20 
+  - consume{d=500;h=400;i=true} @Children
+  - delay 20
+  - summon{mob=TestMob2;amount=2;noise=5} @Self
+TestMedium-MagicShield:
+  Cooldown: 10
+  Skills:  
+  - command{c="give naumnek apple 1"}  
+  - healpercent{repeat=10;repeatInterval=20;m=0.01} @self
+  - skill{s=TestMedium-MagicShield-Activation;repeat=200;repeatInterval=1;}
+TestMedium-MagicShield-Activation:
+  Skills:  
+  - command{c="give naumnek stick 1"}  
+  - effect:particlesphere{particle=reddust;size=0.5;color=#b4f9e6;radius=1.4;y=0.6;hS=0.1;vS=0.01;amount=64;speed=100;vd=32} @self
+  - skill{s=TestMedium-MagicShield-Protect} ~onDamaged
+TestMedium-MagicShield-Protect:
+  Skills:
+  - command{c="give naumnek golden_apple 1"}  
+  - effect:particlesphere{particle=reddust;size=0.5;color=#6fd9cc;radius=1.4;y=0.6;hS=0.1;vS=0.01;amount=64;speed=100;vd=32} @self
+  - potion{type=SLOW;duration=100;level=1;p=true} @target
+  - damage{amount=40;ia=true} @target
+  - throw{velocity=10;velocityY=8} @target
+  - stun{d=40;f=false} @target
+TestShield1:
+  Skills:
+  - potion{type=SLOW;duration=100;level=1;p=true} @target
+TestIceBolt:
+  Skills:
+  - projectile{oT=IceBolt-Tick;oE=IceBolt-Hit;v=8;i=1;hR=1;vR=1} @target
+IceBolt-Tick:
+  Skills:
+  - command{c="give naumnek apple 1"}  
+  - effect:particles{p=snowballpoof;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+IceBolt-Hit:
+  Skills:
+  - command{c="give naumnek golden_apple 1"}  
+  - potion{type=SLOW;duration=100;level=1;p=true}
+  - damage{a=60}
+  - potion{type=SLOW;duration=100;lvl=2r
+  - effect:particlesphere{repeat=200;repeatInterval=1;particle=reddust;size=0.5;color=#b4f9e6;radius=1.4;y=0.6;hS=0.1;vS=0.01;amount=64;speed=100;vd=32} @self
+TestSkill1:
+  Cooldown: 10
+  Skills:
+  - delay 20
+  - summon{mob=TestMob2;amount=2;noise=5} @Self  
+#
+# === DEV ===
+#
+Low-AngrySludgePoison:
+  Cooldown: 10
+  Skills:
+  - potion{type=POISON;lvl=2;duration=100} @PlayersInRadius{r=15}
+  - effect:particles{p=happyVillager;amount=1000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5;vd=32}
+    @Self
+#  
+# === END ===
+#

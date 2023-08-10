@@ -1,0 +1,32 @@
+name: Дуговая Молния
+lore:
+- Ты заряжаешь свое оружие молнией.
+- Следующая атака выпускает молнию,
+- которая наносит &f{extra}%&7 доп. урона
+- и с &f{ratio}%&7 шансом перескакивает
+- с одного врага на другого
+- в радиусе &f{radius}&7 блоков.
+- ''
+- 'Тип: &8Срабатывание от применения'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: BONE_MEAL
+mana:
+  base: 25.0
+  per-level: 0.0
+extra:
+  base: 25.0
+  per-level: 2.5
+cooldown:
+  base: 30.0
+  per-level: -1.5
+  max: 20.0
+  min: 5.0
+radius:
+  base: 5.0
+  per-level: 0.5
+ratio:
+  base: 40.0
+  per-level: 5.0
+  max: 200.0
+  min: 50.0

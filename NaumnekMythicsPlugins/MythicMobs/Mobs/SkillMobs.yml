@@ -1,0 +1,24 @@
+ThunderboltStand:
+  Type: WOLF
+  Display: ''
+  Health: 300
+  Damage: 40
+  Skills:
+# --- SKILLS ---
+  - potion{type=INVISIBILITY;duration=600;level=0} @self ~onSpawn
+  - skill{s=Thunderball_Attack} ~onSpawn
+  - skill{s=Thunderball_Attack} ~onTimer:20
+# --- PASSIVE ---
+# --- PARTICLES ---
+#  
+  KillMessages:
+  - '&f<target.name> &7убит <caster.owner.name>'
+
+  Options:
+    KnockbackResistance: 10
+    Marker: true
+    Invincible: true
+    Interactable: true
+    Invisible: true
+    HasGravity: false  
+    HasBasePlate: false

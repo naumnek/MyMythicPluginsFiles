@@ -1,0 +1,28 @@
+GOLD_COIN:
+    item: GOLD_NUGGET
+    name: '&eМонета'
+    lore:
+    - '&7Ценность:&6 1g'
+
+NOTE:
+    item: PAPER
+    name: '&eБанкнота'
+    lore:
+    - '&7Ценность:&6 {worth}g'
+
+DEPOSIT_ITEM:
+    item: BOOK
+    name: '&7Депозит:&6 {worth}g'
+    lore: {}
+
+GOLD_POUCH:
+    item: LEATHER
+    name: '&eМешочек Золота'
+    lore:
+    - '&fПКМ&7 - открыть.'
+
+MOB_GOLD_POUCH:
+    item: LEATHER
+    name: '&eМешочек Золота'
+    lore:
+    - '&fПКМ&7 - открыть.'

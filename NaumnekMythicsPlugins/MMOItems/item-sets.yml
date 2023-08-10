@@ -1,0 +1,115 @@
+# Item sets let you create links betweens the different items you create.
+# By wearing multiple items from the same set, the player will benefit from
+# set bonuses which incites him to use items from the same type.
+# This is a very powerful system for RPG items.
+#
+# You can also use potion effects as set bonuses, e.g
+# - "potion-speed: 2" gives permanent Speed II
+# - "potion-increase_damage: 3" gives permanent Strength III
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
+#
+# You may also add abilities as full set bonuses. The ability ID
+# must start with 'ability-' but it is only used as reference.
+# You can configure the ability cast mode, type & modifiers as usual.
+
+
+ARCANE:
+    name: '&2Чародейский Сет'
+    bonuses:
+        '3':
+            magic-damage: 20
+        '4':
+            max-mana: 30
+            potion-speed: 1
+    lore-tag:
+    - '&8Бонус:'
+    - '&7[3] +20% Магический Урон'
+    - '&7[4] 30 Объём Маны'
+    - '&7[4] Постоянная Скорость Передвижения I'
+
+SAND_MAGE:
+    name: '&fКомплет Мага Песков'
+    bonuses:
+        '3':
+            magic-damage: 20
+        '4':
+            physical-damage-reduction: 30
+    lore-tag:
+    - '&8Бонус:'
+    - '&7[3] +20% Магический Урон'
+    - '&7[4] +30% Снижение Физического Урона'
+
+STEEL:
+    name: '&fСтальной Комплект'
+    bonuses:
+        '3':
+            damage-reduction: 10
+        '4':
+            damage-reduction: 15
+    lore-tag:
+    - '&8Бонус:'
+    - '&7[3] +10% Снижение Урона'
+    - '&7[4] +15% Снижение Урона'
+
+STEEL_CHAINMAIL:
+    name: '&fСтальной Кольчужный Комплект'
+    bonuses:
+        '3':
+            damage-reduction: 2
+        '4':
+            damage-reduction: 3
+    lore-tag:
+    - '&8Бонус:'
+    - '&7[3] +2% Снижение Урона'
+    - '&7[4] +3% Снижение Урона'
+
+SKELETON_KNIGHT:
+    name: '&3Комплект Скелета Рыцаря'
+    bonuses:
+        '3':
+            damage-reduction: 10
+        '4':
+            potion-increase-damage: 2
+    lore-tag:
+    - '&8Бонус:'
+    - '&7[3] +10% Снижение Урона'
+    - '&7[4] Постоянная Сила II'
+
+SKELETON_ARCHER:
+    name: '&fКомплект Скелета Лучника'
+    bonuses:
+        '3':
+            knockback-resistance: 10
+        '4':
+            potion-jump: 1
+    lore-tag:
+    - '&8Бонус:'
+    - '&7[3] +10% Сопротивление Отбрасыванию'
+    - '&7[4] Постоянная Высота Прыжка I'
+
+GINGERBREAD:
+    name: '&fКомплект Санты'
+    bonuses:
+        '3':
+            knockback-resistance: 20
+        '4':
+            potion-jump: 3
+    lore-tag:
+    - '&8Бонус:'
+    - '&7[3] +20% Сопротивление Отбрасыванию'
+    - '&7[4] Постоянная Высота Прыжка III'
+
+# Not used by default, but works.
+HATRED:
+    name: '&cНабор Огня'
+    bonuses:
+        '2':
+            damage-reduction: 6
+            ability-1:
+                type: LIFE_ENDER
+                cooldown: 30
+                mode: ON_HIT
+    lore-tag:
+    - '&8Бонус:'
+    - '&7[2] -6% Урон'
+    - '&7[2] При попадании вызывает разрушительный огненный метеор.'

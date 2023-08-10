@@ -1,0 +1,37 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+DummyHelmet:
+  Id: LEATHER_HELMET
+  Display: '&fШлем Манекена'
+  Options:
+    Color: 255,40,40
+    Unbreakable: true    
+MagicSkeletonHelmet:
+  Id: LEATHER_HELMET
+  Display: '&fМагический Шлем'
+  Options:
+    Color: 0,191,255
+MagicSkeletonChestplate:
+  Id: LEATHER_CHESTPLATE
+  Display: '&fМагический Нагрудник'
+  Options:
+    Color: 0,191,255
+MagicSkeletonLeggings:
+  Id: LEATHER_LEGGINGS
+  Display: '&fМагический Поножи'
+  Options:
+    Color: 0,191,255
+MagicSkeletonBoots:
+  Id: LEATHER_BOOTS
+  Display: '&fМагические Сапоги'
+  Options:
+    Color: 0,191,255
+BanditTunic:
+  Id: LEATHER_CHESTPLATE
+  Display: '&aBandit Tunic'
+  Lore:
+  - '&6A leather tunic taken from'
+  - '&6the corpse of a bandit.'
+  Options:
+    Color: 255,40,40

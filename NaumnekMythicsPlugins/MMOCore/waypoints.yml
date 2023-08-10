@@ -1,0 +1,60 @@
+# Waypoint ID, used as reference.
+# Make sure the waypoints have different IDs.
+detlas:
+
+    # Name of waypoint displayed in the waypoint GUI.
+    name: §aТорговый Город Дэтлас §8(Обычный Мир)
+    
+    # Location of waypoint: <world> <x y z> <yaw> <pitch>
+    # Yaw and pitch are where the player will be looking at when teleported.
+    location: 'world 86 115 122 -180 0'
+    
+    # Radius of waypoint around the specified location.
+    radius: 2
+    
+    # Stellium cost in order to use the waypoint.
+    # Stellium is like stamina however it's not used
+    # by skills and regens much slower than mana.
+    stellium: 1
+    
+    # When enabled, players can unlock the waypoint
+    # by sneaking on it, and can open the waypoint menu
+    # from the specified location (true by default).
+    sneak: true
+    
+    # Should be waypoint be unlocked by default?
+    default: true
+    
+    # Can be teleported to even when not standing
+    # on any waypoint (waypoint must be unlocked).
+    dynamic: true
+# Waypoint ID, used as reference.
+# Make sure the waypoints have different IDs.
+belgor:
+
+    # Name of waypoint displayed in the waypoint GUI.
+    name: §bГород Белгор §8(Магический Мир)
+    
+    # Location of waypoint: <world> <x y z> <yaw> <pitch>
+    # Yaw and pitch are where the player will be looking at when teleported.
+    location: 'magic_world -1 99 279 -180 0'
+    
+    # Radius of waypoint around the specified location.
+    radius: 2
+    
+    # Stellium cost in order to use the waypoint.
+    # Stellium is like stamina however it's not used
+    # by skills and regens much slower than mana.
+    stellium: 3
+    
+    # When enabled, players can unlock the waypoint
+    # by sneaking on it, and can open the waypoint menu
+    # from the specified location (true by default).
+    sneak: true
+    
+    # Should be waypoint be unlocked by default?
+    default: true
+    
+    # Can be teleported to even when not standing
+    # on any waypoint (waypoint must be unlocked).
+    dynamic: true

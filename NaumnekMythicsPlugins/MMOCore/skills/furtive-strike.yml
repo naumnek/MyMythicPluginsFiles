@@ -1,0 +1,27 @@
+name: Скрытый Удар
+lore:
+- Ты наносишь &c{damage} &7урона, который
+- увеличивается на &c{extra}%&7, если в
+- радиусе &f{radius} &7блоков нет врагов.
+- ''
+- 'Тип: &8Направленная на существо'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: COAL
+damage:
+  base: 20.0
+  per-level: 3.0
+mana:
+  base: 0.0
+  per-level: 0.0
+extra:
+  base: 10.0
+  per-level: 2.0
+cooldown:
+  base: 20.0
+  per-level: -0.5
+  max: 20.0
+  min: 5.0
+radius:
+  base: 8.0
+  per-level: -0.4

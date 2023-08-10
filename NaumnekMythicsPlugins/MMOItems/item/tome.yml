@@ -1,0 +1,103 @@
+AMPLIFICATION_TOME:
+  base:
+    material: ENCHANTED_BOOK
+    name: '&9Старая Книга Магии'
+    required-level: 9.0
+    tier: RARE
+    lore:
+    - '&7Старая, но всё еще хранит в себе силу.'
+    magic-damage:
+      base: 85.0
+      spread: 0.02
+      max-spread: 0.06
+    revision-id: 1
+WYVERN_FEATHER:
+  base:
+    material: FEATHER
+    disable-crafting: true
+    name: '&fWyvern Feather'
+    fall-damage-reduction: 65.0
+    revision-id: 1
+WYVERN_SOUL:
+  base:
+    material: ENDER_EYE
+    name: '&fWyvern Soul'
+    disable-interaction: true
+    disable-crafting: true
+    enchants:
+      unbreaking: 1
+    perm-effects:
+      LEVITATION: 2
+    hide-enchants: true
+    revision-id: 1
+TOME_OF_ACCURACY:
+  base:
+    material: ENCHANTED_BOOK
+    disable-repairing: true
+    name: '&eTome of Accuracy'
+    critical-strike-power:
+      base: 27.5
+      spread: 0.03
+      max-spread: 0.08
+    critical-strike-chance:
+      base: 7.5
+      spread: 0.08
+      max-spread: 0.25
+    lore:
+    - '&7Increases your critical power.'
+    revision-id: 1
+NAUGHTY_SPELL_BOOK:
+  base:
+    material: ENCHANTED_BOOK
+    disable-repairing: true
+    name: '&8Naughty Spell Book'
+    required-level: 20.0
+    ability:
+      right-click:
+        type: CURSED_BEAM
+        mode: RIGHT_CLICK
+        cooldown: 30.0
+        damage: 6.0
+    lore:
+    - '&7Right click to cast a &5cursed beam&7.'
+    - '&7This magic projectile deals &57'
+    - '&5damage &7to the first enemy it hits.'
+    revision-id: 1
+TESTVITALII3:
+  base:
+    material: BOOK
+    max-mana: 2000.0
+    mana-regeneration: 100.0
+    health-regeneration: 100.0
+    max-health: 2000.0
+    revision-id: 1
+TM1:
+  base:
+    material: BOOK
+    revision-id: 1
+DARK_ICE_GRIMOIRE:
+  base:
+    material: BOOK
+    name: '&9Гримуар Темного Льда'
+    lore:
+    - '&7&oКаждый уважающий себя колдун,'
+    - '&7&oдаже если он мертв,'
+    - '&7&oобязан иметь свою книгу заклинаний.'
+    tier: RARE
+    disable-crafting: true
+    hide-enchants: true
+    enchants:
+      unbreaking: 1
+    ability:
+      ability1:
+        type: MEDIUM_MAGICSHIELD
+        mode: SHIFT_RIGHT_CLICK
+      ability2:
+        type: MEDIUM_MAGICSHIELD_ACTIVATION
+        mode: WHEN_HIT
+      ability3:
+        type: LOW_ICEGUARD_SUMMON
+        mode: RIGHT_CLICK
+        cooldown: 60.0
+    custom-model-data: 2.0
+    revision-id: 1

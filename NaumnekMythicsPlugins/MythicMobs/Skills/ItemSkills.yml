@@ -1,0 +1,61 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+PAY_MESSAGE:
+  Skills:
+  - message{m="&a$1000 &6получено от игрока &a<caster.name>."} @PlayersInRadius{r=16}
+#
+LOWELEMENTAL_FIRE_SUMMON:
+  Skills:
+  - summon{mob=Summon_LowElemental_Fire;amount=1;noise=5} @Self
+  - delay 100
+  - remove{} @Children
+#
+LOW_ICEGUARD_SUMMON:
+  Skills:
+  - summon{mob=IceGuard_Summon;amount=4;noise=5} @Self
+LOW_ICEGUARD_AGRE:
+  Skills:
+  - threat{amount=10000} @Target
+#  
+LOW_LICH_ATTACK:
+  Skills:
+  - damage{a=60} @EntitiesInRadius{r=5;limit=5;sort=NEAREST}
+  - stun{d=20;f=false} @EntitiesInRadius{r=5;limit=5;sort=NEAREST}
+  - potion{type=SLOW;duration=100;lvl=1} @EntitiesInRadius{r=5;limit=5;sort=NEAREST}
+  - effect:particles{particle=reddust;size=1;color=#95eaed;amount=64;hS=0.3;vS=1;speed=0.01;vd=32} @EntitiesInRadius{r=5;limit=5;sort=NEAREST}
+  - effect:particleline{particle=reddust;size=0.5;color=#95eaed;amount=32;hS=0.2;vS=0.2;vd=32} @EntitiesInRadius{r=5;limit=5;sort=NEAREST}
+LOW_ICESPIRIT_ATTACK:
+  Skills:
+  - damage{a=40} @EntitiesInRadius{r=5;limit=3;sort=NEAREST}
+  - potion{type=SLOW;duration=100;lvl=0} @EntitiesInRadius{r=5;limit=3;sort=NEAREST}
+  - effect:particles{particle=reddust;size=1;color=#2167eb;amount=64;hS=0.3;vS=1;speed=0.01;vd=32} @EntitiesInRadius{r=5;limit=3;sort=NEAREST}
+  - effect:particleline{particle=reddust;size=0.5;color=#2167eb;amount=18;hS=0.1;vS=0.1;vd=32} @EntitiesInRadius{r=5;limit=3;sort=NEAREST}
+  
+MEDIUM_MAGICSHIELD:
+  Skills:  
+  - skill{repeat=400;repeatInterval=1;s=MEDIUM_MAGICSHIELD-Effect} @self
+  - addtag{t=MEDIUM_MAGICSHIELD} @self 
+  - delay 400
+  - removetag{t=MEDIUM_MAGICSHIELD} @self   
+  
+MEDIUM_MAGICSHIELD-Effect:
+  Conditions:
+  - hastag{t=MEDIUM_MAGICSHIELD} true
+  Skills:  
+  - effect:particlesphere{particle=reddust;size=0.5;color=#b4f9e6;radius=1.4;y=0.6;hS=0.1;vS=0.01;amount=64;speed=100;vd=32}
+  
+MEDIUM_MAGICSHIELD_ACTIVATION:
+  Conditions:
+  - hastag{t=MEDIUM_MAGICSHIELD} true
+  Skills:
+  - removetag{t=MEDIUM_MAGICSHIELD} @self   
+  - effect:particlesphere{particle=reddust;size=0.5;color=#6fd9cc;radius=1.4;y=0.6;hS=0.1;vS=0.01;amount=64;speed=100;vd=32} @EntitiesInRadius{r=8;limit=3;sort=NEAREST}
+  - damage{amount=200;ia=true} @EntitiesInRadius{r=8;limit=3;sort=NEAREST}
+  - throw{velocity=10;velocityY=8} @EntitiesInRadius{r=8;limit=3;sort=NEAREST}
+  - delay 40  
+  - stun{d=60;f=true} @EntitiesInRadius{r=8;limit=3;sort=NEAREST}
+  - potion{type=SLOW;duration=100;level=1;p=true} @EntitiesInRadius{r=8;limit=3;sort=NEAREST}
+  - delay 400
+  - healpercent{repeat=10;repeatInterval=20;m=0.01} @self
+  
+#

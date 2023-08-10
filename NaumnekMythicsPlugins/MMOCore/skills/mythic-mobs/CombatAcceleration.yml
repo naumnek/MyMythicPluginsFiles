@@ -1,0 +1,20 @@
+mythicmobs-skill-id: CombatAcceleration
+name: §a§lБоевое Ускорение
+lore:
+- 'После получение 4 ударов вы получаете'
+- 'Скорость 2 на &f{duration} &7секунд.'
+- 'Или 3 скорость с&f 10% &7шансом.'
+- ''
+- 'Тип: &8Пассивная'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: FEATHER
+duration:
+  base: 5
+  per-level: 1
+mana:
+  base: 0.0
+  per-level: 0.0
+cooldown:
+  base: 0.0
+  per-level: 0.0

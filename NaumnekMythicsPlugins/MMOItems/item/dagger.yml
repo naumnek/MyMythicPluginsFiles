@@ -1,0 +1,101 @@
+STEEL_DAGGER:
+  base:
+    material: STONE_SWORD
+    name: '&fСтальной Кинжал'
+    tier: COMMON
+    ability:
+      on-hit:
+        type: POISON
+        mode: ON_HIT
+        duration: 20
+        amplifier: 1
+    attack-damage:
+      base: 12
+      spread: 0.017
+      max-spread: 0.05
+    attack-speed:
+      base: 1.9
+      spread: 0.017
+      max-spread: 0.05
+    movement-speed: 0.02
+    critical-strike-chance:
+      base: 15.0
+      spread: 0.028
+      max-spread: 0.08
+    critical-strike-power:
+      base: 35.0
+      spread: 0.028
+      max-spread: 0.1     
+    revision-id: 4
+POISONOUS_SHIBRIA:
+  base:
+    material: IRON_SWORD
+    name: '&3Шибрия'
+    tier: UNCOMMON
+    ability:
+      on-hit:
+        type: Corrosion
+        mode: ON_HIT
+        radius: 3
+        duration: 10
+        amplifier: 5
+    attack-damage:
+      base: 18
+      spread: 0.017
+      max-spread: 0.05
+    attack-speed:
+      base: 1.9
+      spread: 0.017
+      max-spread: 0.05
+    critical-strike-chance:
+      base: 25.0
+      spread: 0.028
+      max-spread: 0.08
+    critical-strike-power:
+      base: 75.0
+      spread: 0.028
+      max-spread: 0.1     
+    gem-sockets:
+    - Uncolored
+    custom-model-data: 4.0
+    revision-id: 2    
+DRACULA_DAGGER:
+  base:
+    material: IRON_SWORD
+    tier: RARE
+    required-level: 15.0
+    attack-damage:
+      base: 7.5
+      spread: 0.02
+      max-spread: 0.06
+    name: '&fDracula''s Dagger'
+    attack-speed:
+      base: 1.65
+      spread: 0.01
+      max-spread: 0.03
+    critical-strike-chance: 15.0
+    fall-damage-reduction: 43.0
+    gem-sockets:
+    - Uncolored
+    - Red
+    ability:
+      on-hit:
+        type: VAMPIRISM
+        mode: ON_HIT
+        drain: 3.0
+        cooldown: 4.0
+    lore:
+    - '&7Every 4sec, hitting an'
+    - '&7enemy &cdrains&7 his health,'
+    - '&7healing you for &c1.5 heart&7.'
+    enchants:
+      unbreaking: 10
+    hide-enchants: true
+    custom-model-data: 4.0
+    revision-id: 1
+RITUALDAGER:
+  base:
+    material: STONE_SWORD
+    custom-model-data: 5.0
+    commands: {}
+    revision-id: 1

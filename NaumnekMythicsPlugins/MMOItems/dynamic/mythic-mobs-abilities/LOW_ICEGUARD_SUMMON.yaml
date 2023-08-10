@@ -1,0 +1,5 @@
+# The internal name of the MM skill.
+mythicmobs-skill-id: LOW_ICEGUARD_SUMMON
+
+# Ability name displayed in lore.
+name: 'Призыв Ледяных Стражей'

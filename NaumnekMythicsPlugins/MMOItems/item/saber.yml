@@ -1,0 +1,44 @@
+STEEL_SABER:
+  base:
+    material: IRON_SWORD
+    name: '&fСтальная Сабля'
+    tier: COMMON
+    disable-repairing: true
+    max-durability: 1200.0
+    required-level: 5.0
+    attack-damage:
+      base: 12.7
+      spread: 0.006
+      max-spread: 0.02
+    attack-speed:
+      base: 1.97
+      spread: 0.006
+      max-spread: 0.02
+    health-regeneration: 2.0
+    element:
+      earth:
+        damage: 8.0
+    revision-id: 1
+BLACK_SABER:
+  base:
+    material: IRON_SWORD
+    name: '&3Черная Сабля'
+    lore:
+    - '&8Черное железо этой сабли твердо,'
+    - '&8как и воля её владельца.'
+    tier: UNCOMMON
+    max-durability: 2400.0
+    required-level: 15.0
+    attack-damage:
+      base: 32.07
+      spread: 0.006
+      max-spread: 0.02
+    attack-speed:
+      base: 1.47
+      spread: 0.006
+      max-spread: 0.02
+    health-regeneration: 5.0
+    element:
+      earth:
+        damage: 18.0
+    revision-id: 1

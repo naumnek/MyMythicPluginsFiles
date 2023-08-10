@@ -1,0 +1,750 @@
+MYTHRIL_CHAINMAIL:
+  base:
+    material: CHAINMAIL_CHESTPLATE
+    name: '&3Мифриловая Кольчуга'
+    block-power:
+      base: 60.0
+      spread: 0.014
+      max-spread: 0.48
+    block-rating:
+      base: 12.5
+      spread: 0.06
+      max-spread: 0.17
+    armor: 5
+    element:
+      ice:
+        defense: 8.0
+      earth:
+        defense: 6.4
+    gem-sockets:
+    - Uncolored
+    - Uncolored
+    required-level: 4.0
+    tier: UNCOMMON
+    revision-id: 1
+STEEL_HELMET:
+  base:
+    material: IRON_HELMET
+    name: '&3Стальной Шлем'
+    set: STEEL
+    tier: UNCOMMON
+    max-durability: 1000.0
+    block-power:
+      base: 6.0
+      spread: 0.048
+      max-spread: 0.14
+    block-rating:
+      base: 6.5
+      spread: 0.0625
+      max-spread: 0.1875
+    required-level: 3.0
+    armor: 2.5
+    knockback-resistance:
+      base: 0.02
+      spread: 0.11
+      max-spread: 0.33
+    gem-sockets:
+    - Green
+    revision-id: 1
+STEEL_CHESTPLATE:
+  base:
+    material: IRON_CHESTPLATE
+    name: '&3Стальной Нагрудник'
+    set: STEEL
+    tier: UNCOMMON
+    max-durability: 1000.0
+    block-power:
+      base: 6.0
+      spread: 0.048
+      max-spread: 0.15
+    block-rating:
+      base: 6.5
+      spread: 0.0625
+      max-spread: 0.1875
+    armor: 6.5
+    knockback-resistance:
+      base: 0.02
+      spread: 0.11
+      max-spread: 0.33
+    gem-sockets:
+    - Blue
+    revision-id: 1
+STEEL_LEGGINGS:
+  base:
+    material: IRON_LEGGINGS
+    name: '&3Стальные Поножи'
+    set: STEEL
+    tier: UNCOMMON
+    max-durability: 1000.0
+    block-power:
+      base: 6.0
+      spread: 0.048
+      max-spread: 0.14
+    block-rating:
+      base: 6.5
+      spread: 0.0625
+      max-spread: 0.1875
+    armor: 5.5
+    knockback-resistance:
+      base: 0.02
+      spread: 0.11
+      max-spread: 0.33
+    gem-sockets:
+    - Blue
+    revision-id: 1
+STEEL_BOOTS:
+  base:
+    material: IRON_BOOTS
+    name: '&3Стальные ботинки '
+    set: STEEL
+    tier: UNCOMMON
+    max-durability: 1000.0
+    block-power:
+      base: 6.0
+      spread: 0.048
+      max-spread: 0.14
+    block-rating:
+      base: 6.5
+      spread: 0.0625
+      max-spread: 0.1875
+    armor: 2.5
+    knockback-resistance:
+      base: 0.02
+      spread: 0.11
+      max-spread: 0.33
+    gem-sockets:
+    - Green
+    revision-id: 1
+CURSED_WITHER_SKULL:
+  base:
+    material: WITHER_SKELETON_SKULL
+    name: '&9Проклятый Иссушенный Череп'
+    required-level: 30.0
+    tier: RARE
+    gem-sockets:
+    - Red
+    - Blue
+    armor: 3.0
+    armor-toughness: 2.0
+    perm-effects:
+      ABSORPTION: 1
+    lore:
+    - '&8Предоставляет постоянное &62'
+    - '&6Сердце &7поглощающий щит.'
+    durability: 1.0
+    element:
+      thunder:
+        defense: 67.4
+      fire:
+        defense: 53.4
+    crafting:
+      shaped:
+        '1':
+        - BONE BONE BONE
+        - BONE MATERIAL.UNIQUE_WEAPON_ESSENCE BONE
+        - BONE BONE BONE
+    revision-id: 1
+HUGE_MOTHRON_WINGS:
+  base:
+    material: ELYTRA
+    max-durability: 5.0
+    two-handed: false
+    name: '&9Огромные крылья Пчелы'
+    tier: RARE
+    movement-speed: 0.03
+    will-break: false
+    gem-sockets:
+    - Red
+    revision-id: 1
+ARCANE_HELM:
+  base:
+    material: LEATHER_HELMET
+    name: '&9Таинственный шлем'
+    tier: RARE
+    required-level: 4.0
+    max-mana: 10.0
+    dye-color: 100 100 255
+    armor: 2.0
+    magic-damage: 15.0
+    item-particles:
+      type: GALAXY
+      particle: SPELL_WITCH
+    set: ARCANE
+    revision-id: 1
+ARCANE_CHESTPLATE:
+  base:
+    material: LEATHER_CHESTPLATE
+    name: '&9Таинственная туника'
+    tier: RARE
+    required-level: 4.0
+    max-mana: 10.0
+    dye-color: 100 100 255
+    armor: 6.0
+    magic-damage: 15.0
+    ability:
+      on-hit:
+        type: WITHER
+        mode: WHEN_HIT
+        cooldown: 9.0
+        amplifier: 2.0
+    item-particles:
+      type: GALAXY
+      particle: SPELL_WITCH
+    lore:
+    - '&2Враги пытались напасть на вас'
+    - '&2Иссушает всех кто до него дотроница'
+    - '&2(коротковременный эффект)'
+    set: ARCANE
+    revision-id: 1
+ARCANE_LEGGINGS:
+  base:
+    material: LEATHER_LEGGINGS
+    name: '&9Таинственные поножи'
+    tier: RARE
+    required-level: 4.0
+    max-mana: 10.0
+    dye-color: 100 100 255
+    armor: 5.0
+    magic-damage: 15.0
+    item-particles:
+      type: GALAXY
+      particle: SPELL_WITCH
+    gem-sockets:
+    - Blue
+    - Green
+    set: ARCANE
+    revision-id: 1
+ARCANE_BOOTS:
+  base:
+    material: LEATHER_BOOTS
+    name: '&9Таинственные ботинки'
+    tier: RARE
+    required-level: 4.0
+    max-mana: 10.0
+    dye-color: 100 100 255
+    armor: 2.0
+    magic-damage: 15.0
+    item-particles:
+      type: GALAXY
+      particle: SPELL_WITCH
+    lore:
+    - '&2Значительно увеличивает ваше'
+    - '&2сопративление урона от падения.'
+    fall-damage-reduction:
+      base: 45.0
+      spread: 0.033
+      max-spread: 0.1
+    set: ARCANE
+    revision-id: 1
+GINGERBREAD_HELM:
+  base:
+    material: LEATHER_HELMET
+    dye-color: 255 150 100
+    name: '&3Пряничный шлем'
+    tier: UNCOMMON
+    required-level: 2.0
+    lore:
+    - '&eЗаработал во время X-Mas 2018!'
+    set: GINGERBREAD
+    parry-rating: 5.0
+    max-health: 20.0
+    armor: 2.0
+    item-particles:
+      type: OFFSET
+      particle: REDSTONE
+      color:
+        red: 255
+        green: 100
+        blue: 100
+    revision-id: 1
+GINGERBREAD_TUNIC:
+  base:
+    material: LEATHER_CHESTPLATE
+    dye-color: 255 130 130
+    name: '&3Пряничная туника'
+    tier: UNCOMMON
+    required-level: 2.0
+    lore:
+    - '&eЗаработал во время X-Mas 2018!'
+    set: GINGERBREAD
+    parry-rating: 5.0
+    max-health: 20.0
+    armor: 6.0
+    item-particles:
+      type: OFFSET
+      particle: REDSTONE
+      color:
+        red: 255
+        green: 100
+        blue: 100
+    revision-id: 1
+GINGERBREAD_LEGGINGS:
+  base:
+    material: LEATHER_LEGGINGS
+    dye-color: 255 140 120
+    name: '&3GПряничный понножи'
+    tier: UNCOMMON
+    required-level: 2.0
+    lore:
+    - '&eЗаработал во время X-Mas 2018!'
+    set: GINGERBREAD
+    parry-rating: 5.0
+    max-health: 20.0
+    armor: 5.0
+    item-particles:
+      type: OFFSET
+      particle: REDSTONE
+      color:
+        red: 255
+        green: 100
+        blue: 100
+    revision-id: 1
+GINGERBREAD_BOOTS:
+  base:
+    material: LEATHER_BOOTS
+    dye-color: 255 150 150
+    name: '&3Прянечные сапоги'
+    tier: UNCOMMON
+    required-level: 2.0
+    lore:
+    - '&eЗаработал во время X-Mas 2018!'
+    set: GINGERBREAD
+    parry-rating: 5.0
+    max-health: 20.0
+    armor: 2.0
+    item-particles:
+      type: OFFSET
+      particle: REDSTONE
+      color:
+        red: 255
+        green: 100
+        blue: 100
+    revision-id: 1
+DEAD_PHARAOH_HELMET:
+  base:
+    material: PLAYER_HEAD
+    skull-texture:
+      value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU1NWRmOTc5YWI3OTc0OWY4YjU1MWI0MjM5YTQ2OWFhNzY5ZDliNDYwNTBhYWJkOWY2ZDFjZWU1M2VkMzYifX19
+      uuid: 852deb36-af4a-412f-ac76-2b06dc123ed2
+    name: '&9Шлем мертвого фараона'
+    tier: RARE
+    disable-interaction: true
+    item-particles:
+      type: FIREFLIES
+      particle: SMOKE_NORMAL
+    fire-damage-reduction: 30.0
+    armor: 4.0
+    undead-damage: 30.0
+    lore:
+    - '&8Этот мощный забытый шлем'
+    - '&8значительно увеличит вашу силу'
+    - '&8против нежити.'
+    required-level: 9.0
+    revision-id: 1
+MOSSY_SKELETON_SKULL:
+  base:
+    material: PLAYER_HEAD
+    skull-texture:
+      value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWE2MzE0ZWFjMzQ0MTZjZTEwYWIyMmMyZTFjNGRjYjQ3MmEzZmViOThkNGUwNGQzZmJiYjg1YTlhNDcxYjE4In19fQ
+      uuid: f455a085-3f09-43ac-8be1-175204d1a6ad
+    name: '&3Мшистый Скелет Череп'
+    tier: UNCOMMON
+    required-level: 6.0
+    armor: 3.5
+    knockback-resistance: 0.1
+    movement-speed: -0.01
+    disable-interaction: true
+    revision-id: 1
+SKELETON_CROWN:
+  base:
+    material: PLAYER_HEAD
+    skull-texture:
+      value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGM3OGQyMTAyZGI3NWYxYjM3NDRhNWU3ZTliYWNjZjg4ZmRhNGNjNDk3OWViYzBhODFiN2Q5ZWI1NzIxYzAifX19
+      uuid: ccb901e7-0919-463d-9bdd-ee9acae8e0e2
+    name: '&9Корона Скелета'
+    tier: RARE
+    required-level: 9.0
+    armor: 3.0
+    movement-speed: 0.01
+    ability:
+      ability1:
+        type: LIFE_ENDER
+        mode: WHEN_HIT
+        damage: 50.0
+        cooldown: 20.0
+    gem-sockets:
+    - Uncolored
+    - Uncolored
+    lore:
+    - '&8Каждые 9 секунд вызывает'
+    - '&cсмертоносный метеорит&7 который атакует врага,'
+    - '&8нанося &c4&7 урона и коротковременно'
+    - '&8сбивая его с ног.'
+    disable-interaction: true
+    revision-id: 1
+WYVERN_CAP:
+  base:
+    material: GOLDEN_HELMET
+    name: '&9Шапка Виверны'
+    tier: RARE
+    required-level: 10.0
+    hide-enchants: false
+    enchants:
+      unbreaking: 9
+    armor: 2.5
+    fall-damage-reduction: 70.0
+    perm-effects:
+      REGENERATION: 1
+    lore:
+    - '&8Даёт постоянно прыгучесть 2'
+    disable-crafting: true
+    revision-id: 1
+TRAVEL_BOOTS:
+  base:
+    material: LEATHER_BOOTS
+    name: '&3Дорожные ботинки'
+    tier: UNCOMMON
+    movement-speed: 0.005
+    dye-color: 187 118 126
+    will-break: true
+    max-durability: 100.0
+    armor: 2.0
+    fall-damage-reduction: 5.0
+    revision-id: 1
+SHADOWVEIL:
+  base:
+    material: LEATHER_HELMET
+    dye-color: 0 0 0
+    name: '&2Темная Вуаль'
+    tier: LEGENDARY
+    gem-sockets:
+    - Uncolored
+    - Uncolored
+    - Uncolored
+    max-durability: 2500.0
+    enchants:
+      protection: 4
+      unbreaking: 3
+    hide-enchants: false
+    disable-enchanting: true
+    disable-repairing: true
+    ability:
+      ability1:
+        type: SHADOW_VEIL
+        mode: SHIFT_LEFT_CLICK
+        duration: 5.0
+        cooldown: 20.0
+    lore:
+    - '&8Полученные из глубин коренных пород'
+    max-health: 35.0
+    max-mana: 45.0
+    armor: 10.0
+    armor-toughness: 3.0
+    revision-id: 1
+SHADOWROBE:
+  base:
+    material: LEATHER_CHESTPLATE
+    name: '&2Теневая Роба'
+    lore:
+    - '&9Полученные из глубин коренных пород'
+    tier: LEGENDARY
+    gem-sockets:
+    - Uncolored
+    - Uncolored
+    - Uncolored
+    max-durability: 3000.0
+    disable-repairing: true
+    disable-enchanting: true
+    enchants:
+      unbreaking: 3
+      protection: 4
+    magic-damage-reduction: 30.0
+    armor-toughness: 5.0
+    armor: 20.0
+    dye-color: 0 0 0
+    max-health: 50.0
+    max-mana: 60.0
+    ability:
+      ability1:
+        type: CORRUPT
+        mode: WHEN_HIT
+        duration: 4.0
+        damage: 12.0
+        cooldown: 15.0
+        amplifier: 1.0
+    revision-id: 1
+SHADOWLEGGINGS:
+  base:
+    material: LEATHER_LEGGINGS
+    lore:
+    - '&8Полученные из глубин коренных пород'
+    name: '&2Теневые поножи'
+    tier: LEGENDARY
+    max-durability: 2500.0
+    gem-sockets:
+    - Uncolored
+    - Uncolored
+    - Uncolored
+    enchants:
+      unbreaking: 3
+      protection: 4
+    disable-repairing: true
+    disable-enchanting: true
+    magic-damage-reduction: 20.0
+    armor-toughness: 4.0
+    armor: 15.0
+    max-health: 40.0
+    max-mana: 50.0
+    dye-color: 0 0 0
+    revision-id: 1
+SHADOWBOOTS:
+  base:
+    material: LEATHER_BOOTS
+    name: '&2Теневые ботинки'
+    lore:
+    - '&8Полученные из глубин коренных пород'
+    tier: LEGENDARY
+    gem-sockets:
+    - Uncolored
+    - Uncolored
+    - Uncolored
+    enchants:
+      unbreaking: 3
+      protection: 4
+    disable-repairing: true
+    disable-enchanting: true
+    max-durability: 1000.0
+    fall-damage-reduction: 25.0
+    armor-toughness: 3.0
+    armor: 10.0
+    max-health: 30.0
+    max-mana: 40.0
+    movement-speed: 0.02
+    dye-color: 0 0 0
+    revision-id: 1
+IRON_KNIGHT_HELMET:
+  base:
+    material: IRON_HELMET
+    name: §3Шлем Рыцаря
+    set: SKELETON_KNIGHT
+    tier: UNCOMMON
+    max-durability: 1200.0
+    required-level:
+      base: 5.0
+      spread: 0.2
+      max-spread: 1
+    armor: 5.0
+    damage-reduction:
+      base: 10.0
+      spread: 0.2
+      max-spread: 1
+    gem-sockets:
+    - Uncolored
+    custom-model-data: 2.0
+    revision-id: 1
+IRON_KNIGHT_CHESTPLATE:
+  base:
+    material: IRON_CHESTPLATE
+    name: §3Нагрудник Рыцаря
+    set: SKELETON_KNIGHT
+    tier: UNCOMMON
+    max-durability: 1600.0
+    required-level:
+      base: 5.0
+      spread: 0.2
+      max-spread: 1
+    armor: 7.0
+    max-health:
+      base: 15.0
+      spread: 0.2
+      max-spread: 1
+    magic-damage-reduction:
+      base: 5.0
+      spread: 0.2
+      max-spread: 1
+    gem-sockets:
+    - Uncolored
+    custom-model-data: 2.0
+    revision-id: 1
+IRON_KNIGHT_LEGGINGS:
+  base:
+    material: IRON_LEGGINGS
+    name: §3Штаны Рыцаря
+    set: SKELETON_KNIGHT
+    tier: UNCOMMON
+    max-durability: 1500.0
+    required-level:
+      base: 5.0
+      spread: 0.2
+      max-spread: 1
+    armor: 6.0
+    dodge-rating:
+      base: 3.5
+      spread: 0.06
+      max-spread: 0.17
+    magic-damage-reduction:
+      base: 5.0
+      spread: 0.2
+      max-spread: 1
+    gem-sockets:
+    - Uncolored
+    custom-model-data: 2.0
+    revision-id: 1
+IRON_KNIGHT_BOOTS:
+  base:
+    material: IRON_BOOTS
+    name: §3Ботинки Рыцаря
+    set: SKELETON_KNIGHT
+    tier: UNCOMMON
+    max-durability: 1200.0
+    required-level:
+      base: 5.0
+      spread: 0.2
+      max-spread: 1
+    armor: 5.0
+    attack-speed:
+      base: 0.01
+      spread: 0.06
+      max-spread: 0.17
+    gem-sockets:
+    - Uncolored
+    custom-model-data: 2.0
+    revision-id: 1
+BLACK_ARCHER_HELMET:
+  base:
+    material: LEATHER_HELMET
+    dye-color: 0 0 0
+    name: §fШлем Лучника
+    set: SKELETON_ARCHER
+    tier: COMMON
+    hide-dye: true
+    critical-strike-chance:
+      base: 0.3
+      spread: 0.06
+      max-spread: 0.17
+    will-break: true
+    max-durability: 400.0
+    critical-strike-power:
+      base: 1.7
+      spread: 0.06
+      max-spread: 0.17
+    revision-id: 1
+BLACK_ARCHER_CHESTPLATE:
+  base:
+    material: LEATHER_CHESTPLATE
+    dye-color: 0 0 0
+    name: §fНагрудник Лучника
+    set: SKELETON_ARCHER
+    tier: COMMON
+    hide-dye: true
+    max-durability: 320.0
+    will-break: true
+    attack-speed:
+      base: 0.01
+      spread: 0.06
+      max-spread: 0.17
+    revision-id: 1
+BLACK_ARCHER_LEGGINGS:
+  base:
+    material: LEATHER_LEGGINGS
+    dye-color: 0 0 0
+    name: §fШтаны Лучника
+    set: SKELETON_ARCHER
+    tier: COMMON
+    hide-dye: true
+    max-durability: 315.0
+    max-health:
+      base: 15
+      spread: 0.06
+      max-spread: 0.17
+    revision-id: 1
+BLACK_ARCHER_BOOTS:
+  base:
+    material: LEATHER_BOOTS
+    dye-color: 0 0 0
+    name: §fБотинки Лучника
+    set: SKELETON_ARCHER
+    tier: COMMON
+    hide-dye: true
+    max-durability: 285.0
+    dodge-rating:
+      base: 3.5
+      spread: 0.06
+      max-spread: 0.17
+    revision-id: 1
+STEEL_CHAINMAIL_HELMET:
+  base:
+    material: CHAINMAIL_HELMET
+    name: §fСтальной Кольчужный Шлем
+    set: STEEL_CHAINMAIL
+    tier: COMMON
+    max-durability: 600.0
+    damage-reduction:
+      base: 10.0
+      spread: 0.2
+      max-spread: 1
+    revision-id: 1
+STEEL_CHAINMAIL_CHESTPLATE:
+  base:
+    material: CHAINMAIL_CHESTPLATE
+    name: §fСтальной Кольчужный Нагрудник
+    set: STEEL_CHAINMAIL
+    tier: COMMON
+    max-durability: 800.0
+    max-health:
+      base: 15.0
+      spread: 0.2
+      max-spread: 1
+    revision-id: 1
+STEEL_CHAINMAIL_LEGGINGS:
+  base:
+    material: CHAINMAIL_LEGGINGS
+    name: §fСтальные Кольчужные Штаны
+    set: STEEL_CHAINMAIL
+    tier: COMMON
+    max-durability: 700.0
+    dodge-rating:
+      base: 3.5
+      spread: 0.06
+      max-spread: 0.17
+    revision-id: 1
+STEEL_CHAINMAIL_BOOTS:
+  base:
+    material: CHAINMAIL_BOOTS
+    name: §fСтальные Кольчужные Ботинки
+    set: STEEL_CHAINMAIL
+    tier: COMMON
+    max-durability: 600.0
+    attack-speed:
+      base: 0.01
+      spread: 0.06
+      max-spread: 0.17
+    revision-id: 1
+CURSED_GOLDEN_HELMET:
+  base:
+    material: GOLDEN_HELMET
+    name: §3Проклятый Золотой Шлем
+    tier: UNCOMMON
+    max-durability: 2000.0
+    mana-regeneration: -0.1
+    max-mana: -25
+    health-regeneration: 1
+    max-health: 50.0
+    revision-id: 1
+CAPITAN_BLACK_HELMET:
+  base:
+    material: NETHERITE_HELMET
+    name: '&3Шляпа Мертвого Капитана'
+    tier: UNCOMMON
+    max-durability: 1500.0
+    knockback-resistance:
+      base: 0.3
+      spread: 0.11
+      max-spread: 0.33
+    gem-sockets:
+    - Green
+    - Green
+    - Green
+    - Green
+    custom-model-data: 2.0
+    revision-id: 1

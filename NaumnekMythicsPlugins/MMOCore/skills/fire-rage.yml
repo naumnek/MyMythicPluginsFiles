@@ -1,0 +1,34 @@
+name: Залпы Пламени
+lore:
+- Ты замедляешься.
+- '&f[ЛКМ]&7 - Залп пламени'
+- ''
+- Попадание наносит цели &c{damage}&7 урона
+- и поджигает на &c{ignite}&7 секунд.
+- ''
+- 'Тип: &8Направленная на точку'
+- 'Макс. Огн. Стрел: &f{count}'
+- 'Длительность: &8{duration}'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: FIRE_CHARGE
+duration:
+  base: 20.0
+  per-level: 4.0
+damage:
+  base: 20.0
+  per-level: 3.0
+ignite:
+  base: 2.0
+  per-level: 0.3
+mana:
+  base: 30.0
+  per-level: 3.0
+count:
+  base: 2.0
+  per-level: 1.0
+cooldown:
+  base: 40.0
+  per-level: -2.0
+  max: 20.0
+  min: 5.0

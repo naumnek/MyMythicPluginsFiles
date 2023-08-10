@@ -1,0 +1,24 @@
+name: Сила Ветра
+lore:
+- Замедляет цель и нажатием &f[ЛКМ]
+- двигает в сторону взгляда.
+- ''
+- 'Силы Отталкивания: &f{knockback}%'
+- 'Длительность: &8{duration}'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: FEATHER
+duration:
+  base: 10.0
+  per-level: 0.0
+mana:
+  base: 50.0
+  per-level: 0.0
+cooldown:
+  base: 40.0
+  per-level: 0.0
+  max: 40.0
+  min: 20.0
+knockback:
+  base: 1.0
+  per-level: 0.0

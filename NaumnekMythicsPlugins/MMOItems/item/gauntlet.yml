@@ -1,0 +1,9 @@
+TEST_SKILLS:
+  base:
+    material: IRON_HORSE_ARMOR
+    ability:
+      ability1:
+        type: TARGETED_FIREBALL
+        mode: LEFT_CLICK
+        cooldown: 0.0
+    revision-id: 1

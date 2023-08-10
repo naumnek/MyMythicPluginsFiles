@@ -1,0 +1,8 @@
+# The internal name of the MM skill.
+mythicmobs-skill-id: MEDIUM_MAGICSHIELD_ACTIVATION
+
+# Ability name displayed in lore.
+name: 'Защита Морозного Щита'
+
+# Ability Modifiers (default values).
+cooldown: 0

@@ -1,0 +1,120 @@
+# Weapon Stats
+attack-damage: '&7Урон: &c#'
+attack-speed: '&7Скорость Атаки: &a#'
+critical-strike-chance: '&7Шанс Критической Атаки: &c<plus>#'
+critical-strike-power: '&7Сила Критической Атаки: &c<plus>#'
+range: '&7Радиус: &f#'
+mana-cost: '&7Маны за Использование: &9#'
+stamina-cost: '&7Стамины за Использование: &a#'
+arrow-velocity: '&7Скорость Стрелы: &a#'
+blunt-power: '&7Сила Блока: &f#'
+blunt-rating: '&7Шанс Блока: &f#'
+two-handed: '&7Двуручный'
+knockback: '&7Отталкивание: &2#'
+recoil: '&7Отдача: &f#'
+note-weight: '&7Вес: &f#'
+
+# Extra Damage
+pve-damage: '&7PvE &7Урон: &c<plus>#'
+pvp-damage: '&7PvP &7Урон: &c<plus>#'
+magic-damage: '&7Магический Урон: &9<plus>#'
+weapon-damage: '&7Урон от Оружия: &c<plus>#'
+undead-damage: '&7Урон по Нежити: &c<plus>#'
+skill-damage: '&7Урон от Способностей: &c<plus>#'
+physical-damage: '&7Физический &7Урон: &c<plus>#'
+projectile-damage: '&7Урон Снарядов: &c<plus>#'
+
+# Abilities
+ability-format: '&8#c: #a'
+ability-modifier: '&8#m: #v'
+ability-splitter: '&8'
+
+# Armor Stats
+block-power: '&7Сила Блокирования: &f<plus>#'
+block-rating: '&7Шанс Блокирования: &f<plus>#'
+block-cooldown-reduction: '&7Уменьшение Перезарядки Блокирования: &f<plus>#'
+dodge-rating: '&7Шанс &7Уклонения: &f<plus>#'
+dodge-cooldown-reduction: '&7Уменьшение Перезарядки &7Уклонения: &f<plus>#'
+parry-rating: '&7Шанс Парирования: &f<plus>#'
+parry-cooldown-reduction: '&7Уменьшение Перезарядки Парирования: &f<plus>#'
+armor: '&7Защита: &f<plus>#'
+armor-toughness: '&7Прочность Брони: &f<plus>#'
+knockback-resistance: '&7Сопротивление Отталкиванию: &f<plus>#'
+max-health: '&7Здоровье: &c<plus>#'
+movement-speed: '&7Скорость Передвижения: &a<plus>#'
+
+# Damage Reduction
+damage-reduction: '&7Снижение &7Урона: &f<plus>#'
+fall-damage-reduction: '&7Снижение &7Урона от Падения: &f<plus>#'
+fire-damage-reduction: '&7Снижение &7Урона от Огня: &e<plus>#'
+magic-damage-reduction: '&7Снижение &7Урона от Магии: &9<plus>#'
+projectile-damage-reduction: '&7Снижение &7Урона от Снарядов: &f<plus>#'
+physical-damage-reduction: '&7Снижение Физического &7Урона: &c<plus>#'
+
+# RPG Stats
+health-regeneration: '&7Регенерация &7Здоровья: &c<plus>#'
+max-mana: '&7Максимальная Мана: &9<plus>#'
+mana-regeneration: '&7Восстановление Маны: &9<plus>#'
+max-stamina: '&7Максимальная Выносливость: &a<plus>#'
+stamina-regeneration: '&7Восстановление Выносливости: &a<plus>#'
+cooldown-reduction: '&7Уменьшение Перезарядки Способностей: &f<plus>#'
+additional-experience: '&7Дополнительный Опыт: &f<plus>#'
+
+# Extra Options
+perm-effect: '&7Бесконечный &f#'
+command: '&7Команда: &f#c &7(&f#d&7s)'
+item-cooldown: '&7Перезарядка: &f#&7'
+
+# Consumables
+restore-health: '&7Восстанавливает &c# &7Здоровья'
+restore-food: '&7Восстанавливает &2# &7Еды'
+restore-saturation: '&7Восстанавливает &2# &7Насыщения'
+restore-mana: '&7Восстанавливает &9# &7Маны'
+restore-stamina: '&7Восстанавливает &a# &7Выносливости'
+effect: '&7Даёт &f#e &7на &f#d&7Секунд'
+repair: '&7Ремонт: &f#'
+can-identify: '&7Может идентифицировать предметы.'
+can-deconstruct: '&7Может разобрать тировые предметы.'
+success-rate: '&7Шанс &7Успеха: &a&l#'
+max-consume: '&7Потребление: &f#'
+
+# Gem Stones
+empty-gem-socket: '&7Слот: &8Пусто'
+filled-gem-socket: '&7Слот: #'
+when-applied: '&8Последнее Применение:'
+gem-stone-lore: '&8&l[&f&l!&8&l] &7Перетащите на предмет, чтобы применить!'
+
+# Soulbound
+soulbinding-chance: '&7Шанс Связать Предмет: &a#'
+soulbound-break-chance: '&7Шанс Отвязать Предмет: &f#'
+soulbound-level: '&7Уровень Связи: &e#'
+
+# Tool Enchants
+autosmelt: '&7Автоплавка'
+bouncing-crack: '&7Трещина'
+pickaxe-power: '&7Силы Копания: &a#'
+
+# General
+item-type: '&7Тип: &f#'
+tier: '&7Редкость: #'
+required-class: '&7Требуется Класс: &f#'
+required-level: '&7Необходимый &7Уровень: &f#'
+required-dexterity: '&7Требуется Ловкости: &a#'
+required-strength: '&7Требуется Силы: &c#'
+required-intelligence: '&7Требуется Интеллекта: &9#'
+
+# Elemental Damage
+fire-damage: '&7Урон от Огня: &f#'
+ice-damage: '&7Урон от Льда: &f#'
+earth-damage: '&7Урон от &7Земли: &f#'
+wind-damage: '&7Урон от Ветра: &f#'
+thunder-damage: '&7Урон от Молнии: &f#'
+water-damage: '&7Урон от Воды: &f#'
+
+# Elemental Defense
+fire-defense: '&7Защита от Огня: &f#'
+ice-defense: '&7Защита от Льда: &f#'
+earth-defense: '&7Защита от &7Земли: &f#'
+wind-defense: '&7Защита от Ветра: &f#'
+thunder-defense: '&7Защита от Молнии: &f#'
+water-defense: '&7Защита от Воды: &f#'

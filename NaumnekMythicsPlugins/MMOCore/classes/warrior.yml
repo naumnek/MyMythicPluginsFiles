@@ -1,0 +1,158 @@
+display:
+    name: '§7Рыцарь'
+    attribute-lore:
+    - '&8&oСпециальзация'
+    - '&2 * &7Доминирует в ближних боях'         
+    - '&2 * &7Навыки направлены на выживаемость'  
+    - '&2 * &7Ярость накапливается от ударов'      
+    - '&a + &7Высокий физический урон'
+    - '&a + &7Большой объём здоровья'
+    - '&6 + &7Регенерация здоровья в бою'        
+    - '&6 + &7Навыки потребляют 25 ярости'    
+    - '&8&oСила'
+    - '&7  Физический урон: &c14% &7(+&c4%&7)'
+    - '&7  Объём здоровье: &c60 &7(+&c10&7)'
+    - '&7  Регенерация здоровья: &c0.2 &7(+&c0.05&7)'    
+    - '&8&oЛовкость'
+    - '&7  Урон ближнего оружия: &a11% &7(+&a1%&7)'
+    - '&7  Сопротивление отбрасыванию: &a21% &7(+&a1%&7)'
+    - '&8&oИнтеллект'
+    - '&7  Объём ярости: &442 &7(+&42&7)'
+    - '&7  Ярость от оружия: &45-10 &7(+&40&7)'
+    - '&7  Ярость от кулаков: &410-15 &7(+&40&7)'    
+    - ''
+    item: IRON_SWORD:0 # Supports custom model data/texture by durability
+
+# Must match an existing exp curve filename from the 'expcurves' folder
+exp-curve: levels2
+
+# Rage charges when dealing weapon and physical damage.
+triggers:
+    weapon-damage:
+    - 'mana{operation=GIVE;amount=5-10}'
+    physical-damage:
+    - 'mana{operation=GIVE;amount=10-15}'
+    class-chosen:
+    - 'command{format="lp user %player% meta setprefix 3 &7Рыцарь"}'    
+    level-up:
+    - 'command{format="mmocore admin attribute-points give %player% 2"}' 
+    level-up-5:      
+    - 'command{format="mmocore admin skill-points give %player% 5"}'
+    level-up-10:      
+    - 'command{format="mmocore admin skill-points give %player% 5"}'
+    level-up-15:      
+    - 'command{format="mmocore admin skill-points give %player% 5"}'
+    level-up-20:      
+    - 'command{format="mmocore admin skill-points give %player% 5"}'
+    level-up-25:      
+    - 'command{format="mmocore admin skill-points give %player% 5"}'
+    level-up-30:      
+    - 'command{format="mmocore admin skill-points give %player% 5"}'
+    - 'command{format="lp user %player% meta setprefix 4 &7Воин"}'    
+
+# Players cannot go further than Lvl 100
+max-level: 30
+
+# Warrior has rage which he gains while casting spells
+# Rage increase its skill damage. Use <mmocore.rage>
+# to get the player's rage (MythicMobs formulas)
+#
+# 'char' is the character used to generate the mana bar as a message
+# 'color' are also the colors used to generate the mana bar
+# 'icon' is the icon display on the player action bar
+# 'name' is basically displayed everywhere
+mana:
+    char: ♦
+    icon: '&4♦'
+    color:
+        full: DARK_RED
+        half: RED
+        empty: WHITE
+    name: 'Ярости'
+    
+cast-particle:
+    particle: REDSTONE
+    color:
+        red: 255
+        green: 0
+        blue: 0
+
+options:
+    off-combat-health-regen: false
+    off-combat-mana-regen: true
+    off-combat-stamina-regen: false
+    off-combat-stellium-regen: false
+
+skills:
+    SNEAKY_PICKY:
+        level: 5
+        max-level: 11
+    DEEP_WOUND:
+        level: 10
+        max-level: 11
+    FURTIVE_STRIKE:
+        level: 15
+        max-level: 11 
+    SLOWSTRIKES:
+        level: 20
+        max-level: 11
+    EVADE:
+        level: 25
+        max-level: 11
+    
+attributes:
+    physical-damage:
+        base: 14
+        per-level: 4
+    max-health:
+        base: 60
+        per-level: 8
+    health-regeneration:
+        base: 0.55
+        per-level: 0.05        
+    knockback-resistance:
+        base: 21
+        per-level: 1.0  
+    mana-regeneration:
+        base: -0.5
+        per-level: 0
+    max-mana:
+        base: 42
+        per-level: 2.0     
+    weapon-damage:
+        base: 11
+        per-level: 1  
+
+# Experience sources for main class experience.
+main-exp-sources:
+- 'killmob{type=ENDER-DRAGON;amount=50-100}'
+- 'killmob{type=SPIDER;amount=1-3}'
+- 'killmob{type=CREEPER;amount=3-5}'
+- 'killmob{type=STRAY;amount=2-3}'
+- 'killmob{type=SKELETON;amount=2-3}'
+- 'killmythicmob{type=SpiderScout;amount=10-25}'
+- 'killmythicmob{type=PoisonSpider;amount=100-150}'
+- 'killmythicmob{type=SkeletonArcher;amount=10-15}'
+- 'killmythicmob{type=SkeletonSwordsman;amount=10-15}'
+- 'killmythicmob{type=SkeletonKnight;amount=100-150}'
+- 'killmythicmob{type=ZombieSwordsman;amount=10-15}'
+- 'killmythicmob{type=ZombieCommander;amount=100-150}'
+- 'killmythicmob{type=LowLich;amount=500-1000}'
+- 'killmythicmob{type=IceSpirit;amount=100-200}'
+- 'killmythicmob{type=IceGuard;amount=25-60}'
+- 'killmythicmob{type=ZombiePirate;amount=15-20}'
+- 'killmythicmob{type=ZombieCommanderPirate;amount=250-300}'
+- 'killmythicmob{type=AngryGreenSludge;amount=80-100}'
+- 'killmob{type=HUSK;amount=1-2}'
+- 'killmob{type=DROWNED;amount=1-2}'
+- 'killmob{type=ZOMBIE;amount=1-2}'
+- 'killmythicmob{type=ZombieSwordsman;amount=10-15}'
+- 'killmob{type=WITCH;amount=6-8}'
+- 'killmob{type=GHAST;amount=4-6}'
+- 'killmob{type=PILLAGER;amount=2-4}'
+- 'killmob{type=ILLUSIONER;amount=3-4}'
+- 'killmob{type=VINDICATOR;amount=2-4}'
+- 'killmob{type=RAVAGER;amount=5-6}'
+- 'killmob{type=GUARDIAN;amount=3-4}'
+- 'killmob{type=ELDER-GUARDIAN;amount=20-25}'
+- 'killmob{type=MAGMA-CUBE;amount=1-2}'

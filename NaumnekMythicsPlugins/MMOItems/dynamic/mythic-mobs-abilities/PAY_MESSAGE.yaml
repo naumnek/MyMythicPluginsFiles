@@ -1,0 +1,8 @@
+# The internal name of the MM skill.
+mythicmobs-skill-id: PAY_MESSAGE
+
+# Ability name displayed in lore.
+name: 'Розыгрыш'
+
+# Ability Modifiers (default values).
+cooldown: 30

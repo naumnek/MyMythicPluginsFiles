@@ -1,0 +1,20 @@
+mythicmobs-skill-id: SlowStrikes
+name: §a§lЗамедляющие Удары
+lore:
+- 'После 6 удара по той же цели.'
+- 'Она получит 2 замедление на &f{duration} &7секунд.'
+- 'Или 3 замедление с&f 10% &7шансом.'
+- ''
+- 'Тип: &8Пассивная'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: COBWEB
+duration:
+  base: 5
+  per-level: 1
+mana:
+  base: 0.0
+  per-level: 0.0
+cooldown:
+  base: 0.0
+  per-level: 0.0

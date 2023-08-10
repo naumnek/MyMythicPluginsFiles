@@ -1,0 +1,38 @@
+condition:
+  level:
+    positive: '&a✔ Требуемый Уровень: #level#'
+    negative: '&c✖ Требуемый Уровень: #level#'
+  class:
+    positive: '&a✔ Требуемый Класс: #class#'
+    negative: '&c✖ Требуемый Класс: #class#'
+  profession:
+    positive: '&a✔ Требуется #level# уровень #profession#'
+    negative: '&c✖ Требуется #level# уровень #profession#'
+  stamina:
+    positive: '&a✔ Требуется #stamina# Выносливости'
+    negative: '&c✖ Требуется #stamina# Выносливости'
+  food:
+    positive: '&a✔ Требуется #food# Сытости'
+    negative: '&c✖ Требуется #food# Сытости'
+  money:
+    positive: '&a✔ Требуется $#money#'
+    negative: '&c✖ Требуется $#money#'
+  mana:
+    positive: '&a✔ Требуется #mana# Маны'
+    negative: '&c✖ Требуется #mana# Маны'
+  stellium:
+    positive: '&a✔ Requires #stellium# Stellium'
+    negative: '&c✖ Requires #stellium# Stellium'
+  attribute:
+    positive: '&a✔ Requires #points# #attribute#'
+    negative: '&c✖ Requires #points# #attribute#'
+ingredient:
+  mythicitem:
+    positive: '&8✔ &7#amount# #item#'
+    negative: '&c✖ &7#amount# #item#'
+  mmoitem:
+    positive: '&8✔ &7#amount# #level##item#'
+    negative: '&c✖ &7#amount# #level##item#'
+  vanilla:
+    positive: '&8✔ &7#amount# #item#'
+    negative: '&c✖ &7#amount# #item#'

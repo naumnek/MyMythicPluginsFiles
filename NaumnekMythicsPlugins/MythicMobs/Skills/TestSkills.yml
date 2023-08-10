@@ -1,0 +1,30 @@
+
+#
+Test-Medium-MagicShield:
+  Cooldown: 20
+  Skills:  
+  - shieldPercent{multiplier=0.2;mS=1} @self
+  - skill{repeat=400;repeatInterval=1;s=Test-Medium-MagicShield-Effect}
+  - delay 20  
+  - addtag{t=Test-Medium-MagicShield} @self 
+  - delay 200
+  - removetag{t=Test-Medium-MagicShield} @self   
+Test-Medium-MagicShield-Effect:
+  Conditions:
+  - hastag{t=Test-Low-MagicShield} true
+  Skills:  
+  - effect:particlesphere{particle=reddust;size=0.5;color=#b4f9e6;radius=1.4;y=0.6;hS=0.1;vS=0.01;amount=64;speed=100;vd=32} @self
+Test-Medium-MagicShield-Activation:
+  Conditions:
+  - hastag{t=Test-Medium-MagicShield} true
+  Skills:
+  - removetag{t=Test-Medium-MagicShield} @self   
+  - effect:particlesphere{particle=reddust;size=0.5;color=#6fd9cc;radius=1.4;y=0.6;hS=0.1;vS=0.01;amount=64;speed=100;vd=32} @target
+  - damage{amount=1;ia=true} @target
+  - throw{velocity=10;velocityY=8} @target
+  - delay 40  
+  - stun{d=60;f=true} @target
+  - potion{type=SLOW;duration=100;level=1;p=true} @target
+  - delay 800
+  - healpercent{repeat=10;repeatInterval=20;m=0.01} @self
+#

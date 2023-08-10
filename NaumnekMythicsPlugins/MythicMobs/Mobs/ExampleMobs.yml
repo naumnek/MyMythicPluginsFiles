@@ -1,0 +1,32 @@
+#
+StaticallyChargedSheep:
+  Type: SHEEP
+  Display: '&6Статически заряженная овца '
+  Health: 100
+  Damage: 2
+  Options:
+    MovementSpeed: 0.3
+  DamageModifiers:
+  - LIGHTNING 0
+  - FIRE 0.5
+  Skills:
+  - lightning @LivingInRadius{r=10} ~onTimer:100
+AngrySludge:
+  Type: SLIME
+  Display: '&aЗлой Слайм'
+  Health: 100
+  Damage: 2
+  Options:
+    Despawn: false
+    Size: 0
+    PreventSlimeSplit: true
+    PreventOtherDrops: true
+    MaxCombatDistance: 30
+    KnockbackResistance: 1
+    MovementSpeed: 0.35
+    MaxCombatDistance: 12
+    PreventOtherDrops: true
+    FollowRange: 48      
+  Skills:
+  - skill{s=Low-AngrySludgePoison} 0.2
+  - blockmask{material=SLIME_BLOCK;r=1;duration=100} @self ~onTimer:20

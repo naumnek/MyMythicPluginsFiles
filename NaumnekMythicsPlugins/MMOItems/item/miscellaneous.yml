@@ -1,0 +1,15 @@
+HUMAN_SOUL:
+  base:
+    material: PHANTOM_MEMBRANE
+    name: '&6Человеческая Душа'
+    lore:
+    - '&8Слышатся крики изнутри'
+    - '&8Нравится богам'
+    tier: COMMON
+    disable-repairing: false
+    disable-enchanting: false
+    disable-crafting: true
+    hide-enchants: true
+    enchants:
+      unbreaking: 1
+    revision-id: 1

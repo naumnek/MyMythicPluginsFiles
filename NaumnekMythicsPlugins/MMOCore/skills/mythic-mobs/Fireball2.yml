@@ -1,0 +1,21 @@
+mythicmobs-skill-id: Fireball2
+name: §aОгненный Шар
+lore:
+- 'Ты выпускаешь из рук огненные шары,'
+- 'которые при контакте взрываются и'
+- 'отталкивают всех в радиусе &f5 &7блоков'
+- 'и ноносят &c{damage}&7 урона.'
+- ''
+- 'Тип: &8Направленная на точку'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: FIRE_CHARGE
+damage:
+  base: 50.0
+  per-level: 5.0
+mana:
+  base: 75.0
+  per-level: -2.5
+cooldown:
+  base: 0.0
+  per-level: 0.0

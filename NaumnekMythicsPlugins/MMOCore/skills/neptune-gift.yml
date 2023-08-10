@@ -1,0 +1,7 @@
+name: Близость к Воде
+lore:
+- Ваша близость к воде &8{extra}%.
+material: LILY_PAD
+extra:
+  base: 50.0
+  per-level: 0.0

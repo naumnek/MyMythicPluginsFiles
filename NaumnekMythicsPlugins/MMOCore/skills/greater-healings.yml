@@ -1,0 +1,20 @@
+name: Усиленное Исцеление
+lore:
+- Ты мгновенно восстанавливаешь &a{heal} HP&7 цели.
+- '&f[КРАСТЬСЯ]&7 - Использовать на себя.'
+- ''
+- 'Тип: &8Направленная на существо'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: ENCHANTED_GOLDEN_APPLE
+mana:
+  base: 55.0
+  per-level: 5.0
+heal:
+  base: 120.0
+  per-level: 20.0
+cooldown:
+  base: 15.0
+  per-level: -1.0
+  max: 50.0
+  min: 20.0

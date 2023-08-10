@@ -1,0 +1,20 @@
+name: Стойкость
+lore:
+- Ты получаешь имунитет к урону.
+- ''
+- 'Тип: &8Срабатывание от применения'
+- 'Длительность: &8{duration}'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: LEATHER_BOOTS
+duration:
+  base: 5.0
+  per-level: 0.5
+  max: 15.0
+  min: 10.0
+mana:
+  base: 25.0
+  per-level: 0.0
+cooldown:
+  base: 60.0
+  per-level: -3.0

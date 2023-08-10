@@ -1,0 +1,34 @@
+TESTVITALII:
+  base:
+    material: IRON_SWORD
+    durability: 20.0
+    max-durability: 4.0
+    name: '&9Стальная Катана'
+    required-level: 5.0
+    attack-damage:
+      base: 20.0
+      scale: 2.0
+      spread: 3.0
+      max-spread: 1.0
+    attack-speed: 1.8
+    mana-cost: 20.0
+    skill-damage:
+      base: 12.0
+      scale: 17.0
+    max-mana: 500.0
+    movement-speed: 0.006
+    ability:
+      ability2:
+        type: BLINK
+        mana: 40.0
+        range: 90.0
+        stamina: 0.0
+        mode: RIGHT_CLICK
+        cooldown: 2.0
+    mana-regeneration: 7.0
+    will-break: true
+    disable-repairing: true
+    unbreakable: true
+    tier: RARE
+    custom-model-data: 5.0
+    revision-id: 1

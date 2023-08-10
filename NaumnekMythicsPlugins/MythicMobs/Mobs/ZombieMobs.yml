@@ -1,0 +1,152 @@
+#      
+ZombieCommanderPirate:
+  Type: HUSK
+  Display: '&3Мертвый Капитан'
+  Health: 2000
+  Damage: 50
+  Modules:
+    ThreatTable: true
+  Faction: Undead
+  AITargetSelectors:
+  - clear
+  - hurtbytarget
+  - players
+  - specificfactionmonsters Summon
+  Skills:
+# --- ATTACKS ---
+# --- SKILLS ---  
+# --- PASSIVE ---repeat=10;repeatInterval=20;
+  - Aura{auraName=Black_Mist;onTick=LowBlackMistAura;interval=20;duration=200;maxStacks=0} @PlayersInRadius{r=16} 
+  - Aura{auraName=Black_Commander;onTick=LowBlackCommanderAura;interval=20;duration=200;maxStacks=0} @Children
+# --- SUMMONS ---
+  - skill{s=Low-ZombieSwordsman-DamageSummon} @self 0.2 ~onDamaged
+  - skill{s=Low-ZombieSwordsman-DamageSummon} @self <80% 0.4 ~onDamaged
+  - skill{s=Low-ZombieSwordsman-DamageSummon} @self <60% 0.8 ~onDamaged
+  - skill{s=Low-ZombieSwordsman-DamageSummon} @self <40% ~onDamaged
+  - skill{s=Low-ZombieSwordsman-AttackSummon} @self 0.2 ~onAttack
+  - skill{s=Low-ZombieSwordsman-AttackSummon} @self <80% 0.4 ~onAttack
+  - skill{s=Low-ZombieSwordsman-AttackSummon} @self <60% 0.8 ~onAttack
+  - skill{s=Low-ZombieSwordsman-AttackSummon} @self <40% ~onAttack
+  - potion{type=DAMAGE_RESISTANCE;level=0} <50% ~onDamaged
+  - effect:particles{particle=reddust;size=1;color=#133337;amount=64;hS=0.3;vS=1;speed=0.01;vd=32} <50% ~onDamaged 
+  - healpercent{m=0.01} <50% ~onDamaged 
+# --- ACTIONS ---
+# --- PARTICLES ---
+  Equipment:
+  - mmoitems{type=ARMOR;id=CAPITAN_BLACK_HELMET}:4
+  - mmoitems{type=SABER;id=BLACK_SABER}:0
+  Drops:
+  - ZombieCommanderPirateDrops
+  LevelModifiers:
+  - health 3
+  - damage 0.2  
+  Options:
+    Despawn: false
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    PreventSunburn: true  
+    MaxCombatDistance: 128
+    FollowRange: 30
+    MovementSpeed: 0.29
+#
+ZombiePirate:
+  Type: HUSK
+  Display: '&fМертвый Пират'
+  Health: 200
+  Damage: 20
+  Modules:
+    ThreatTable: true
+  Faction: Undead
+  AITargetSelectors:
+  - clear
+  - hurtbytarget
+  - players
+  - specificfactionmonsters Summon
+  Skills:
+  - remove{} @self ~onTimer:6000  
+  Equipment:
+  - mmoitems{type=SABER;id=STEEL_SABER}:0
+  LevelModifiers:
+  - health 2
+  - damage 0.1  
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    PreventSunburn: true  
+    MaxCombatDistance: 128
+    FollowRange: 30
+    MovementSpeed: 0.3
+#
+#
+#
+ZombieCommander:
+  Type: ZOMBIE
+  Display: '&3Зомби Командир'
+  Health: 500
+  Damage: 30
+  Modules:
+    ThreatTable: true
+  Faction: Undead
+  AITargetSelectors:
+  - clear
+  - hurtbytarget
+  - players
+  - specificfactionmonsters Summon
+  Equipment:
+  - mmoitems{type=ARMOR;id=CURSED_GOLDEN_HELMET}:4
+  - mmoitems{type=AXE;id=SHARP_AXE}:0 
+  Skills:
+# --- SKILLS ---  
+  - skill{s=Low-Slash-Attack} @target 0.2
+  - skill{s=Low-FleshEnchantment-Buff} @self <60% 0.8
+# --- PASSIVE ---  
+  - potion{type=SLOW;duration=300;level=1} @Target ~onDamaged 0.2
+# --- SUMMONS ---
+  - skill{s=Low-ZombieSwordsman-Summon} @self <80% 0.8
+# --- PARTICLES ---
+  - effect:particles{particle=flame;amount=20;hS=0.3;vS=1.2;speed=0.01;vd=32} @self ~onTimer:20
+#
+  Drops:  
+  - ZombieCommanderItemDrops  
+  LevelModifiers:
+  - health 15
+  - damage 1  
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    PreventSunburn: true  
+    MaxCombatDistance: 128
+    FollowRange: 30
+    MovementSpeed: 0.3
+#      
+ZombieSwordsman:
+  Type: ZOMBIE
+  Display: '&fБронированный Зомби'
+  Health: 100
+  Damage: 15
+  Modules:
+    ThreatTable: true
+  Faction: Undead
+  AITargetSelectors:
+  - clear
+  - hurtbytarget
+  - players
+  - specificfactionmonsters Summon
+  Equipment:
+  - mmoitems{type=ARMOR;id=STEEL_CHAINMAIL_HELMET}:4
+  - mmoitems{type=ARMOR;id=STEEL_CHAINMAIL_CHESTPLATE}:3
+  - mmoitems{type=ARMOR;id=STEEL_CHAINMAIL_LEGGINGS}:2
+  - mmoitems{type=ARMOR;id=STEEL_CHAINMAIL_BOOTS}:1
+  - mmoitems{type=SWORD;id=STEEL_SWORD}:0
+  Drops:
+  - LowSwordsmanDrops
+  LevelModifiers:
+  - health 5
+  - damage 0.5  
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    PreventSunburn: true  
+    MaxCombatDistance: 128
+    FollowRange: 30
+    MovementSpeed: 0.21

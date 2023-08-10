@@ -1,0 +1,25 @@
+name: Разрез
+lore:
+- Наносите &c{damage} &7урона.
+- Урон увеличивается до &c+{extra}%
+- Урон зависит от здоровья цели
+- ''
+- Здоровье Цели↓ → Урон↑
+- 'Тип: &8Направленная на существо'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: REDSTONE
+damage:
+  base: 20.0
+  per-level: 3.0
+mana:
+  base: 25.0
+  per-level: 0.0
+extra:
+  base: 50.0
+  per-level: 10.0
+cooldown:
+  base: 30.0
+  per-level: -1.5
+  max: 30.0
+  min: 10.0

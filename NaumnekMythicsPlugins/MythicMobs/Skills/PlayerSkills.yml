@@ -1,0 +1,132 @@
+# === SKILLS ===
+#
+ManaShield:
+  Skills:
+  - effect:particlesphere{repeat="<mmocore.skill.ManaShield.duration> * 20";repeatInterval=1;particle=reddust;size=1.2;color=#8000ff;radius=1.4;yOffset=0.6;hS=0.1;vS=0.01;amount=4;speed=0.1;vd=32}
+  - skill{repeat="<mmocore.skill.ManaShield.duration> / <mmocore.skill.ManaShield.delay>";repeatInterval="<mmocore.skill.ManaShield.delay> * 20";s=ManaShield_Activation} @EntitiesInRadius{r=10;limit=1;sort=NEAREST;ignore=creative,spectators}
+#
+ManaShield_Activation:
+  Skills:
+  - effect:particleline{repeat="<mmocore.skill.ManaShield.delay>";repeatInterval=1;particle=reddust;size=1.2;color=#00ffff;amount=2;hS=0.1;vS=0.1;vd=32;syo=1;tyo=1}
+  - effect:particlering{repeat="<mmocore.skill.ManaShield.delay>";repeatInterval=1;particle=reddust;size=1.2;color=#8000ff;radius=1;points=16;amount=2;hS=0.1;vS=0.1;y=0.5}
+  - throw{velocity=12;velocityY=10}
+  - damage{a="<mmocore.skill.ManaShield.damage>";element=FIRE}
+
+#
+Fireball2:
+  Skills:
+  - projectile{onTick=Fireball_Tick;onEnd=Fireball_onEnd;onHit=Fireball_onEnd;MaxRange=128;Duration=200;v=42;i=1;hR=1;ac=2;tyo=0;hnp=true} @TargetLocation
+Fireball_Tick:
+  Skills:
+  - effect:particles{particle=smoke_normal;size=1;amount=12;hS=0.1;vS=0.1;vd=32} @origin
+  - effect:particles{particle=flame;size=0.1;amount=4;hS=0.2;vS=0.2;vd=32;y=-2} @origin
+Fireball_onEnd:
+  Skills:
+  - damage{a="<mmocore.skill.Fireball2.damage>";element=FIRE} @EntitiesNearOrigin{r=5}
+  - throw{velocity=8;velocityY=4} @EntitiesNearOrigin{r=5} 
+  - particlering{particle=smoke_large;radius=2.0;points=24;amount=4;hS=1;vS=0.6;speed=0.01;vd=64;y=1} @origin
+  - particlering{particle=flame;radius=2.0;points=24;amount=2;hS=1;vS=0.6;speed=0.01;vd=64} @origin
+#  - particlering{particle=lava;size=1.0;radius="<mmocore.skill.Fireball2.radius>";points=32;amount=64;hS=3;vS=1;speed=0.01;vd=32} @origin
+#  - effect:particles{particle=lava;amount=64;size=1;hS="<mmocore.skill.Fireball.radius>";vS=1;vd=32} @origin 
+
+#  
+Thunderball:
+  Skills:
+  - projectile{onTick=Thunderball_Tick;onEnd=Thunderball_onEnd;sE=false;sB=false;MaxRange=16;Duration=100;v=3;i=2;hR=1;tyo=0.2} @target
+  - projectile{onTick=Thunderball_Tick2;sE=false;sB=false;MaxRange=64;Duration=100;v=2.5;i=20;hR=1;tyo=0.2} @target
+  - delay 120
+  - command{c="mmocore admin resource-mana give <caster.name> <mmocore.skill.Thunderball.mana>"}
+Thunderball_Tick:
+  Skills:
+  - effect:particlesphere{particle=fireworks_spark;radius=1;hS=0.01;vS=0.01;amount=16;speed=0.0001;vd=64} @origin
+Thunderball_Tick2:
+  Skills:
+  - skill{s=Thunderball_Attack} @EntitiesNearOrigin{r=6;limit=3;sort=NEAREST;ignore=creative,spectators}
+Thunderball_Attack:
+  Skills:
+  - effect:particleline{particle=fireworks_spark;size=1;amount=2;hS=0.1;vS=0.1;vd=32;syo=0;tyo=0;fo=true;zz=true}
+  - effect:particles{particle=smoke_large;amount=8;hS=0.3;vS=1;speed=0.5;vd=64}
+  - damage{a="<mmocore.skill.Thunderball.damage>";element=LIGHTNING} 
+  - stun{d="<mmocore.skill.Thunderball.stun> * 20";f=false}
+
+#
+BlessingBloodTest:
+  Skills:
+  - onDamaged{auraName=BlessingBloodTest;onHit=BlessingBloodTest_Activation;duration=200;maxStacks=4} @self
+#
+BlessingBloodTest_Activation:
+  Conditions:
+  - hasaurastacks{auraName=BlessingBloodTest;s=4} true
+  Skills:
+  - command{c="give naumnek apple 1"}  
+  - damagepercent{percent=0.01} @target 0.2
+  - heal{amount="<target.hp> / 100 * 2"} @self 0.2
+#
+SlowStrikes:
+  Skills:
+  - onDamaged{auraName=SlowStrikes;onHit=SlowStrikes_Activation;duration=40;maxStacks=6} @self
+#
+SlowStrikes_Activation:
+  Conditions:
+  - hasaurastacks{auraName=SlowStrikes;s=4} true
+  Skills:
+  - potion{type=SLOW;duration="<mmocore.skill.SlowStrikes.duration> * 20";lvl=2} @origin 0.1
+  - potion{type=SLOW;duration="<mmocore.skill.SlowStrikes.duration> * 20";lvl=1} @origin
+  - effect:particles{particle=reddust;size=0.6;color=#032825;amount=32;hS=0.3;vS=1;speed=0.01;vd=32} @origin
+#
+CombatAcceleration:
+  Skills:
+  - onAttack{auraName=CombatAcceleration;onHit=CombatAcceleration_Activation;duration=40;maxStacks=4} @self
+#
+CombatAcceleration_Activation:
+  Conditions:
+  - hasaurastacks{auraName=CombatAcceleration;s=4} true
+  Skills:
+  - potion{type=SPEED;duration="<mmocore.skill.CombatAcceleration.duration> * 20";lvl=2} @origin 0.1
+  - potion{type=SPEED;duration="<mmocore.skill.CombatAcceleration.duration> * 20";lvl=1} @origin
+  - effect:particles{particle=reddust;size=0.6;color=#032825;amount=32;hS=0.3;vS=1;speed=0.01;vd=32} @origin
+#
+BlessingBlood:
+  Skills:
+  - onDamaged{auraName=BlessingBlood;onHit=BlessingBlood_Activation;duration=40;maxStacks=4} @self
+#
+BlessingBlood_Activation:
+  Conditions:
+  - hasaurastacks{auraName=BlessingBlood;s=4} true
+  Skills:
+  - damagepercent{percent="<mmocore.skill.BlessingBlood.percent> / 100"} @origin "<mmocore.skill.BlessingBlood.chance> / 100"
+#
+LifeSteal:
+  Skills:
+  - onAttack{auraName=LifeSteal;onHit=LifeSteal_Activation;duration=40;maxStacks=6} @self
+#
+LifeSteal_Activation:
+  Conditions:
+  - hasaurastacks{auraName=LifeSteal;s=4} true
+  Skills:
+  - heal{amount="<target.hp> / 100 * <mmocore.skill.LifeSteal.percent>"} @origin "<mmocore.skill.LifeSteal.chance> / 100"  
+#  
+Meteor:
+  Skills:
+  - projectile{Duration=800;MaxRange=300;Type=METEOR;StopAtEntity=false;gravity=0.3;Velocity=1;Interval=1;HeightFromSurface=60;onTick=Meteor-Tick;onEnd=Meteor-onEnd} @target
+Meteor-Tick:
+  Cooldown: 0.01
+  Skills:
+  - effect:particles{vd=64;particle=reddust;amount=10;size=3.8;color=#554444;hS=0.2;vS=0.2;yOffset=1} @origin 
+  - skill{s=Meteor-Tick2} @origin
+Meteor-Tick2:
+  Cooldown: 0.15
+  Skills:
+  - effect:particlesphere{vd=64;particle=lava;amount=200;radius=2;size=4;color=#554444;hS=0.2;vS=0.2;yOffset=-1} @origin 
+  - effect:particles{vd=64;particle=reddust;amount=50;size=2;color=#ff3153;hS=1.2;vS=1.2;yOffset=-1} @origin 
+  - effect:particles{vd=64;particle=reddust;amount=100;size=3;color=#ffa700;amount=32;hS=0.8;vS=0.8;yOffset=-1} @origin
+Meteor-onEnd:
+  Skills:
+  - effect:particlesphere{vd=64;particle=lava;amount=200;radius=3;size=4;color=#554444;hS=0.2;vS=0.2} @origin 
+  - effect:particles{vd=64;particle=reddust;amount=50;size=2;color=#ff3153;hS=1.2;vS=1.2} @origin 
+  - effect:particles{vd=64;particle=reddust;amount=100;size=3;color=#ffa700;amount=32;hS=0.8;vS=0.8} @origin
+  - damage{a=100;ia=true} @EntitiesNearOrigin{r=10}
+  - damage{a=500} @EntitiesNearOrigin{r=10}
+  - stun{d=40;f=false} @EntitiesNearOrigin{r=10}
+  - particlering{particle=reddust;size=3.0;color=#556666;radius=5;points=20;amount=100;hS=3;vS=1;speed=0.01;vd=64} @origin
+  - effect:particles{particle=reddust;size=1;color=#ffe34c;amount=32;hS=0.3;vS=1;speed=0.3;vd=64} @EntitiesNearOrigin{r=10}

@@ -1,0 +1,176 @@
+IronGuardian:
+  Type: IRON_GOLEM
+  Display: '&2Железный Хранитель'
+  Health: 10000
+  Damage: 1000
+  Faction: Guardians
+  AITargetSelectors:
+  - clear
+  - specificfactionmonsters Spiders
+  - specificfactionmonsters Undead
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  Skills:
+  - teleportin{d=0,0,0} @target ~onTimer:20
+  - pull{velocity=12} @target ~onTimer:20
+  - stun{d=40;f=false} ~onAttack
+  - heal{a=10000} @self ~onTimer:2000
+  - Aura{auraName=IronHeart;onTick=Low-IronHeart-Aura;interval=60;duration=300;maxStacks=0} @PlayersInRadius{r=8} ~onTimer:40
+  DamageModifiers: 
+  - FALL 0
+  - PROJECTILE 0
+  - LAVA 0
+  - FIRE 0
+  - POISON 0
+  - DROWNING 0
+  - BLOCK_EXPLOSION 0
+  - ENTITY_EXPLOSION 0
+  - FALLING_BLOCK 0   
+  Options:
+    Despawn: false
+    KnockbackResistance: 100
+    PreventRandomEquipment: true  
+    PreventSunburn: true  
+    MovementSpeed: 0.001
+    MaxCombatDistance: 64
+    PreventOtherDrops: true
+    FollowRange: 64      
+    RepeatAllSkills: true   
+#
+Dummy1:
+  Type: SHEEP
+  Display: '&7Пушистый Манекен'
+  Health: 10000
+  Damage: 10
+  Skills:
+# --- PASSIVE ---
+#  - skill{s=DummyEffect} @self ~onTimer:100
+  - skill{s=Dummy-Heal} @self ~onDamaged
+  - heal{amount=10000} @self <20%
+# --- ACTIONS ---
+#  - model{mid=dummy_1} @self ~onSpawn  
+#
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    FollowRange: 16
+    Despawn: false
+    MovementSpeed: 0.05
+#
+#
+DummyStop:
+  Type: SHEEP
+  Display: '&7Пушистый Манекен'
+  Health: 10000
+  Damage: 10
+  Skills:
+# --- PASSIVE ---
+#  - skill{s=DummyEffect} @self ~onTimer:100
+  - teleport{} @CasterSpawnLocation ~onTimer:200
+  - skill{s=Dummy-Heal} @self ~onDamaged
+  - heal{amount=10000} @self <20%
+# --- ACTIONS ---
+#  - model{mid=dummy_1} @self ~onSpawn  
+#
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    FollowRange: 16
+    Despawn: false
+    MovementSpeed: 0.001
+    KnockbackResistance: 100
+#
+DummyFly:
+  Type: SHEEP
+  Display: '&7Пушистый Манекен'
+  Health: 10000
+  Damage: 10
+  Skills:
+# --- PASSIVE ---
+#  - skill{s=DummyEffect} @self ~onTimer:100
+  - teleport{} @CasterSpawnLocation ~onTimer:200
+  - skill{s=Dummy-Heal} @self ~onDamaged
+  - heal{amount=10000} @self <20%
+# --- ACTIONS ---
+#  - model{mid=dummy_1} @self ~onSpawn  
+#
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    FollowRange: 16
+    Despawn: false
+    NoGravity: true
+    MovementSpeed: 0.001
+    KnockbackResistance: 100
+#
+BadDummy1:
+  Type: ZOMBIE
+  Display: '&7Злой Манекен'
+  Health: 10000
+  Damage: 10
+  Skills:
+# --- PASSIVE ---
+#  - skill{s=DummyEffect} @self ~onTimer:100
+  - teleport{} @CasterSpawnLocation ~onTimer:200
+  - skill{s=Dummy-Heal} @self ~onDamaged
+  - heal{amount=10000} @self <20%
+# --- ACTIONS ---
+#  - model{mid=dummy_1} @self ~onSpawn  
+#
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    PreventSunburn: true  
+    FollowRange: 16
+    Despawn: false
+    MovementSpeed: 0.001
+    KnockbackResistance: 100
+#
+Trader1:
+  Type: VILLAGER
+  Display: '&5Торговец Лавки'
+  Health: 75
+  Damage: 10
+  Skills:
+# --- PASSIVE ---
+#  - skill{s=DummyEffect} @self ~onTimer:100
+  - teleport{} @CasterSpawnLocation ~onTimer:200
+  - command{c="dm open shop_hub <target.name>"} ~onInteract
+# --- ACTIONS ---
+#  - model{mid=dummy_1} @self ~onSpawn  
+#
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  Options:
+    PreventRandomEquipment: true  
+    Invincible: true
+    FollowRange: 16
+    Despawn: false
+    MovementSpeed: 0.001
+    KnockbackResistance: 100
+#
+Trader2:
+  Type: VILLAGER
+  Display: '&2&l&olevel&7&o&lбанк'
+  Health: 75
+  Damage: 10
+  Skills:
+# --- PASSIVE ---
+#  - skill{s=DummyEffect} @self ~onTimer:100
+  - teleport{} @CasterSpawnLocation ~onTimer:200
+  - command{c="dm open bank_hub <target.name>"} ~onInteract
+# --- ACTIONS ---
+#  - model{mid=dummy_1} @self ~onSpawn  
+#
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  Options:
+    PreventRandomEquipment: true  
+    Invincible: true
+    FollowRange: 16
+    Despawn: false
+    MovementSpeed: 0.001
+    KnockbackResistance: 100

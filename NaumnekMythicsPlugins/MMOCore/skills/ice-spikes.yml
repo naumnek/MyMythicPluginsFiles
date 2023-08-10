@@ -1,0 +1,25 @@
+name: Ледянной Дождь
+lore:
+- Ты призываешь ледянные шипы.
+- Шипы выскакивают из земли и взрываются.
+- Каждый шип наносит &c{damage} &7урона
+- и замедляет на &b{slow} &7секунд.
+- ''
+- 'Тип: &fНаправленная на область'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: SNOWBALL
+damage:
+  base: 7
+  per-level: 0.5
+mana:
+  base: 40.0
+  per-level: 2.0
+slow:
+  base: 5.0
+  per-level: 2.0
+cooldown:
+  base: 15.0
+  per-level: -1.0
+  max: 15.0
+  min: 2.0

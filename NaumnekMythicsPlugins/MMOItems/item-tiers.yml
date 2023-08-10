@@ -1,0 +1,256 @@
+# 'name' is used to display the tier in the item lore.
+#
+# 'deconstruct-item' is the drop table for the item
+# that drops when deconstructing an item.
+#
+# Tier IDs (TRASH,COMMON...) are case sensitive.
+
+TRASH:
+    name: '&8Мусор'
+    unidentification:
+        range: 6
+        name: 'Мусор'
+        prefix: '&7'
+    # This tier has no generation options specified.
+    # In that case, it'll use the default values set in config.yml
+    item-glow:
+        
+        # When enabled, dropped items display
+        # an item hint (looks like a hologram).
+        hint: true
+        
+        # Item glow color. List (line 400+):
+        # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Color.html
+        color: 'SILVER'    
+COMMON:
+    name: '&fОбычная'
+    parent: TRASH
+    unidentification:
+        range: 6
+        name: 'Обычная'
+        prefix: '&7'
+    # This tier has no generation options specified.
+    # In that case, it'll use the default values set in config.yml
+    item-glow:       
+        hint: true
+        color: 'GRAY'    
+UNCOMMON:
+
+    # Tier name displayed in the item lore. 
+    name: '&3Необычная'
+    
+    # Unidentified items display the item tier.
+    unidentification:
+        
+        # Only applies for items with a required
+        # levels. Corresponds to the range within
+        # which the required level is located.
+        range: 6
+        
+        # Tier name displayed in lore.
+        name: '&3Необычная'
+        
+        # unidentification item name prefix.
+        prefix: '&7'
+    
+    item-glow:
+        hint: true
+        color: 'AQUA'
+    
+    generation:
+        chance: 0.15
+        capacity:
+            base: 6
+            
+            # Scales on the item level
+            scale: .1
+            
+            spread: .1
+            max-spread: .3
+    
+    deconstruct-item:
+        success:
+            coef: 1
+            items:
+                MATERIAL:
+                    UNCOMMON_WEAPON_ESSENCE: 100,1-1,0
+        lose:
+            coef: 2
+            items:
+                MATERIAL:
+                    WEAPON_POWDER: 100,1-1,0
+                    
+RARE:
+    name: '&9Редкая'
+    unidentification:
+        name: 'Редкая'
+        range: 6
+        prefix: '&7'
+    item-glow:
+        hint: true
+        color: 'BLUE'
+    generation:
+        chance: 0.06
+        capacity:
+            base: 9
+            scale: .15
+            spread: .1
+            max-spread: .3
+    deconstruct-item:
+        success:
+            coef: 1
+            items:
+                MATERIAL:
+                    RARE_WEAPON_ESSENCE: 100,1-1,0
+        lose:
+            coef: 3
+            items:
+                MATERIAL:
+                    WEAPON_POWDER: 100,1-1,0
+VERY_RARE:
+    name: '&aОчень Редкая'
+    unidentification:
+        name: 'Очень Редкая'
+        prefix: '&7'
+        range: 6
+    item-glow:
+        hint: true
+        color: 'LIME'        
+    deconstruct-item:
+        success:
+            coef: 1
+            items:
+                MATERIAL:
+                    VERY_RARE_WEAPON_ESSENCE: 100,1-1,0
+        lose:
+            coef: 3
+            items:
+                MATERIAL:
+                    WEAPON_POWDER: 100,1-1,0
+    generation:
+        chance: 0.03
+        capacity:
+            base: 10
+            scale: .17
+            spread: .1
+            max-spread: .3
+LEGENDARY:
+    name: '&2Легендарная'
+    unidentification:
+        name: 'Легендарная'
+        prefix: '&7'
+        range: 6
+    item-glow:
+        hint: true
+        color: 'GREEN'         
+    deconstruct-item:
+        success:
+            coef: 1
+            items:
+                MATERIAL:
+                    LEGENDARY_WEAPON_ESSENCE: 100,1-1,0
+        lose:
+            coef: 4
+            items:
+                MATERIAL:
+                    WEAPON_POWDER: 100,1-1,0
+    generation:
+        chance: 0.01
+        capacity:
+            base: 12
+            scale: .2
+            spread: .1
+            max-spread: .3
+MYTHICAL:
+    name: '&dМифическая'
+    unidentification:
+        name: 'Мифическая'
+        prefix: '&7'
+        range: 6
+    item-glow:
+        hint: true
+        color: 'PURPLE'
+    generation:
+        chance: 0.003
+        capacity:
+            base: 15
+            scale: .3
+            spread: .1
+            max-spread: .3
+    deconstruct-item:
+        success:
+            coef: 1
+            items:
+                MATERIAL:
+                    MYTHICAL_WEAPON_ESSENCE: 100,1-1,0
+        lose:
+            coef: 5
+            items:
+                MATERIAL:
+                    WEAPON_POWDER: 100,1-1,0
+EPIC:
+    name: '&5Эпическая'
+    unidentification:
+        name: 'Эпическая'
+        prefix: '&7'
+        range: 6
+    item-glow:
+        hint: true
+        color: 'FUCHSIA'
+    deconstruct-item:
+        success:
+            coef: 1
+            items:
+                MATERIAL:
+                    EPIC_WEAPON_ESSENCE: 100,1-1,0
+        lose:
+            coef: 6
+            items:
+                MATERIAL:
+                    WEAPON_POWDER: 100,1-1,0
+    # This tier has no generation options specified.
+    # In that case, it'll use the default values set in config.yml
+DIVINE:
+    name: '&eБожественная'
+    unidentification:
+        name: 'Божественная'
+        prefix: '&7'
+        range: 6
+    item-glow:
+        hint: true
+        color: 'YELLOW'
+    deconstruct-item:
+        success:
+            coef: 1
+            items:
+                MATERIAL:
+                    MAGICAL_WEAPON_ESSENCE: 100,1-1,0
+        lose:
+            coef: 3
+            items:
+                MATERIAL:
+                    WEAPON_POWDER: 100,1-1,0
+    # This tier has no generation options specified.
+    # In that case, it'll use the default values set in config.yml
+WORLD:
+    name: '&6Мировая'
+    unidentification:
+        name: 'Мировая'
+        prefix: '&7'
+        range: 6
+    item-glow:
+        hint: true
+        color: 'ORANGE'        
+    deconstruct-item:
+        success:
+            coef: 1
+            items:
+                MATERIAL:
+                    UNIQUE_WEAPON_ESSENCE: 100,1-1,0
+        lose:
+            coef: 9
+            items:
+                MATERIAL:
+                    WEAPON_POWDER: 100,1-1,0
+    # This tier has no generation options specified.
+    # In that case, it'll use the default values set in config.yml

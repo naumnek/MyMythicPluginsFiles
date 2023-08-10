@@ -1,0 +1,117 @@
+DesertSpiderMessageMarkEnd:
+  TargetConditions:
+  - hasaura{n=DesertSpiderBossZone_Mark} false
+  Skills:
+  - message{m="&9Покровитель Пустыни &7больше не сдерживает вас"}
+DesertSpiderMessageMarkStart:
+  TargetConditions:
+  - hasaura{n=DesertSpiderBossZone_Mark} false
+  Skills:
+  - message{m="&9Покровитель Пустыни &7запер пространство на &f15 &7секунд"}
+DesertSpiderMark:
+  TargetConditions:
+  - isPlayer{} true
+  Skills:
+  - skill{s=DesertSpiderMessageMarkStart} @trigger{ignore=creative,spectators}
+  - Aura{auraName=DesertSpiderBossZone_Mark;onTick=DesertSpiderBossZone;interval=40;duration=300;maxStacks=0}
+  - delay 320
+  - skill{s=DesertSpiderMessageMarkEnd}
+DesertSpiderBossZone:
+  TargetConditions:
+  - notinregion{r=desert_hram} true
+  Skills:
+  - teleportto{location=-242,114,1260} 
+  - damage{amount=1;ia=true} 
+  - effect:particles{particle=reddust;size=1;color=#ffffff;amount=16;hS=0.3;vS=1;speed=0.01;vd=32}
+#
+DesertSpider-Attack:
+  Conditions:
+  - targetwithin{d=32} true
+  Cooldown: 1
+  Skills:
+  - projectile{onTick=DesertSpider-Attack-Tick;onHit=DesertSpider-Attack-Hit;v=16;i=1;hR=1;vR=1;syo=1;tyo=2.0;g=0.1;hnp=true} @TargetLocation
+DesertSpider-Attack-Tick:
+  Skills:
+  - effect:particles{particle=reddust;size=0.5;color=#4cb942;amount=24;hS=0.2;vS=0.2;vd=32} @origin
+DesertSpider-Attack-Hit:
+  Skills:
+  - stun{d=10;f=true}
+  - heal{a=50} @self
+  - damage{a=50;io=true;element=FIRE}
+  - potion{type=SLOW;duration=100;lvl=1}
+  - effect:particles{particle=reddust;size=1;color=#8097bf;amount=32;hS=0.3;vS=1;speed=0.01;vd=32}
+#
+DesertSpider-Teleport:
+  Cooldown: 10
+  Conditions:
+  - health{h=<1500} true
+  Skills:
+  - delay 20
+  - teleport @PlayersInRadius{r=32;limit=1;sort=LOWEST_HEALTH} 0.9
+  - delay 40
+  - teleport @PlayersInRadius{r=32;limit=1;sort=LOWEST_HEALTH} 0.45
+  - delay 60
+  - teleport @PlayersInRadius{r=32;limit=1;sort=LOWEST_HEALTH} 0.15
+#
+DesertArea:
+  Cooldown: 10
+  Conditions:
+  - health{h=<1000} true
+  Skills:
+  - effect:particlering{particle=spell_witch;radius=2;points=16;amount=8;hS=1;vS=1;speed=0.0001;vd=32;p=false} @self
+  - stun{d=60;f=false}
+  - potion{type=WEAKNESS;duration=200;level=2} 
+#
+HellOfSend:
+  Cooldown: 30
+  Conditions:
+  - health{h=<2000} true
+  Skills:  
+  - effect:particlesphere{repeat=200;repeatInterval=1;particle=reddust;size=0.5;color=#838b8b;radius=1.4;y=0.6;hS=0.1;vS=0.01;amount=32;speed=0.01;vd=32} @self
+  - skill{s=DesertSlash} @PlayersInRadius{r=16}
+  - skill{repeat=20;repeatInterval=10;s=DesertSpider-Attack} @PlayersInRadius{r=64;limit=2}
+  - heal{repeat=20;repeatInterval=10;a=25} @self
+#
+DesertGuard-Summon:
+  Cooldown: 30
+  Conditions:
+  - children{a=0} true 
+  - health{h=<2900} true
+  Skills:
+  - projectile{onTick=DesertGuard-Summon-Tick;onEnd=DesertGuard-Summon-End;v=24;i=1;hR=1;vR=1;syo=1;tyo=2.0;g=0.1} @TargetLocation
+DesertGuard-Summon-Tick:
+  Skills:
+  - effect:particles{particle=reddust;size=0.5;color=#b45f06;amount=24;hS=0.2;vS=0.2;vd=32} @origin
+DesertGuard-Summon-End:
+  Skills:
+  - delay 20
+  - effect:particleline{particle=reddust;size=0.5;color=#b45f06;amount=8;hS=0.2;vS=0.2;vd=32} 
+  - summon{mob=DesertGuard;amount=1;noise=0;r=6} @Self
+  - delay 600
+  - effect:particles{particle=reddust;size=0.8;color=#eaaa66;amount=32;hS=0.3;vS=0.4;speed=0.006;vd=32;y=1.2} @self ~onTimer:5
+  - remove{} @Children ~onDeath 
+ 
+  
+  
+# --- SUMMONS ---
+DesertGuard-Attack:
+  Cooldown: 1
+  Skills:
+  - projectile{onTick=DesertGuard-Attack-Tick;onHit=DesertGuard-Attack-Hit;v=12;i=1;hR=1;vR=1;syo=1;tyo=2.0;g=0.1} @TargetLocation
+DesertGuard-Attack-Tick:
+  Skills:
+  - effect:particles{particle=reddust;size=0.5;color=#b45f06;amount=18;hS=0.1;vS=0.1;vd=32} @origin
+DesertGuard-Attack-Hit:
+  Skills:
+  - stun{d=20;f=true}
+  - damagepercent{percent=0.1}
+  - damage{a=30;element=FIRE}
+  - potion{type=SLOW;duration=100;lvl=0}
+  - effect:particles{particle=reddust;size=1;color=#b45f06;amount=64;hS=0.3;vS=1;speed=0.01;vd=32}
+#
+DesertSlash:
+  Cooldown: 10
+  Skills:
+  - throw{repeat=20;repeatInterval=5;velocity=4;velocityY=3} @PlayersInRadius{r=5}
+  - damage{repeat=20;repeatInterval=5;amount=5;element=FIRE} @PlayersInRadius{r=5}
+  - effect:particleorbital{p=falling_dust;amount=4;points=32;an=2;hs=1;vs=0.3;size=2.2;y=2;ticks=200;in=1;rx=0;ry=0;r=5;yOffset=1.3} @self

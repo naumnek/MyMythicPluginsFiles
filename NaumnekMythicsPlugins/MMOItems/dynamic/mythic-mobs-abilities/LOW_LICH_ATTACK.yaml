@@ -1,0 +1,8 @@
+# The internal name of the MM skill.
+mythicmobs-skill-id: LOW_LICH_ATTACK
+
+# Ability name displayed in lore.
+name: 'Ледяной Гнев'
+
+# Ability Modifiers (default values).
+cooldown: 15

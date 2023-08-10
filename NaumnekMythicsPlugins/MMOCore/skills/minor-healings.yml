@@ -1,0 +1,20 @@
+name: Исцеление
+lore:
+- Ты мгновенно восстанавливаешь &a{heal} HP&7 цели.
+- '&f[КРАСТЬСЯ]&7 - Использовать на себя.'
+- ''
+- 'Тип: &fНаправленная на существо'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: GOLDEN_APPLE
+mana:
+  base: 23.0
+  per-level: 3.0
+heal:
+  base: 35.0
+  per-level: 5.0
+cooldown:
+  base: 15.0
+  per-level: -1.0
+  max: 15.0
+  min: 3.0

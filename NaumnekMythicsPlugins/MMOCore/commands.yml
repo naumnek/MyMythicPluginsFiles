@@ -1,0 +1,30 @@
+player:
+  main: "player"
+  aliases: ["mmop", "profile"]
+attributes:
+  main: "attributes"
+  aliases: ["att", "stats"]
+class:
+  main: "class"
+  aliases: ["mmoc"]
+waypoints:
+  main: "waypoints"
+  aliases: ["mmowp"]
+quests:
+  main: "quests"
+  aliases: ["mmoq", "journal"]
+skills:
+  main: "skills"
+  aliases: ["mmos"]
+friends:
+  main: "friends"
+  aliases: ["mmof"]
+party:
+  main: "party"
+  aliases: []
+withdraw:
+  main: "mmowithdraw"
+  aliases: ["mmow"]
+deposit:
+  main: "mmodeposit"
+  aliases: ["mmod"]

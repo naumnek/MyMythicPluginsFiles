@@ -1,0 +1,27 @@
+mythicmobs-skill-id: Meteor
+name: §6§lПламенный Метеорит
+lore:
+- 'Ты призываешь на место указанной сущности метеорит.'
+- 'После приземление все в радиусе &f10 &7блоков'
+- 'получают стан на &f2 &7секунды и &c500&7 урона'
+- '&c100 &7из которого игнорирует броню.'
+- ''
+- 'Тип: &8Направленная на существо с эффектом по области'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: MAGMA_BLOCK
+radius:
+  base: 15.0
+  per-level: 0.0
+damage:
+  base: 300.0
+  per-level: 0.0
+ignite:
+  base: 30.0
+  per-level: 0.0
+mana:
+  base: 200.0
+  per-level: 0.0
+cooldown:
+  base: 0.0
+  per-level: 0.0

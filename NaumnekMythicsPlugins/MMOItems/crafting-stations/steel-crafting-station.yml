@@ -1,0 +1,207 @@
+# Name which will be displayed
+# when opening the station
+name: 'Станция Крафта (#page#/#max#)'
+
+# The maximum amount of items in the crafting queue ie. the
+# max number of items players are able to craft simultaneously.
+# Must be between 1 and 64.
+max-queue-size: 10
+
+# The sound that plays whenever an action is
+# completed in the crafting station.
+# GET SOUND NAMES HERE:
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+sound: ENTITY_EXPERIENCE_ORB_PICKUP
+
+# This is how the gui looks. You can define your own
+# in crafting-stations/layouts by creating a new
+# file with the name of the file as the id.
+layout: default
+
+# Configure GUI items here
+items:
+    fill:
+        material: AIR
+    no-recipe:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aНет Рецепта'
+    no-queue-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aНет Товара в Очереди'
+
+# Station recipes
+recipes:
+    steel-sword:
+    
+        # The item which the recipe gives
+        output:
+            type: SWORD
+            id: STEEL_SWORD
+            amount: 1
+        
+        # Time it takes to craft the item
+        crafting-time: 3
+        
+        # Recipe options
+        options:
+            output-item: true # Set to false to give no item
+            silent-craft: false # No sound when item is claimed
+            hide-when-locked: false # Hide in the GUI when conditions are not met
+        
+        # Conditions to unlock the recipe
+        conditions:
+        - stamina{amount=2}
+        
+        # Ingredients needed for the recipe
+        # Available properties: type, id, amount, display, level (optional)
+        ingredients:
+        - mmoitem{type=MATERIAL,id=STEEL_INGOT,amount=2}
+    steel-sword-upgrade:
+        item:
+            type: SWORD
+            id: STEEL_SWORD
+        conditions:
+        - stamina{amount=2}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=STEEL_INGOT,amount=4}
+    steel-dagger:
+        output:
+            type: DAGGER
+            id: STEEL_DAGGER
+            amount: 1
+        crafting-time: 6
+        conditions:
+        - stamina{amount=2}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=STEEL_INGOT,amount=1}
+    earth-staff:
+        output:
+            type: STAFF
+            id: EARTH_STAFF
+            amount: 1
+        crafting-time: 3
+        conditions:
+        - stamina{amount=2}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=UNCOMMON_WEAPON_ESSENCE,amount=1}
+        - mmoitem{type=MATERIAL,id=STEEL_INGOT,amount=4}
+    strudy-staff:
+        output:
+            type: STAFF
+            id: STRUDY_STAFF
+            amount: 1
+        crafting-time: 3
+        conditions:
+        - stamina{amount=2}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=UNCOMMON_WEAPON_ESSENCE,amount=1}
+        - mmoitem{type=MATERIAL,id=POISON_FLESH,amount=4}
+    steel-helmet:
+        output:
+            type: ARMOR
+            id: STEEL_HELMET
+            amount: 1
+        crafting-time: 7
+        conditions:
+        - stamina{amount=2}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=STEEL_INGOT,amount=5}
+    steel-chestplate:
+        output:
+            type: ARMOR
+            id: STEEL_CHESTPLATE
+            amount: 1
+        crafting-time: 7
+        conditions:
+        - stamina{amount=2}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=STEEL_INGOT,amount=8}
+    steel-leggings:
+        output:
+            type: ARMOR
+            id: STEEL_LEGGINGS
+            amount: 1
+        crafting-time: 7
+        conditions:
+        - stamina{amount=2}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=STEEL_INGOT,amount=7}
+    steel-boots:
+        output:
+            type: ARMOR
+            id: STEEL_BOOTS
+            amount: 1
+        crafting-time: 7
+        conditions:
+        - stamina{amount=2}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=STEEL_INGOT,amount=4}
+    steel-pickaxe:
+        output:
+            type: TOOL
+            id: STEEL_PICKAXE
+            amount: 1
+        crafting-time: 3
+        conditions:
+        - stamina{amount=2}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=STEEL_INGOT,amount=3}
+    steel-shovel:
+        output:
+            type: TOOL
+            id: STEEL_SHOVEL
+            amount: 1
+        crafting-time: 3
+        conditions:
+        - stamina{amount=2}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=STEEL_INGOT,amount=1}
+    steel-axe:
+        output:
+            type: TOOL
+            id: STEEL_AXE
+            amount: 1
+        crafting-time: 3
+        conditions:
+        - stamina{amount=2}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=STEEL_INGOT,amount=3}
+    hardened-steel-claymore:
+        output:
+            type: GREATSWORD
+            id: HARDENED_STEEL_CLAYMORE
+        crafting-time: 20
+        conditions:
+        - stamina{amount=15}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=RARE_WEAPON_ESSENCE,amount=1}
+        - mmoitem{type=MATERIAL,id=HARDENED_STEEL_INGOT,amount=2}
+    hardened-steel-claymore-upgrade:
+        item:
+            type: GREATSWORD
+            id: HARDENED_STEEL_CLAYMORE
+        conditions:
+        - stamina{amount=10}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HARDENED_STEEL_INGOT,amount=1}
+    mythril-chainmail:
+        output:
+            type: MAGIC_ARMOR
+            id: MYTHRIL_CHAINMAIL
+            amount: 1
+        crafting-time: 20
+        conditions:
+        - stamina{amount=15}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=RARE_WEAPON_ESSENCE,amount=1}
+        - mmoitem{type=MATERIAL,id=SEND_FAVOR,amount=2}
+        - mmoitem{type=MATERIAL,id=POISON_FLESH,amount=16}
+    mythril-chainmail-upgrade:
+        item:
+            type: MAGIC_ARMOR
+            id: MYTHRIL_CHAINMAIL
+        conditions:
+        - stamina{amount=10}
+        ingredients:
+        - mmoitem{type=MATERIAL,id=SEND_FAVOR,amount=1}
+        - mmoitem{type=MATERIAL,id=POISON_FLESH,amount=4}

@@ -1,0 +1,27 @@
+STEEL_PICKAXE:
+  base:
+    material: IRON_PICKAXE
+    name: '&fСтальная Кирка'
+    max-durability: 2000
+    tier: COMMON
+    will-break: true
+    unbreakable: true
+    revision-id: 1
+STEEL_SHOVEL:
+  base:
+    material: IRON_SHOVEL
+    name: '&fСтальная Лопата'
+    max-durability: 2000
+    tier: COMMON
+    will-break: true
+    unbreakable: true
+    revision-id: 1
+STEEL_AXE:
+  base:
+    material: IRON_AXE
+    name: '&fСтальной Топор'
+    max-durability: 2000
+    tier: COMMON
+    will-break: true
+    unbreakable: true
+    revision-id: 1

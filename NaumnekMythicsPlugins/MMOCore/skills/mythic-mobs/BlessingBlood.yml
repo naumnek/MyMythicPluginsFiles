@@ -1,0 +1,23 @@
+mythicmobs-skill-id: BlessingBlood
+name: §a§lВозмездие
+lore:
+- 'После получения 4 ударов от одной цели'
+- 'она лишается &f{percent}% &7от своего здоровья'
+- 'с шансом &f{chance}%'
+- ''
+- 'Тип: &8Пассивная'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: GHAST_TEAR
+percent:
+  base: 0.1
+  per-level: 0.01
+chance:
+  base: 10
+  per-level: 0.2
+mana:
+  base: 0.0
+  per-level: 0.0
+cooldown:
+  base: 0.0
+  per-level: 0.0

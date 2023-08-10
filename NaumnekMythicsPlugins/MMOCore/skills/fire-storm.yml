@@ -1,0 +1,23 @@
+name: Шквал Огня
+lore:
+- Ты создаешь шквал из &f6&7 огненных шаров
+- направленных на ближайшую цель.
+- Попадание наносит цели &c{damage}&7 урона
+- и поджигает на &c{ignite}&7 секунд.
+- ''
+- 'Тип: &8Направленная на существо'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: BLAZE_POWDER
+damage:
+  base: 2.0
+  per-level: 0.8
+ignite:
+  base: 2.0
+  per-level: 0.1
+mana:
+  base: 10.0
+  per-level: -0.5
+cooldown:
+  base: 0.0
+  per-level: 0.0

@@ -1,0 +1,19 @@
+NATURES_GIFT2:
+  base:
+    material: OAK_SAPLING
+    disable-crafting: true
+    name: '&9Magical Catalyst'
+    lore:
+    - '&7No one knows where it was found.'
+    magic-damage:
+      base: 15.0
+      spread: 0.084
+      max-spread: 0.25
+    required-level: 4.0
+    required-class:
+    - Wizard
+    - Paladin
+    hide-enchants: true
+    enchants:
+      unbreaking: 1
+    revision-id: 1

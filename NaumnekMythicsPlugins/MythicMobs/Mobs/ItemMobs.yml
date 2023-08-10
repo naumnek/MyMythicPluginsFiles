@@ -1,0 +1,108 @@
+#
+IceGuard_Summon:
+  Type: SKELETON
+  Display: '&3Ледяной Страж'
+  Health: 300
+  Damage: 40
+  Faction: Summon
+  AITargetSelectors:
+  - clear
+  - hurtbytarget
+  - otherfactionmonsters
+  AIGoalSelectors:
+  - 0 clear
+  - 1 gotoowner 16
+  - 2 meleeattack
+  - 3 gotoowner 8
+  - 4 randomstroll
+  Equipment:
+  - MagicSkeletonHelmet HEAD
+  - MagicSkeletonChestplate CHEST
+  - MagicSkeletonLeggings LEGS
+  - MagicSkeletonBoots FEET
+  - mmoitems{type=SWORD;id=ICE_SOUL_BLADE}:0
+  Skills:
+# --- ATTACKS ---
+  - potion{type=SLOW;duration=60;level=1} ~OnAttack 0.5
+# --- SKILLS ---
+  - skill{s=Low-IceSmash-Attack} 0.3 ~onTimer:200   
+# --- PASSIVE ---
+  - potion{type=SLOW;duration=60;level=1} ~OnDamaged 0.1
+  - heal{a=5} @self ~onTimer:200 
+# --- PARTICLES ---
+  - effect:particles{particle=reddust;size=1.2;color=#2167eb;amount=32;hS=0.4;vS=0.6;speed=0.006;vd=32;y=0.8} @self ~onTimer:20 
+# --- ACTIONS --- 
+#
+  DamageModifiers: 
+  - FIRE 0
+  - POISON 0
+  - DROWNING 0
+  - BLOCK_EXPLOSION 0
+  - ENTITY_EXPLOSION 0
+  - FALLING_BLOCK 0  
+  Options:
+    Despawn: false
+    KnockbackResistance: 10
+    PreventOtherDrops: true
+    PreventRandomEquipment: true  
+    PreventSunburn: true  
+    MovementSpeed: 0.3
+    MaxCombatDistance: 24
+    FollowRange: 64
+#    
+Summon_LowElemental_Fire:
+  Type: HUSK
+  Display: '&3Огненный Лучник'
+  Health: 500
+  Damage: 25
+  Modules:
+    ThreatTable: true
+  Faction: Summon
+  AITargetSelectors:
+  - clear
+  - hurtbytarget
+  - otherfactionmonsters
+  AIGoalSelectors:
+  - 0 clear
+  - 1 gotoowner 16
+  - 2 ownertarget
+  - 3 gotoowner 8
+  - 4 randomstroll
+  Skills:
+# --- ATTACKS ---
+  - shoot{type=ARROW;velocity=5;damage=25} @target ~onTimer:20
+  - skill{s=DesertGuard-Attack} @NearestPlayer{r=16;ignore=creative,spectators} ~onSpawn
+  - skill{s=DesertGuard-Attack} @NearestPlayer{r=16;ignore=creative,spectators} 0.6 ~onTimer:60
+  - potion{type=SLOW;duration=60;level=1} ~OnAttack 0.9
+# --- SKILLS ---  
+# --- PASSIVE ---
+  - heal{a=10} @self ~onTimer:100 
+  - heal{a=20} @Owner ~onTimer:100 
+# --- ACTIONS ---
+  - remove{} @Children ~onDeath  
+# --- PARTICLES ---
+  - effect:particles{particle=reddust;size=1.2;color=#afeeee;amount=8;hS=0.2;vS=0.1;speed=0.006;vd=32;y=1} @self ~onTimer:1 
+#
+  Equipment:
+  - mmoitems{type=BOW;id=FIRE_ARCHER_BOW}:0
+  DamageModifiers: 
+  - CUSTOM 0.9
+  - ENTITY_ATTACK 0.8
+  - PROJECTILE 0.8
+  - MAGIC 0.9
+  - WITHER 0
+  - FALL 0
+  - FIRE 0
+  - POISON 0
+  - DROWNING 0
+  - BLOCK_EXPLOSION 0
+  - ENTITY_EXPLOSION 0
+  - FALLING_BLOCK 0  
+  Options:
+    KnockbackResistance: 10
+    PreventRandomEquipment: true  
+    PreventSunburn: true  
+    PreventOtherDrops: true
+    MovementSpeed: 0.3
+    MaxCombatDistance: 30
+    FollowRange: 48

@@ -1,0 +1,64 @@
+PoisonSpider:
+  Type: SPIDER
+  Display: '&3Ядовитый Паук'
+  Health: 600
+  Damage: 30 
+  Modules:
+    ThreatTable: true
+  Faction: Spiders
+  AITargetSelectors:
+  - clear
+  - hurtbytarget
+  - specificfactionmonsters Summon
+  - players
+  Skills:
+# --- ATTACKS --- 
+  - potion{type=POISON;duration=200;level=3} @Target 0.2 ~onAttack
+# --- PASSIVE --- 
+  - skill{s=Low-Poison-Area} @target <60% 1
+  - potion{type=REGENERATION;duration=60;level=9} @self 0.2 ~onTimer:40
+# --- PARTICLES ---
+  - effect:particles{particle=spell_witch;amount=20;hS=0.2;vS=0.4;speed=0.002;vd=32} @self ~onTimer:20
+#
+  Drops:
+  - PoisonSpiderDrops
+  LevelModifiers:
+  - health 5
+  - damage 1
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    PreventSunburn: true  
+    MaxCombatDistance: 128
+    FollowRange: 64
+    MovementSpeed: 0.2
+    AttackSpeed: 3
+#
+# 
+#
+SpiderScout:
+  Type: CAVE_SPIDER
+  Display: '&fПаук Разведчик'
+  Health: 60
+  Damage: 10
+  Modules:
+    ThreatTable: true
+  Faction: Spiders
+  AITargetSelectors:
+  - clear
+  - hurtbytarget
+  - specificfactionmonsters Summon
+  - players
+  Drops:
+  - SpiderScoutDrops
+  LevelModifiers:
+  - health 5
+  - damage 0.5
+  Options:
+    PreventRandomEquipment: true  
+    PreventOtherDrops: true
+    PreventSunburn: true  
+    MaxCombatDistance: 128
+    FollowRange: 30
+    MovementSpeed: 0.27
+    AttackSpeed: 2

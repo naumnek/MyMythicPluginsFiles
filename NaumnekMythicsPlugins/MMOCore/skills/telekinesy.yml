@@ -1,0 +1,28 @@
+name: Воздушный Поток
+lore:
+- Магия воздуха захватывает цель и
+- хаотично двигает в пространстве.
+- '&f[ЛКМ] &7- Отменяет заклинание.'
+- ''
+- 'Тип: &fНаправленная на существо'
+- 'Сила Отталкивания: &f{knockback}%'
+- 'Длительность: &8{duration}'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: ENDER_EYE
+duration:
+  base: 1.5
+  per-level: 0.1
+  max: 6.0
+  min: 1.0
+mana:
+  base: 30.0
+  per-level: 3.0
+cooldown:
+  base: 6.0
+  per-level: -1.0
+  max: 10.0
+  min: 0.0
+knockback:
+  base: 0.5
+  per-level: 0.1

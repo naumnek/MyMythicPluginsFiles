@@ -1,0 +1,25 @@
+AngryGreenSludgeSpawner:
+  MobName: AngryGreenSludge
+  World: magic_world
+  X: -50
+  Y: 126
+  Z: -456
+  Radius: 4
+  UseTimer: true
+  MaxMobs: '1'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 900
+  CooldownTimer: 0
+  Warmup: 900
+  WarmupTimer: 0
+  CheckForPlayers: false
+  ActivationRange: 0
+  ScalingRange: 25.0
+  LeashRange: 12
+  HealOnLeash: false
+  ResetThreatOnLeash: true
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

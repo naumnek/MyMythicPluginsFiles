@@ -1,0 +1,27 @@
+name: Ослабляющая Пыль
+lore:
+- Ты бросаешь в цель специальную пыль.
+- Она ослабевает сущность.
+- Из-за чего цель получает дополнительно &c{ratio}% &7урона.
+- ''
+- 'Тип: &8Направленная на существо'
+- 'Длительность: &2{duration}'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: MAGENTA_DYE
+duration:
+  base: 20.0
+  per-level: 4.0
+  max: 70.0
+  min: 15.0
+mana:
+  base: 0.0
+  per-level: 0.0
+cooldown:
+  base: 120.0
+  per-level: -6.0
+  max: 25.0
+  min: 5.0
+ratio:
+  base: 25.0
+  per-level: 2.5

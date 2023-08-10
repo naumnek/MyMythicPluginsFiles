@@ -1,0 +1,27 @@
+mythicmobs-skill-id: ManaShield
+name: §a§lЩит Маны
+lore:
+- 'Ты создаешь щит, отталкивающий от тебя всех'
+- 'существ в радиусе &210 &7блоков и наносит &c{damage} &7 урона.'
+- 'С задержкой между отталкиваниями &f{delay} &7секунды.'
+- ''
+- 'Тип: &8Активируемая'
+- 'Длительность: &a{duration}'
+- 'Перезарядка: &e{cooldown}'
+- 'Потребление: &9{mana} {mana_name}'
+material: HEART_OF_THE_SEA
+damage:
+  base: 25
+  per-level: 2.5
+delay:
+  base: 0.8
+  per-level: -0.02
+duration:
+  base: 8.0
+  per-level: 0.8
+mana:
+  base: 150.0
+  per-level: 0.0
+cooldown:
+  base: 8.0
+  per-level: 0.8

@@ -1,0 +1,7 @@
+name: Близость к Огню
+lore:
+- Если ты горишь, то наносишь на &c{extra}% &7больше урона.
+material: FLINT_AND_STEEL
+extra:
+  base: 100.0
+  per-level: 40.0

@@ -1,0 +1,65 @@
+TESTVITALII2:
+  base:
+    material: IRON_HORSE_ARMOR
+    name: '&aАдский Мушкет'
+    lore:
+    - '&8Мушкет заряженный силой тьмы'
+    tier: VERY_RARE
+    attack-damage: 100.0
+    mana-cost: 80.0
+    range: 45.0
+    ability:
+      ability1:
+        type: FIREBOLT
+        damage: 45.0
+        cooldown: 30.0
+        mana: 50.0
+        mode: LEFT_CLICK
+    attack-speed: 0.5
+    element:
+      darkness:
+        damage: 33.0
+        defense: 10.0
+    gem-sockets:
+    - Uncolored
+    - Uncolored
+    - Uncolored
+    amphibian: DRY
+    revision-id: 1
+SNIPE:
+  base:
+    material: IRON_HORSE_ARMOR
+    name: §2§l§k_ §aМорозный Мушкет §2§l§k_
+    disable-smelting: true
+    disable-smithing: true
+    disable-crafting: true
+    disable-enchanting: true
+    disable-repairing: true
+    range: 100.0
+    unbreakable: true
+    ability:
+      ability1:
+        type: FREEZE
+        mode: ON_HIT
+        duration: 3.0
+        cooldown: 5.0
+        amplifier: 5.0
+        radius: 1.0
+      ability2:
+        type: ITEM_BOMB
+        mode: SHIFT_LEFT_CLICK
+        damage: 60.0
+        mana: 30.0
+        slow-duration: 15.0
+        slow-amplifier: 3.0
+        radius: 5.0
+        cooldown: 60.0
+    attack-damage: 10.0
+    cooldown-reduction: 0.0
+    attack-speed: 0.0
+    item-cooldown: 1.0
+    knockback: 1.5
+    tier: VERY_RARE
+    movement-speed: 0.0
+    custom-model-data: 1.0
+    revision-id: 1
